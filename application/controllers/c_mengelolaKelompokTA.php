@@ -90,8 +90,9 @@
 				$nama_topik = $data->TOPIK;
 				$list_ak = $this->m_kelompokTA->getAnggotaKelompokTA($data->KODEKELOMPOK);
 				$list_pb = $this->m_kelompokTA->getPembimbingKelompokTA($data->KODEKELOMPOK);
+				$ispublished = $data->ISPUBLISHED;
 
-				$list_detail_kota[] = array('id_kota' => $id_kota, 'nama_topik' => $nama_topik, 'list_ak' => $list_ak, 'list_pb' => $list_pb);
+				$list_detail_kota[] = array('id_kota' => $id_kota, 'nama_topik' => $nama_topik, 'list_ak' => $list_ak, 'list_pb' => $list_pb, 'ispublished' => $ispublished);
 			}
 
 			return $list_detail_kota;

@@ -51,8 +51,14 @@ body {
   border-radius: 0px !important;
 }
 
-.btn.btn-icon {
+.alert.alert-cell {
+  padding: 9px 5px !important;
+  min-width: 120px;
+}
+
+.btn.btn-cell, .alert.alert-cell {
   margin: 0px auto !important;
+  min-height: 40px;
 }
 
 .btn-group-lg>.btn, .btn-lg {
