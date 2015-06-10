@@ -60,9 +60,13 @@
 			<div class="alert alert-success" role="alert">
 				<strong>Pembuatan Kelompok TA berhasil!</strong> Silakan lanjutkan penambahan Kelompok TA lainnya, atau kembali ke Home.
 			</div>
-			<?php } else if ($status_iscreated === false) { ?>
+			<?php } elseif ($status_iscreated === false) { ?>
 			<div class="alert alert-danger" role="alert">
 				<strong>Pembuatan Kelompok TA gagal!</strong> Silakan coba lagi.
+			</div>
+			<?php } elseif ($status_ispublished === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<strong>Kelompok TA berhasil dipublikasikan!</strong> Jangan lupa untuk melakukan publikasi setiap ada perubahan.
 			</div>
 			<?php } ?>
 			<div class="row">
@@ -70,7 +74,7 @@
 					<input id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" value="Tambah Baru Kelompok TA" data-toggle="modal" data-target="#modalTambahKelompokTA" />
 				</div>
 				<div class="col-md-6" align="right">
-					<input id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" value="Publikasikan Semua Kelompok TA " />
+					<input id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" value="Publikasikan Semua Kelompok TA" onclick="location.href='c_mengelolaKelompokTA/postKelompokTA'" />
 				</div>
 			</div>
 

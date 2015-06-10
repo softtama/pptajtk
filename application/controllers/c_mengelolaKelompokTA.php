@@ -9,6 +9,7 @@
 		public function index()
 		{
 			$data['status_iscreated'] = null;
+			$data['status_ispublished'] = null;
 
 			if ($this->input->get('iscreated') == 'true')
 			{
@@ -18,6 +19,16 @@
 			if ($this->input->get('iscreated') == 'false')
 			{
 				$data['status_iscreated'] = false;
+			}
+
+			if ($this->input->get('ispublished') == 'true')
+			{
+				$data['status_ispublished'] = true;
+			}
+
+			if ($this->input->get('ispublished') == 'false')
+			{
+				$data['status_ispublished'] = false;
 			}
 
 			$this->load->model('m_mahasiswa', '', true);
@@ -84,6 +95,16 @@
 			}
 
 			return $list_detail_kota;
+		}
+
+		public function postKelompokTA()
+		{
+			$this->load->model('m_kelompokTA', '', true);
+
+			$this->m_kelompokTA->setStatusKePublished();
+
+			// Redirect to index, show notification to current User
+			redirect(base_url().'c_mengelolaKelompokTA?ispublished=true');	
 		}
 	}
 ?>

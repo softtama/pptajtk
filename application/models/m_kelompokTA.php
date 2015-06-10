@@ -48,12 +48,25 @@
 			$query = $this->db->query
 				(
 				   "SELECT kta.kodekelompok, pb.kode_dosen, dsn.nama_dosen
-					FROM kelompok_ta kta
+					FROM   kelompok_ta kta
 					LEFT JOIN pembimbing pb
-					ON pb.kodekelompok = kta.kodekelompok
+					ON     pb.kodekelompok = kta.kodekelompok
 					LEFT JOIN dosen dsn
-					ON dsn.kode_dosen = pb.kode_dosen
-					WHERE kta.kodekelompok = '$id_kota'"
+					ON     dsn.kode_dosen = pb.kode_dosen
+					WHERE  kta.kodekelompok = '$id_kota'"
+				);
+
+			return $query;
+		}
+
+		public function setStatusKePublished()
+		{
+			$query = $this->db->query
+				(
+				   "UPDATE kelompok_ta
+					SET    ispublished = TRUE
+					WHERE  ispublished = FALSE
+					"
 				);
 
 			return $query;
