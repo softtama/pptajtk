@@ -2,65 +2,112 @@
 <html>
 	<head>
 		<title>Pengelolaan Pelaksanaan Tugas Akhir JTK</title>
-		<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/jasny-bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
 	</head>
 	<body>
+		<!-- Fixed Left Sidebar Nav Menu -->
+		<nav class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm" role="navigation">
+			<a class="navmenu-brand" href="#">Pengelolaan Pelaksanaan TA JTK</a>
+
+			<ul class="nav navmenu-nav">
+				<li><a href="#">Home</a></li>
+				<li class="active"><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pengelolaan Seminar <b class="caret"></b></a>
+					<ul class="dropdown-menu navmenu-nav" role="menu">
+						<li class="dropdown-header">Seminar 1</li>
+						<li><a href="#">Jadwal Seminar 1</a></li>
+						<li><a href="#">Persyaratan Seminar 1</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-header">Seminar 2</li>
+						<li><a href="#">Jadwal Seminar 2</a></li>
+						<li><a href="#">Persyaratan Seminar 2</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-header">Seminar 3</li>
+						<li><a href="#">Jadwal Seminar 3</a></li>
+						<li><a href="#">Persyaratan Seminar 3</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pengelolaan Sidang <b class="caret"></b></a>
+					<ul class="dropdown-menu navmenu-nav" role="menu">
+						<li><a href="#">Jadwal Sidang</a></li>
+						<li><a href="#">Persyaratan Sidang</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Pengelolaan Nilai</a></li>
+				<li><a href="#">Pengelolaan Revisi</a></li>
+				<li><a href="#">Tren Topik Tugas Akhir</a></li>
+			</ul>
+		</nav>
+
+		<!-- Top Nav Menu -->
 		<nav class="navbar navbar-inverse">
-			<div class="container">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">PPTAJTK</a>
+					<a class="navbar-brand" href="#">Brand</a>
 				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Pengelolaan Kelompok</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pengelolaan Seminar<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li class="dropdown-header">Seminar 1</li>
-								<li><a href="#">Jadwal Seminar 1</a></li>
-								<li><a href="#">Persyaratan Seminar 1</a></li>
-								<li class="divider"></li>
-								<li class="dropdown-header">Seminar 2</li>
-								<li><a href="#">Jadwal Seminar 2</a></li>
-								<li><a href="#">Persyaratan Seminar 2</a></li>
-								<li class="divider"></li>
-								<li class="dropdown-header">Seminar 3</li>
-								<li><a href="#">Jadwal Seminar 3</a></li>
-								<li><a href="#">Persyaratan Seminar 3</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pengelolaan Sidang<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Jadwal Sidang</a></li>
-								<li><a href="#">Persyaratan Sidang</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Pengelolaan Nilai</a></li>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<div class="col-sm-3 col-md-3">
+				        <form class="navbar-form" role="search">
+				        <div class="input-group">
+				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
+				            <div class="input-group-btn">
+				                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+				            </div>
+				        </div>
+				        </form>
+				    </div>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Pesan</a></li>
+						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Guest!</a></li>
+						<div id="popover-login-content" class="hide">
+					      <form class="form-inline" role="form">
+					        <div class="form-group">
+					          <input type="text" placeholder="Username" class="form-control" maxlength="20">
+					          <input type="password" placeholder="Password" class="form-control" maxlength="20"><br>
+					          <button type="submit" class="btn btn-primary">Login</button>                                  
+					        </div>
+					      </form>
+					    </div>
 					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
 		</nav>
-		<div class="container">
+
+		<!-- Main Content -->
+		<div class="container flex-container">
+			<div class="page-header">
+				<h1><small>Pengelolaan Kelompok</small></h1>
+			</div>
 			<?php if ($status_iscreated === true) { ?>
 			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
 				<strong>Pembuatan Kelompok TA berhasil!</strong> Silakan lanjutkan penambahan Kelompok TA lainnya, atau kembali ke Home.
 			</div>
 			<?php } elseif ($status_iscreated === false) { ?>
 			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Error:</span>
 				<strong>Pembuatan Kelompok TA gagal!</strong> Silakan coba lagi.
 			</div>
 			<?php } elseif ($status_ispublished === true) { ?>
 			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
 				<strong>Kelompok TA berhasil dipublikasikan!</strong> Jangan lupa untuk melakukan publikasi setiap ada perubahan.
 			</div>
 			<?php } ?>
@@ -119,12 +166,12 @@
 					?>
 						<td style="text-align: center;">
 							<?php if ($value_ldk['ispublished'] == true) { ?>
-							<div class="alert alert-success alert-cell" role="alert">Published</div>
+							<div class="alert alert-success cell" role="alert">Published</div>
 							<?php } else { ?>
-							<div class="alert alert-warning alert-cell" role="alert">Not Published</div>
+							<div class="alert alert-warning cell" role="alert">Not Published</div>
 							<?php } ?>
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg btn-cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="<?php echo $id_kota; ?>"
 							data-nama-topik="<?php echo $nama_topik; ?>"
 							data-ak-1="<?php echo $ak_nama[0]; ?>"
@@ -133,7 +180,7 @@
 							data-pb-1="<?php echo $pb_nama[0]; ?>"
 							data-pb-2="<?php echo $pb_nama[1]; ?>"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg btn-cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
 					</tr>
 				<?php } ?>
 				</tbody>
@@ -387,8 +434,9 @@
 			</div>
 	    </div>
 
-		<script type="text/javascript" src="./assets/js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jasny-bootstrap.min.js"></script>
 		<script type="text/javascript">
 			$('#modalViewDetailKelompokTA').on('show.bs.modal', function(e) {
 			    var id_kota = $(e.relatedTarget).data('id-kota');
@@ -406,6 +454,14 @@
 			    $(e.currentTarget).find('input[name="vd_ak_3"]').val(ak_3);
 			    $(e.currentTarget).find('input[name="vd_pb_1"]').val(pb_1);
 			    $(e.currentTarget).find('input[name="vd_pb_2"]').val(pb_2);
+			});
+		</script>
+		<script type="text/javascript">
+			$("[data-toggle=popover-login]").popover({
+			    html: true, 
+				content: function() {
+		        	return $('#popover-login-content').html();
+		        }
 			});
 		</script>
 	</body>
