@@ -1,11 +1,6 @@
 <?php
 	class m_kelompokTA extends CI_model
 	{
-		function __construct()
-		{
-			parent::__construct();
-		}
-		
 		public function createKelompokTA($id_kota, $topik)
 		{
 			$query = $this->db->query("INSERT INTO kelompok_ta values('$id_kota', '$topik', 0)");

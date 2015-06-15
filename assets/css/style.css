@@ -99,3 +99,7 @@ body {
 
 .popover {min-width: 300px; max-width:400px;}
 .popover-content.form-control {width:120px;}
+
+.dropdown-menu.navmenu-nav {
+  display: block !important;
+}

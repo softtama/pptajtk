@@ -1,5 +1,5 @@
 <?php
-	class C_mengelolaSeminarSatu extends CI_controller
+	class C_mengelolaSeminarDua extends CI_controller
 	{
 		function _construct()
 		{
@@ -10,17 +10,17 @@
 		{
 			$data['is_published'] = null;
 
-			$this->load->view('v_mengelolaSeminarSatu');
+			$this->load->view('v_mengelolaSeminarDua');
 		}
 		
 		// User: Mahasiswa Anggota Kelompok TA
-		public function uploadDokumenProposal()
+		public function uploadDokumenAnlSRS()
 		{
-			$this->load->view('v_uploadDokumenProposal');
+			$this->load->view('v_uploadDokumenAnlSRS');
 		}
 
 		// User: Koordinator
-		public function validasiDokumenProposal($file)
+		public function validasiDokumenAnlSRS($file)
 		{
 			if ($this->input->post('submit_validate'))
 			{
@@ -30,18 +30,18 @@
 			}
 			else
 			{
-				redirect(base_url().'c_mengelolaSeminarSatu');
+				redirect(base_url().'c_mengelolaSeminarDua');
 			}
 		}
 
 		// User: Koordinator
-		public function inputJadwalSeminarSatu()
+		public function inputJadwalSeminarDua()
 		{
 			
 		}
 
 		// User: Koordinator
-		public function postJadwalSeminarSatu()
+		public function postJadwalSeminarDua()
 		{
 			
 		}

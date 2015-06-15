@@ -8,27 +8,27 @@
 		
 		public function index()
 		{
-			$data['status_iscreated'] = null;
-			$data['status_ispublished'] = null;
+			$data['status_is_created'] = null;
+			$data['status_is_published'] = null;
 
-			if ($this->input->get('iscreated') == 'true')
+			if ($this->input->get('is_created') == 'true')
 			{
-				$data['status_iscreated'] = true;
+				$data['status_is_created'] = true;
 			}
 
-			if ($this->input->get('iscreated') == 'false')
+			if ($this->input->get('is_created') == 'false')
 			{
 				$data['status_iscreated'] = false;
 			}
 
-			if ($this->input->get('ispublished') == 'true')
+			if ($this->input->get('is_published') == 'true')
 			{
-				$data['status_ispublished'] = true;
+				$data['status_is_published'] = true;
 			}
 
-			if ($this->input->get('ispublished') == 'false')
+			if ($this->input->get('is_published') == 'false')
 			{
-				$data['status_ispublished'] = false;
+				$data['status_is_published'] = false;
 			}
 
 			$this->load->model('m_mahasiswa', '', true);
@@ -61,7 +61,7 @@
 			// Validation
 			if ($id_kota == '' || $anggota_1 == '0' || $pemb_1 == '0' || $pemb_2 == '0')
 			{
-				redirect(base_url().'c_mengelolaKelompokTA?iscreated=false');
+				redirect(base_url().'c_mengelolaKelompokTA?is_created=false');
 			}
 
 			// Query
@@ -73,7 +73,7 @@
 			$this->m_pembimbing->addPembimbingKelompok($pemb_2, $id_kota, '2');
 			
 			// Redirect to index, show notification to current User
-			redirect(base_url().'c_mengelolaKelompokTA?iscreated=true');
+			redirect(base_url().'c_mengelolaKelompokTA?is_created=true');
 		}
 
 		public function getDataKelompokTA()
@@ -105,7 +105,7 @@
 			$this->m_kelompokTA->setStatusKePublished();
 
 			// Redirect to index, show notification to current User
-			redirect(base_url().'c_mengelolaKelompokTA?ispublished=true');	
+			redirect(base_url().'c_mengelolaKelompokTA?is_published=true');	
 		}
 	}
 ?>

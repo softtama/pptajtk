@@ -15,24 +15,27 @@
 			<ul class="nav navmenu-nav">
 				<li><a href="#">Home</a></li>
 				<li class="active"><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pengelolaan Seminar <b class="caret"></b></a>
+				<li class="">
+					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li class="dropdown-header">Seminar 1</li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/uploadDokumenProposal' ?>">Upload Dokumen Proposal</a></li>
 						<li><a href="#">Jadwal Seminar 1</a></li>
 						<li><a href="#">Persyaratan Seminar 1</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 2</li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/uploadDokumenAnlSRS' ?>">Upload Dokumen Analisis dan SRS</a></li>
 						<li><a href="#">Jadwal Seminar 2</a></li>
 						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/uploadDokumenDsgSDD' ?>">Upload Dokumen Desain dan SDD</a></li>
 						<li><a href="#">Jadwal Seminar 3</a></li>
 						<li><a href="#">Persyaratan Seminar 3</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Pengelolaan Sidang <b class="caret"></b></a>
+				<li class="">
+					<a href="#" class="dropdown-toggle">Pengelolaan Sidang <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li><a href="#">Jadwal Sidang</a></li>
 						<li><a href="#">Persyaratan Sidang</a></li>
@@ -55,7 +58,6 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Brand</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,19 +94,19 @@
 			<div class="page-header">
 				<h1><small>Pengelolaan Kelompok</small></h1>
 			</div>
-			<?php if ($status_iscreated === true) { ?>
+			<?php if ($status_is_created === true) { ?>
 			<div class="alert alert-success" role="alert">
 				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
 				<span class="sr-only">Success:</span>
 				<strong>Pembuatan Kelompok TA berhasil!</strong> Silakan lanjutkan penambahan Kelompok TA lainnya, atau kembali ke Home.
 			</div>
-			<?php } elseif ($status_iscreated === false) { ?>
+			<?php } elseif ($status_is_created === false) { ?>
 			<div class="alert alert-danger" role="alert">
 				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 				<span class="sr-only">Error:</span>
 				<strong>Pembuatan Kelompok TA gagal!</strong> Silakan coba lagi.
 			</div>
-			<?php } elseif ($status_ispublished === true) { ?>
+			<?php } elseif ($status_is_published === true) { ?>
 			<div class="alert alert-success" role="alert">
 				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
 				<span class="sr-only">Success:</span>

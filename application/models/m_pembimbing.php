@@ -1,11 +1,6 @@
 <?php
 	class m_pembimbing extends CI_model
-	{
-		function __construct()
-		{
-			parent::__construct();
-		}
-		
+	{		
 		function addPembimbingKelompok($kode_dosen, $id_kota, $pemb_ke)
 		{
 			$query = $this->db->query("INSERT INTO pembimbing values('$kode_dosen','$id_kota','$pemb_ke')");
