@@ -45,5 +45,11 @@
 		{
 			
 		}
+
+		// User: All and Guest
+		public function lihatJadwalSeminarTiga()
+		{
+			$this->load->view('v_jadwalSeminarTiga');
+		}
 	}
 ?>

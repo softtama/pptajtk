@@ -14,8 +14,8 @@
 
 			<ul class="nav navmenu-nav">
 				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
-				<li class="active"><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
-				<li class="">
+				<li><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
+				<li class="active">
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li class="dropdown-header">Seminar 1</li>
@@ -30,7 +30,7 @@
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/uploadDokumenDsgSDD' ?>">Upload Dokumen Desain dan SDD</a></li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/lihatJadwalSeminarTiga' ?>">Jadwal Seminar 3</a></li>
+						<li class="active"><a href="<?php echo base_url().'c_mengelolaSeminarTiga/lihatJadwalSeminarTiga' ?>">Jadwal Seminar 3</a></li>
 						<li><a href="#">Persyaratan Seminar 3</a></li>
 					</ul>
 				</li>
@@ -92,27 +92,9 @@
 		<!-- Main Content -->
 		<div class="container flex-container">
 			<div class="page-header">
-				<h1><small>Pengelolaan Kelompok</small></h1>
+				<h1><small>Pengelolaan Seminar / Jadwal Seminar 3</small></h1>
 			</div>
-			<?php if ($status_is_created === true) { ?>
-			<div class="alert alert-success" role="alert">
-				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
-				<span class="sr-only">Success:</span>
-				<strong>Pembuatan Kelompok TA berhasil!</strong> Silakan lanjutkan penambahan Kelompok TA lainnya, atau kembali ke Home.
-			</div>
-			<?php } elseif ($status_is_created === false) { ?>
-			<div class="alert alert-danger" role="alert">
-				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-				<span class="sr-only">Error:</span>
-				<strong>Pembuatan Kelompok TA gagal!</strong> Silakan coba lagi.
-			</div>
-			<?php } elseif ($status_is_published === true) { ?>
-			<div class="alert alert-success" role="alert">
-				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
-				<span class="sr-only">Success:</span>
-				<strong>Kelompok TA berhasil dipublikasikan!</strong> Jangan lupa untuk melakukan publikasi setiap ada perubahan.
-			</div>
-			<?php } ?>
+			
 			<div class="row">
 				<div class="col-md-6">
 					<input id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" value="Tambah Baru Kelompok TA" data-toggle="modal" data-target="#modalTambahKelompokTA" />
@@ -125,20 +107,8 @@
 			<table class="table table-hover">
 				<thead>
 					<tr>
+						<th>Tanggal</th>
 						<th>ID Kelompok</th>
-						<th>Nama Topik</th>
-						<!--
-						<th class="nim_ak_1 hide">NIM Anggota 1</th>
-						<th class="nama_ak_1 hide">Nama Anggota 1</th>
-						<th class="nim_ak_2 hide">NIM Anggota 2</th>
-						<th class="nama_ak_2 hide">Nama Anggota 2</th>
-						<th class="nim_ak_3 hide">NIM Anggota 3</th>
-						<th class="nama_ak_3 hide">Nama Anggota 3</th>
-						<th class="kd_pb_1 hide">Kode Dosen Pembimbing 1</th>
-						<th class="nama_pb_1 hide">Nama Pembimbing 1</th>
-						<th class="kd_pb_2 hide">Kode Dosen Pembimbing 2</th>
-						<th class="nama_pb_2 hide">Nama Pembimbing 2</th>
-						-->
 						<th width="80" style="text-align: center;">Status</th>
 						<th width="80" style="text-align: center;">Detail</th>
 						<th width="80" style="text-align: center;">Edit</th>
