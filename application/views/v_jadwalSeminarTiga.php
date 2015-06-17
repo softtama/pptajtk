@@ -97,64 +97,94 @@
 			
 			<div class="row">
 				<div class="col-md-6">
-					<input id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" value="Tambah Baru Kelompok TA" data-toggle="modal" data-target="#modalTambahKelompokTA" />
+					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalTambahKelompokTA"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Tambah Jadwal Seminar</a>
 				</div>
 				<div class="col-md-6" align="right">
-					<input id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" value="Publikasikan Semua Kelompok TA" onclick="location.href='c_mengelolaKelompokTA/postKelompokTA'" />
+					<a href="<?php echo base_url().'c_mengelolaKelompokTA/postKelompokTA' ?>" id='btn_addnew' class="btn btn-success" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalTambahKelompokTA"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Publikasikan Semua Jadwal</a>
 				</div>
 			</div>
 
-			<table class="table table-hover">
+			<table class="table table-hover jadwal-seminar">
 				<thead>
 					<tr>
-						<th>Tanggal</th>
-						<th>ID Kelompok</th>
-						<th width="80" style="text-align: center;">Status</th>
-						<th width="80" style="text-align: center;">Detail</th>
-						<th width="80" style="text-align: center;">Edit</th>
+						<th width="170">Senin</th>
+						<th width="170">Selasa</th>
+						<th width="170">Rabu</th>
+						<th width="170">Kamis</th>
+						<th width="170">Jumat</th>
+						<th width="170">Sabtu</th>
+						<th width="170">Minggu</th>
 					</tr>
 				</thead>
 				<tbody>
-				<?php foreach ($list_detail_kota as $value_ldk) { ?>
 					<tr>
-						<td class="id_kota"><?php echo $id_kota = $value_ldk['id_kota']; ?></td>
-						<td class="nama_topik"><?php echo $nama_topik = $value_ldk['nama_topik']; ?></td>
-					<?php
-					$idx = 0;
-					foreach ($value_ldk['list_ak']->result() as $value_lak) 
-					{ 
-						$ak_nim[$idx] = $value_lak->nim;
-						$ak_nama[$idx] = $value_lak->nama_mahasiswa;
-						$idx++;
-					} 
-
-					$idx = 0;
-					foreach ($value_ldk['list_pb']->result() as $value_lpb) 
-					{
-						$pb_kode[$idx] = $value_lpb->kode_dosen;
-						$pb_nama[$idx] = $value_lpb->nama_dosen;
-						$idx++; 
-					}
-					?>
-						<td style="text-align: center;">
-							<?php if ($value_ldk['ispublished'] == true) { ?>
-							<div class="alert alert-success cell" role="alert">Published</div>
-							<?php } else { ?>
-							<div class="alert alert-warning cell" role="alert">Not Published</div>
-							<?php } ?>
+						<td>
+							KOTA 203 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 106 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 109 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 107 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 204 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 105 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
-							data-id-kota="<?php echo $id_kota; ?>"
-							data-nama-topik="<?php echo $nama_topik; ?>"
-							data-ak-1="<?php echo $ak_nama[0]; ?>"
-							data-ak-2="<?php echo $ak_nama[1]; ?>"
-							data-ak-3="<?php echo $ak_nama[2]; ?>"
-							data-pb-1="<?php echo $pb_nama[0]; ?>"
-							data-pb-2="<?php echo $pb_nama[1]; ?>"
-							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
-				<?php } ?>
+					<tr>
+						<td>
+							KOTA 101 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 108 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 209 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 210 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 102 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 103 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 205 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 202 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 201 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 207 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
+						</td>
+						<td></td>
+						<td>
+							KOTA 104 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							KOTA 206 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 208 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
+						</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
 				</tbody>
 			</table>
 

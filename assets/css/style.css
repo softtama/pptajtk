@@ -78,7 +78,7 @@ body {
 
 @media (min-width: 992px) {
   body {
-    padding-left: 300px;
+    padding-left: 280px;
   }
 }
 
@@ -102,4 +102,23 @@ body {
 
 .dropdown-menu.navmenu-nav {
   display: block !important;
+}
+
+.navmenu, .navbar-offcanvas {
+  width: 280px !important;
+}
+
+table.jadwal-seminar>tbody>tr>td {
+  min-height: 150px;
+  max-height: 150px;
+  text-align: center;
+  height: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  width: 150px;
+  overflow-y: scroll;
+}
+
+table.jadwal-seminar>thead>tr>th {
+  text-align: center;
 }

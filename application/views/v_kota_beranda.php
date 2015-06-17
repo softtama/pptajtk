@@ -13,9 +13,9 @@
 			<a class="navmenu-brand" href="#">Pengelolaan Pelaksanaan TA JTK</a>
 
 			<ul class="nav navmenu-nav">
-				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
-				<li><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
-				<li class="active">
+				<li class="active"><a href="<?php echo base_url() ?>">Beranda</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Kelompok TA</a></li>
+				<li class="">
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li class="dropdown-header">Seminar 1</li>
@@ -24,8 +24,8 @@
 						<li><a href="#">Persyaratan Seminar 1</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 2</li>
-						<li class="active"><a href="<?php echo base_url().'c_mengelolaSeminarDua/uploadDokumenAnlSRS' ?>">Upload Dokumen Analisis dan SRS</a></li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/uploadDokumenAnlSRS' ?>">Upload Dokumen Analisis dan SRS</a></li>
+						<li class="active"><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
 						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
@@ -41,8 +41,9 @@
 						<li><a href="#">Persyaratan Sidang</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Pengelolaan Nilai</a></li>
-				<li><a href="#">Pengelolaan Revisi</a></li>
+				<li><a href="#">Bimbingan</a></li>
+				<li><a href="#">Revisi Laporan TA</a></li>
+				<li><a href="#">Nilai Tugas Akhir</a></li>
 				<li><a href="#">Tren Topik Tugas Akhir</a></li>
 			</ul>
 		</nav>
@@ -73,7 +74,7 @@
 				        </form>
 				    </div>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Pesan</a></li>
+						<li><a href="<?php echo base_url().'c_pesan' ?>"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Pesan</a></li>
 						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Guest!</a></li>
 						<div id="popover-login-content" class="hide">
 					      <form class="form-inline" role="form">
@@ -92,23 +93,10 @@
 		<!-- Main Content -->
 		<div class="container flex-container">
 			<div class="page-header">
-				<h1><small>Pengelolaan Kegiatan Seminar 2 / Upload Dokumen Analisis dan SRS</small></h1>
+				<h1><small>Beranda</small></h1>
 			</div>
-			
-			<div class="row">
-				<div class="col-md-6">
-					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalUploadDokAnlSRS"><span class="glyphicon glyphicon-upload"></span>&nbsp;&nbsp;Upload Dokumen Analisis dan SRS</a>
-				</div>
-				<div class="col-md-6" align="right">
-					<a href="<?php echo base_url().'c_mengelolaSeminarDua/hapusDokumenAnlSRS' ?>" id='btn_addnew' class="btn btn-danger" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalHapusDokAnlSRS"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Hapus Dokumen</a>
-				</div>
-			</div>
-			<br>
-			<div class="alert alert-warning" role="alert">
-				<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-				<span class="sr-only">Warning:</span>
-				<strong>Kelompok Anda belum mengunggah berkas dokumen Analisis dan SRS!</strong> Silakan upload sebagai persyaratan Seminar 2.
-			</div>
+
+		</div>
 
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
