@@ -49,7 +49,7 @@
 		</nav>
 
 		<!-- Top Nav Menu -->
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -91,7 +91,7 @@
 		</nav>
 
 		<!-- Main Content -->
-		<div class="container flex-container">
+		<div class="container flex-container container-below-navbar-fixed-top">
 			<div class="page-header">
 				<h1><small>Beranda</small></h1>
 			</div>

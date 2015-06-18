@@ -48,7 +48,7 @@
 		</nav>
 
 		<!-- Top Nav Menu -->
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -90,11 +90,60 @@
 		</nav>
 
 		<!-- Main Content -->
-		<div class="container flex-container">
+		<div class="container flex-container container-below-navbar-fixed-top">
 			<div class="page-header">
 				<h1><small>Beranda</small></h1>
 			</div>
-
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Informasi</h3>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+				<div class="panel-footer">
+					<div class="row">
+						<div class="col-md-4">Dipublikasikan oleh Santi Sundari</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;Pengumuman</h3>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+				</div>
+				<div class="panel-footer">
+					<div class="row">
+						<div class="col-md-4">Dipublikasikan oleh Ida Suhartini</div>
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span class="glyphicon glyphicon-warning-sign"></span>&nbsp;Peringatan</h3>
+				</div>
+				<div class="panel-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.
+				</div>
+				<div class="panel-footer">
+					<div class="row">
+						<div class="col-md-4">Reminder sistem</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-1.11.3.min.js"></script>

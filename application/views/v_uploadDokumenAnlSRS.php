@@ -48,7 +48,7 @@
 		</nav>
 
 		<!-- Top Nav Menu -->
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -90,14 +90,14 @@
 		</nav>
 
 		<!-- Main Content -->
-		<div class="container flex-container">
+		<div class="container flex-container container-below-navbar-fixed-top">
 			<div class="page-header">
 				<h1><small>Pengelolaan Kegiatan Seminar 2 / Upload Dokumen Analisis dan SRS</small></h1>
 			</div>
 			
 			<div class="row">
 				<div class="col-md-6">
-					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalUploadDokAnlSRS"><span class="glyphicon glyphicon-upload"></span>&nbsp;&nbsp;Upload Dokumen Analisis dan SRS</a>
+					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalUploadDokAnlSRS"><span class="glyphicon glyphicon-arrow-up"></span>&nbsp;&nbsp;Upload Dokumen Analisis dan SRS</a>
 				</div>
 				<div class="col-md-6" align="right">
 					<a href="<?php echo base_url().'c_mengelolaSeminarDua/hapusDokumenAnlSRS' ?>" id='btn_addnew' class="btn btn-danger" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalHapusDokAnlSRS"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Hapus Dokumen</a>

@@ -48,7 +48,7 @@
 		</nav>
 
 		<!-- Top Nav Menu -->
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
@@ -90,17 +90,17 @@
 		</nav>
 
 		<!-- Main Content -->
-		<div class="container flex-container">
+		<div class="container flex-container container-below-navbar-fixed-top">
 			<div class="page-header">
 				<h1><small>Pengelolaan Seminar / Jadwal Seminar 3</small></h1>
 			</div>
 			
 			<div class="row">
 				<div class="col-md-6">
-					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalTambahKelompokTA"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Tambah Jadwal Seminar</a>
+					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalTambahKelompokTA"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Jadwal Seminar</a>
 				</div>
 				<div class="col-md-6" align="right">
-					<a href="<?php echo base_url().'c_mengelolaKelompokTA/postKelompokTA' ?>" id='btn_addnew' class="btn btn-success" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalTambahKelompokTA"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Publikasikan Semua Jadwal</a>
+					<a href="<?php echo base_url().'c_mengelolaKelompokTA/postKelompokTA' ?>" id='btn_addnew' class="btn btn-success" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalTambahKelompokTA"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;Publikasikan Semua Jadwal</a>
 				</div>
 			</div>
 

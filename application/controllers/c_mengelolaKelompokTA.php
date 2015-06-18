@@ -18,7 +18,7 @@
 
 			if ($this->input->get('is_created') == 'false')
 			{
-				$data['status_iscreated'] = false;
+				$data['status_is_created'] = false;
 			}
 
 			if ($this->input->get('is_published') == 'true')
