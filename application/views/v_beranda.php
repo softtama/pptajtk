@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Pengelolaan Pelaksanaan Tugas Akhir JTK</title>
+		<title>Koordinator</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/jasny-bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap-theme.min.css">
@@ -19,25 +19,25 @@
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li class="dropdown-header">Seminar 1</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/uploadDokumenProposal' ?>">Upload Dokumen Proposal</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/daftarDokumenProposal' ?>">Daftar Dokumen Proposal TA Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/lihatJadwalSeminarSatu' ?>">Jadwal Seminar 1</a></li>
 						<li><a href="#">Persyaratan Seminar 1</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 2</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/uploadDokumenAnlSRS' ?>">Upload Dokumen Analisis dan SRS</a></li>
-						<li class="active"><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/daftarDokumenAnlSRS' ?>">Daftar Dokumen Analisis dan SRS Kelompok</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
 						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/uploadDokumenDsgSDD' ?>">Upload Dokumen Desain dan SDD</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/daftarDokumenDsgSDD' ?>">Daftar Dokumen Desain dan SDD Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/lihatJadwalSeminarTiga' ?>">Jadwal Seminar 3</a></li>
 						<li><a href="#">Persyaratan Seminar 3</a></li>
 					</ul>
 				</li>
-				<li class="">
+				<li>
 					<a href="#" class="dropdown-toggle">Pengelolaan Sidang <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
-						<li><a href="#">Jadwal Sidang</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSidang/lihatJadwalSidang' ?>">Jadwal Sidang</a></li>
 						<li><a href="#">Persyaratan Sidang</a></li>
 					</ul>
 				</li>
@@ -74,7 +74,7 @@
 				    </div>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="<?php echo base_url().'c_pesan' ?>"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Pesan</a></li>
-						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Guest!</a></li>
+						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Ida!</a></li>
 						<div id="popover-login-content" class="hide">
 					      <form class="form-inline" role="form">
 					        <div class="form-group">
@@ -92,57 +92,9 @@
 		<!-- Main Content -->
 		<div class="container flex-container container-below-navbar-fixed-top">
 			<div class="page-header">
-				<h1><small>Beranda</small></h1>
-			</div>
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;Informasi</h3>
-				</div>
-				<div class="panel-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</div>
-				<div class="panel-footer">
-					<div class="row">
-						<div class="col-md-4">Dipublikasikan oleh Santi Sundari</div>
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-success">
-				<div class="panel-heading">
-					<h3 class="panel-title"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;Pengumuman</h3>
-				</div>
-				<div class="panel-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
-				</div>
-				<div class="panel-footer">
-					<div class="row">
-						<div class="col-md-4">Dipublikasikan oleh Ida Suhartini</div>
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<h3 class="panel-title"><span class="glyphicon glyphicon-warning-sign"></span>&nbsp;Peringatan</h3>
-				</div>
-				<div class="panel-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat.
-				</div>
-				<div class="panel-footer">
-					<div class="row">
-						<div class="col-md-4">Reminder sistem</div>
-					</div>
-				</div>
+				<h1><small><ol class="breadcrumb">
+					<li><a href="#">Beranda</a></li>
+				</ol></small></h1>
 			</div>
 		</div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Pengelolaan Pelaksanaan Tugas Akhir JTK</title>
+		<title>Koordinator</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/jasny-bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap-theme.min.css">
@@ -19,25 +19,25 @@
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li class="dropdown-header">Seminar 1</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/uploadDokumenProposal' ?>">Upload Dokumen Proposal</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/daftarDokumenProposal' ?>">Daftar Dokumen Proposal TA Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/lihatJadwalSeminarSatu' ?>">Jadwal Seminar 1</a></li>
 						<li><a href="#">Persyaratan Seminar 1</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 2</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/uploadDokumenAnlSRS' ?>">Upload Dokumen Analisis dan SRS</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/daftarDokumenAnlSRS' ?>">Daftar Dokumen Analisis dan SRS Kelompok</a></li>
 						<li class="active"><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
 						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/uploadDokumenDsgSDD' ?>">Upload Dokumen Desain dan SDD</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/daftarDokumenDsgSDD' ?>">Daftar Dokumen Desain dan SDD Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/lihatJadwalSeminarTiga' ?>">Jadwal Seminar 3</a></li>
 						<li><a href="#">Persyaratan Seminar 3</a></li>
 					</ul>
 				</li>
-				<li class="">
+				<li>
 					<a href="#" class="dropdown-toggle">Pengelolaan Sidang <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
-						<li><a href="#">Jadwal Sidang</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSidang/lihatJadwalSidang' ?>">Jadwal Sidang</a></li>
 						<li><a href="#">Persyaratan Sidang</a></li>
 					</ul>
 				</li>
@@ -74,7 +74,7 @@
 				    </div>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Pesan</a></li>
-						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Guest!</a></li>
+						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Ida!</a></li>
 						<div id="popover-login-content" class="hide">
 					      <form class="form-inline" role="form">
 					        <div class="form-group">
@@ -92,349 +92,416 @@
 		<!-- Main Content -->
 		<div class="container flex-container container-below-navbar-fixed-top">
 			<div class="page-header">
-				<h1><small>Pengelolaan Seminar / Jadwal Seminar 2</small></h1>
+				<h1><small><ol class="breadcrumb">
+					<li><a href="#">Pengelolaan Seminar</a></li>
+					<li><a href="#">Seminar 2</a></li>
+					<li><a href="#">Jadwal Seminar 2</a></li>
+				</ol></small></h1>
 			</div>
 			
 			<div class="row">
 				<div class="col-md-6">
-					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" data-toggle="modal" data-target="#modalTambahKelompokTA"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Jadwal Seminar</a>
+					<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalAddJadwalSeminarSatu"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Jadwal Seminar</a>
 				</div>
 				<div class="col-md-6" align="right">
-					<a href="<?php echo base_url().'c_mengelolaKelompokTA/postKelompokTA' ?>" id='btn_addnew' class="btn btn-success" name='btn_addnew' type="button"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;Publikasikan Semua Jadwal</a>
+					<a href="<?php echo base_url().'' ?>" id="" name="btn_addnew" class="btn btn-success" type="button"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;Publikasikan Semua Jadwal</a>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-12" style="text-align: center;">
+					<nav>
+						<ul class="pagination" style="margin: 0;">
+							<li>
+								<a href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+								</a>
+							</li>
+							<li><a href="#">April</a></li>
+							<li class="active"><a href="#">Mei</a></li>
+							<li><a href="#">Juni</a></li>
+							<li>
+								<a href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 
-			<table class="table table-hover jadwal-seminar">
+			<table class="table table-hover table-bordered table-striped jadwal-seminar">
 				<thead>
 					<tr>
-						<th width="170">Senin</th>
-						<th width="170">Selasa</th>
-						<th width="170">Rabu</th>
-						<th width="170">Kamis</th>
-						<th width="170">Jumat</th>
-						<th width="170">Sabtu</th>
-						<th width="170">Minggu</th>
+						<th class="success" width="170">Senin</th>
+						<th class="success" width="170">Selasa</th>
+						<th class="success" width="170">Rabu</th>
+						<th class="success" width="170">Kamis</th>
+						<th class="success" width="170">Jumat</th>
+						<th class="danger" width="170">Sabtu</th>
+						<th class="danger" width="170">Minggu</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>
-							KOTA 203 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 106 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 109 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 107 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 204 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 105 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td><div>
+							KOTA 203 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 106 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 109 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 107 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 204 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 105 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
+						</div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
 					</tr>
 					<tr>
-						<td>
-							KOTA 101 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 108 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 209 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 210 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 102 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 103 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 205 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 202 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 201 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 207 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
-						</td>
-						<td></td>
-						<td>
-							KOTA 104 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td><div>
+							KOTA 101 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 108 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar_108"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 209 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 210 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 102 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 103 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 205 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 202 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 201 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 207 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
+						</div></td>
+						<td><div></div></td>
+						<td><div>
+							KOTA 104 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
+						</div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
 					</tr>
 					<tr>
-						<td>
-							KOTA 206 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 208 <a href="#" class="btn btn-primary btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
-						</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td><div>
+							KOTA 206 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 208 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
+						</div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
+						<td><div></div></td>
 					</tr>
 				</tbody>
-			</table>
-
-			<!-- Modal for View Detail -->
-			<div class="modal fade" id="modalViewDetailKelompokTA" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Detail Kelompok TA</h4>
-						</div>
-						<div class="modal-body">
-							<form id="form_viewdet_kota" name="form_viewdet_kota" class="form-signin" action='' method=''>
-								<table>
-									<tr> 
-										<td width="120"><label for='vd_id_kota'>Kode Kelompok</label></td>
-										<td><input id='vd_id_kota' class="form-control" name='vd_id_kota' type='text' disabled="disabled"></td>
-									</tr>
-									<tr> 
-										<td><label for='vd_nama_topik'>Topik TA</label></td>
-										<td><input id='vd_nama_topik' class="form-control" name='vd_nama_topik' type='text' disabled="disabled"></td>
-									</tr>
-									<tr>
-										<td><label for='vd_ak_1'>Anggota 1</label></td>
-										<td>
-											<input id='vd_ak_1' class="form-control" name='vd_ak_1' type="text" disabled="disabled" />
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='vd_ak_2'>Anggota 2</label></td>
-										<td>
-											<input id='vd_ak_2' class="form-control" name='vd_ak_2' type="text" disabled="disabled" />
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='vd_ak_3'>Anggota 3</label></td>
-										<td>
-											<input id='vd_ak_3' class="form-control" name='vd_ak_3' type="text" disabled="disabled" />
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='vd_pb_1'>Pembimbing 1</label></td>
-										<td>
-											<input id='vd_pb_1' class="form-control" name='vd_pb_1' type="text" disabled="disabled" />
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='vd_pb_2'>Pembimbing 2</label></td>
-										<td>
-											<input id='vd_pb_2' class="form-control" name='vd_pb_2' type="text" disabled="disabled" />
-										</td>
-									</tr>
-								</table>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Modal for Add Kelompok TA -->
-			<div class="modal fade" id="modalTambahKelompokTA" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Tambah Baru Kelompok TA</h4>
-						</div>
-						<div class="modal-body">
-							<form id="form_create_kota" name="form_create_kota" class="form-signin" action='c_mengelolaKelompokTA/inputKelompokTA' method='post'>
-								<table>
-									<tr> 
-										<td width="120"><label for='id_kota'>Kode Kelompok</label></td>
-										<td><input id='id_kota' class="form-control" name='id_kota' type='text'></td>
-									</tr>
-									<tr> 
-										<td><label for='nama_topik'>Topik TA</label></td>
-										<td><input id='nama_topik' class="form-control" name='nama_topik' type='text'></td>
-									</tr>
-									<tr>
-										<td><label for='anggota_1'>Anggota 1</label></td>
-										<td>
-											<select id='anggota_1' class="form-control" name='anggota_1'>
-												<option value='0'>--- Pilih Mahasiswa ---</option>
-												<?php foreach ($list_mhs->result() as $data) { ?>
-												<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='anggota_2'>Anggota 2</label></td>
-										<td>
-											<select id='anggota_2' class="form-control" name='anggota_2'>
-												<option value='0'>--- Pilih Mahasiswa ---</option>
-												<?php foreach ($list_mhs->result() as $data) { ?>
-												<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='anggota_3'>Anggota 3</label></td>
-										<td>
-											<select id='anggota_3' class="form-control" name='anggota_3'>
-												<option value='0'>--- Pilih Mahasiswa ---</option>
-												<?php foreach ($list_mhs->result() as $data) { ?>
-												<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='pemb_1'>Pembimbing 1</label></td>
-										<td>
-											<select id='pemb_1' class="form-control" name='pemb_1'>
-												<option value='0'>--- Pilih Dosen ---</option>
-												<?php foreach ($list_dsn->result() as $data) { ?>
-												<option value='<?php echo $data->KODE_DOSEN ?>'><?php echo $data->NAMA_DOSEN ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='pemb_2'>Pembimbing 2</label></td>
-										<td>
-											<select id='pemb_2' class="form-control" name='pemb_2'>
-												<option value='0'>--- Pilih Dosen ---</option>
-												<?php foreach ($list_dsn->result() as $data) { ?>
-												<option value='<?php echo $data->KODE_DOSEN ?>'><?php echo $data->NAMA_DOSEN ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<!--tr> 
-										<td>isPublished</td>
-										<td><input type='checkbox' name='isPublished' value='0' disabled></td>
-									</tr-->
-									<tr> 
-										<td colspan="2"><input id='submit_kota' class="btn btn-primary" name='submit_kota' type='submit' value='Create Kelompok TA' /></td>
-									</tr>
-								</table>
-							</form>
-							<div class="alert alert-info" role="alert">
-								<strong>Keterangan:</strong> Kelompok TA tidak dipublikasikan sebelum Anda melakukannya sendiri pada halaman Pengelolaan Kelompok TA.
-							</div>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Modal for Edit Kelompok TA -->
-			<div class="modal fade" id="modalEditKelompokTA" role="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Edit Kelompok TA</h4>
-						</div>
-						<div class="modal-body">
-							<form id="form_create_kota" name="form_create_kota" class="form-signin" action='c_mengelolaKelompokTA/inputKelompokTA' method='post'>
-								<table>
-									<tr> 
-										<td width="120"><label for='id_kota'>Kode Kelompok</label></td>
-										<td><input id='id_kota' class="form-control" name='id_kota' type='text'></td>
-									</tr>
-									<tr> 
-										<td><label for='nama_topik'>Topik TA</label></td>
-										<td><input id='nama_topik' class="form-control" name='nama_topik' type='text'></td>
-									</tr>
-									<tr>
-										<td><label for='anggota_1'>Anggota 1</label></td>
-										<td>
-											<select id='anggota_1' class="form-control" name='anggota_1'>
-												<option value='0'>--- Pilih Mahasiswa ---</option>
-												<?php foreach ($list_mhs->result() as $data) { ?>
-												<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='anggota_2'>Anggota 2</label></td>
-										<td>
-											<select id='anggota_2' class="form-control" name='anggota_2'>
-												<option value='0'>--- Pilih Mahasiswa ---</option>
-												<?php foreach ($list_mhs->result() as $data) { ?>
-												<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='anggota_3'>Anggota 3</label></td>
-										<td>
-											<select id='anggota_3' class="form-control" name='anggota_3'>
-												<option value='0'>--- Pilih Mahasiswa ---</option>
-												<?php foreach ($list_mhs->result() as $data) { ?>
-												<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='pemb_1'>Pembimbing 1</label></td>
-										<td>
-											<select id='pemb_1' class="form-control" name='pemb_1'>
-												<option value='0'>--- Pilih Dosen ---</option>
-												<?php foreach ($list_dsn->result() as $data) { ?>
-												<option value='<?php echo $data->KODE_DOSEN ?>'><?php echo $data->NAMA_DOSEN ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='pemb_2'>Pembimbing 2</label></td>
-										<td>
-											<select id='pemb_2' class="form-control" name='pemb_2'>
-												<option value='0'>--- Pilih Dosen ---</option>
-												<?php foreach ($list_dsn->result() as $data) { ?>
-												<option value='<?php echo $data->KODE_DOSEN ?>'><?php echo $data->NAMA_DOSEN ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<!--tr> 
-										<td>isPublished</td>
-										<td><input type='checkbox' name='isPublished' value='0' disabled></td>
-									</tr-->
-									<tr> 
-										<td colspan="2"><input id='submit_kota' class="btn btn-primary" name='submit_kota' type='submit' value='Create Kelompok TA' /></td>
-									</tr>
-								</table>
-							</form>
-							<div class="alert alert-info" role="alert">
-								<strong>Keterangan:</strong> Kelompok TA tidak dipublikasikan sebelum Anda melakukannya sendiri pada halaman Pengelolaan Kelompok TA.
-							</div>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
+			</table>	
 	    </div>
+
+		<!-- Modal for Tambah Jadwal Seminar Satu -->
+		<div class="modal fade" id="modalAddJadwalSeminarSatu" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Tambah Jadwal Seminar 2</h4>
+					</div>
+					<div class="modal-body">
+						<form id="form_viewdet_kota" class="form-horizontal" name="form_viewdet_kota">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Kode Kelompok</label>
+								<div class="col-sm-8">
+									<select id="input_id_kota" class="form-control" name="input_id_kota">
+										<option>--- Pilih Kelompok TA ---</option>
+										<optgroup label="Dokumen Sudah Divalidasi dan Layak">
+											<option>KOTA 101</option>
+											<option>KOTA 102</option>
+											<option>KOTA 103</option>
+											<option>KOTA 105</option>
+											<option>KOTA 108</option>
+											<option>KOTA 109</option>
+										</optgroup>
+										<optgroup label="Dokumen Sudah Divalidasi dan Tidak Layak">
+											<option>KOTA 104</option>
+											<option>KOTA 106</option>
+											<option>KOTA 107</option>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Topik TA</label>
+								<div class="col-sm-8">
+									<p id="show_topik_ta" class="form-control-static"><i>Pilih Kelompok TA terlebih dahulu</i></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Status Validasi Proposal</label>
+								<div class="col-sm-8">
+									<p id="show_stat_proposal" class="form-control-static"><i>Pilih Kelompok TA terlebih dahulu</i></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Tanggal Seminar</label>
+								<div class="col-sm-8">
+									<input id="input_tgl_seminar" class="form-control" name="input_tgl_seminar" type="date" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Jam Seminar</label>
+								<div class="col-sm-8">
+									<input id="input_jam_seminar" class="form-control" name="input_jam_seminar" type="time" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Ruangan Seminar</label>
+								<div class="col-sm-8">
+									<select id="input_rng_seminar" class="form-control" name="input_rng_seminar">
+										<option>--- Pilih Ruangan ---</option>
+										<optgroup label="Ruangan">
+											<option>A210</option>
+											<option>A211</option>
+											<option>A212</option>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Penguji Seminar</label>
+								<div class="col-sm-8">
+									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
+										<option>--- Pilih Penguji Satu ---</option>
+										<optgroup label="Penguji Seminar">
+											<option>Dosen 01</option>
+											<option>Dosen 02</option>
+											<option>Dosen 03</option>
+											<option>Dosen 04</option>
+											<option>Dosen 05</option>
+											<option>Dosen 06</option>
+										</optgroup>
+									</select>
+
+									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
+										<option>--- Pilih Penguji Dua ---</option>
+										<optgroup label="Penguji Seminar">
+											<option>Dosen 01</option>
+											<option>Dosen 02</option>
+											<option>Dosen 03</option>
+											<option>Dosen 04</option>
+											<option>Dosen 05</option>
+											<option>Dosen 06</option>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+							<div class="form-group hide">
+								<div class="col-sm-offset-4 col-sm-8">
+									<input id="submit_jadwal_seminar_satu" name="submit_jadwal_seminar_satu" class="btn btn-primary" type="submit" value="Buat Jadwal" />
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<div class="col-sm-6" style="text-align: left;">
+							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Buat Jadwal</label>
+						</div>
+						<div class="col-sm-6">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for View Detail Jadwal Seminar Satu -->
+		<div class="modal fade" id="modalViewDetailJadwalSeminar_108" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Detail Jadwal Seminar 2</h4>
+					</div>
+					<div class="modal-body">
+						<form id="form_viewdet_kota" class="form-horizontal" name="form_viewdet_kota">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Kode Kelompok</label>
+								<div class="col-sm-8">
+									<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Topik Tugas Akhir</label>
+								<div class="col-sm-8">
+									<p id="show_topik_ta" class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Status Validasi Proposal</label>
+								<div class="col-sm-8">
+									<p id="show_stat_proposal" class="form-control-static">Sudah Divalidasi, Layak</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Tanggal Seminar</label>
+								<div class="col-sm-8">
+									<p id="show_stat_proposal" class="form-control-static">Senin, 11 Mei 2015</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Jam Seminar</label>
+								<div class="col-sm-8">
+									<p id="show_stat_proposal" class="form-control-static">08.40 WIB</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Ruangan Seminar</label>
+								<div class="col-sm-8">
+									<p id="show_stat_proposal" class="form-control-static">Ruang Rapat</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Penguji Seminar</label>
+								<div class="col-sm-8">
+									<p id="show_stat_proposal" class="form-control-static">Joe Lian Min</p>
+									<p id="show_stat_proposal" class="form-control-static">Ida Suhartini</p>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<div class="col-sm-6" style="text-align: left;">
+							<a class="btn btn-primary" data-toggle="modal" data-target="#modalEditJadwalSeminarSatu" data-dismiss="modal"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit Jadwal</a>
+						</div>
+						<div class="col-sm-6">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for Edit Jadwal Seminar Satu -->
+		<div class="modal fade" id="modalEditJadwalSeminarSatu" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Edit Jadwal Seminar 2</h4>
+					</div>
+					<div class="modal-body">
+						<form id="form_viewdet_kota" class="form-horizontal" name="form_viewdet_kota">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Kode Kelompok</label>
+								<div class="col-sm-8">
+									<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Topik TA</label>
+								<div class="col-sm-8">
+									<p id="show_topik_ta" class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Status Validasi Proposal</label>
+								<div class="col-sm-8">
+									<p id="show_stat_proposal" class="form-control-static">Sudah Divalidasi, Layak</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Tanggal Seminar</label>
+								<div class="col-sm-8">
+									<input id="input_tgl_seminar" class="form-control" name="input_tgl_seminar" type="date" value="2015-05-11" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Jam Seminar</label>
+								<div class="col-sm-8">
+									<input id="input_jam_seminar" class="form-control" name="input_jam_seminar" type="time" value="08:40" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Ruangan Seminar</label>
+								<div class="col-sm-8">
+									<select id="input_rng_seminar" class="form-control" name="input_rng_seminar">
+										<option>--- Pilih Ruangan ---</option>
+										<optgroup label="Ruangan">
+											<option>A210</option>
+											<option>A211</option>
+											<option>A212</option>
+											<option selected="true">Ruang Rapat</option>
+											<option>Ruang Serba Guna</option>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Penguji Seminar</label>
+								<div class="col-sm-8">
+									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
+										<option>--- Pilih Penguji Satu ---</option>
+										<optgroup label="Penguji Seminar">
+											<option selected="true">Joe Lian Min</option>
+											<option>Irwan Setiawan</option>
+											<option>Eddy Bambang Soewono</option>
+											<option>Ida Suhartini</option>
+											<option>Santi Sundari</option>
+											<option>Suprihanto</option>
+											<option>Yadhi Aditya</option>
+											<option>Yudi Widhiyasana</option>
+										</optgroup>
+									</select>
+
+									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
+										<option>--- Pilih Penguji Dua ---</option>
+										<optgroup label="Penguji Seminar">
+											<option>Joe Lian Min</option>
+											<option>Irwan Setiawan</option>
+											<option>Eddy Bambang Soewono</option>
+											<option selected="true">Ida Suhartini</option>
+											<option>Santi Sundari</option>
+											<option>Suprihanto</option>
+											<option>Yadhi Aditya</option>
+											<option>Yudi Widhiyasana</option>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+							<div class="form-group hide">
+								<div class="col-sm-offset-4 col-sm-8">
+									<input id="submit_jadwal_seminar_satu" name="submit_jadwal_seminar_satu" class="btn btn-primary" type="submit" value="Buat Jadwal" />
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<div class="col-sm-6" style="text-align: left;">
+							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Update Jadwal</label>
+						</div>
+						<div class="col-sm-6">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>

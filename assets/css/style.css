@@ -238,3 +238,11 @@ table.jadwal-seminar>thead>tr>th {
 .container-below-navbar-fixed-top {
   padding-top: 80px;
 }
+
+.breadcrumb {
+  margin-bottom: 0;
+}
+
+.modal-body>.alert {
+  margin-bottom: 0;
+}

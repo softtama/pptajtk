@@ -20,6 +20,12 @@
 		}
 
 		// User: Koordinator
+		public function daftarDokumenDsgSDD()
+		{
+			$this->load->view('v_daftarDokumenDsgSDD');
+		}
+
+		// User: Koordinator
 		public function validasiDokumenDsgSDD($file)
 		{
 			if ($this->input->post('submit_validate'))

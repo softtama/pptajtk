@@ -13,9 +13,9 @@
 			<a class="navmenu-brand" href="#">Pengelolaan Pelaksanaan TA JTK</a>
 
 			<ul class="nav navmenu-nav">
-				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
+				<li class="active"><a href="<?php echo base_url() ?>">Beranda</a></li>
 				<li><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
-				<li class="active">
+				<li class="">
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li class="dropdown-header">Seminar 1</li>
@@ -29,7 +29,7 @@
 						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
-						<li class="active"><a href="<?php echo base_url().'c_mengelolaSeminarTiga/uploadDokumenDsgSDD' ?>">Upload Dokumen Desain dan SDD</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/uploadDokumenDsgSDD' ?>">Upload Dokumen Desain dan SDD</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/lihatJadwalSeminarTiga' ?>">Jadwal Seminar 3</a></li>
 						<li><a href="#">Persyaratan Seminar 3</a></li>
 					</ul>
@@ -73,7 +73,7 @@
 				        </form>
 				    </div>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Pesan</a></li>
+						<li><a href="<?php echo base_url().'c_pesan' ?>"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Pesan</a></li>
 						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Ida!</a></li>
 						<div id="popover-login-content" class="hide">
 					      <form class="form-inline" role="form">
@@ -92,23 +92,46 @@
 		<!-- Main Content -->
 		<div class="container flex-container container-below-navbar-fixed-top">
 			<div class="page-header">
-				<h1><small>Pengelolaan Kegiatan Seminar 3 / Upload Dokumen Design dan SDD</small></h1>
+				<h1><small><ol class="breadcrumb">
+					<li><a href="#">Beranda</a></li>
+				</ol></small></h1>
 			</div>
-			
-			<div class="row">
-				<div class="col-md-6">
-					<input id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" value="Upload Dokumen Design dan SDD" data-toggle="modal" data-target="#modalUploadDokumenProposal" />
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title" style="margin-bottom: 10px;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;Notifikasi</h3>
+					<h4 class="panel-title">Pengelolaan Seminar / Seminar 1 / Validasi Dokumen Proposal Tugas Akhir</h4>
 				</div>
-				<div class="col-md-6" align="right">
-					<input id='btn_addnew' class="btn btn-danger" name='btn_addnew' type="button" value="Hapus Dokumen" onclick="location.href='<?php echo base_url(); ?>c_mengelolaSeminarTiga/hapusDokumenDsgSDD'" />
+				<div class="panel-body">
+					<p>Dokumen Proposal Tugas Akhir milik</p>
+					<form class="form-horizontal">
+						<div class="form-group" style="margin-bottom: 0;">
+							<label class="col-sm-3 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-sm-7">
+								<p id='vd_id_kota' class="form-control-static">KOTA 106</p>
+							</div>
+						</div>
+						<div class="form-group" style="margin-bottom: 0;">
+							<label class="col-sm-3 control-label" style="text-align: left;">Topik Tugas Akhir</label>
+							<div class="col-sm-7">
+								<p id='vd_id_kota' class="form-control-static">Aplikasi Animasi 3D pada Android untuk Pembelajaran Shalat Anak Usia 6-8 Tahun</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" style="text-align: left;">Waktu Upload Dokumen</label>
+							<div class="col-sm-7">
+								<p id='vd_id_kota' class="form-control-static">Kamis, 26 Februari 2015, 14.00 WIB <a href="#">(Unduh Dokumen)</a></p>
+							</div>
+						</div>
+					</form>
+					telah divalidasi oleh Koordinator Santi Sundari dengan status <h4 style="display: inline-block; margin-bottom: 0; margin-top: 0;"><span class="label label-danger">TIDAK LAYAK</span></h4> untuk melaksanakan Seminar 1.
+				</div>
+				<div class="panel-footer">
+					<div class="row">
+						<div class="col-md-12">Dipublikasikan oleh Santi Sundari, pada Jumat, 27 Februari 2015, 09.15 WIB</div>
+					</div>
 				</div>
 			</div>
-			<br>
-			<div class="alert alert-warning" role="alert">
-				<span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
-				<span class="sr-only">Warning:</span>
-				<strong>Kelompok Anda belum mengunggah berkas dokumen Design dan SDD!</strong> Silakan upload sebagai persyaratan Seminar 3.
-			</div>
+		</div>
 
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>

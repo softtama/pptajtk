@@ -9,14 +9,38 @@
 		public function index()
 		{
 			$data['is_published'] = null;
+			$data['status_is_validated'] = null;
+			$data['status_is_updated'] = null;
 
-			$this->load->view('v_mengelolaSeminarSatu');
+			$this->load->view('v_mengelolaSeminarSatu', $data);
 		}
 		
 		// User: Mahasiswa Anggota Kelompok TA
 		public function uploadDokumenProposal()
 		{
 			$this->load->view('v_uploadDokumenProposal');
+		}
+
+		// User: Koordinator
+		public function daftarDokumenProposal()
+		{
+			$data['status_is_validated'] = null;
+			$data['status_is_updated'] = null;
+
+			if ($this->input->get('status_is_validated') == 'true')
+			{
+				$data['status_is_validated'] = true;
+			}
+			elseif ($this->input->get('status_is_validated') == 'false')
+			{
+				$data['status_is_validated'] = false;
+			}
+			elseif ($this->input->get('status_is_updated') == 'true')
+			{
+				$data['status_is_updated'] = true;
+			}
+
+			$this->load->view('v_daftarDokumenProposal', $data);
 		}
 
 		// User: Koordinator

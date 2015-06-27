@@ -20,6 +20,12 @@
 		}
 
 		// User: Koordinator
+		public function daftarDokumenAnlSRS()
+		{
+			$this->load->view('v_daftarDokumenAnlSRS');
+		}
+
+		// User: Koordinator
 		public function validasiDokumenAnlSRS($file)
 		{
 			if ($this->input->post('submit_validate'))

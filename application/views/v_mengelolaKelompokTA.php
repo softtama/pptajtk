@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Pengelolaan Pelaksanaan Tugas Akhir JTK</title>
+		<title>Koordinator</title>
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/jasny-bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap-theme.min.css">
@@ -19,25 +19,25 @@
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li class="dropdown-header">Seminar 1</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/uploadDokumenProposal' ?>">Upload Dokumen Proposal</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/daftarDokumenProposal' ?>">Daftar Dokumen Proposal TA Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/lihatJadwalSeminarSatu' ?>">Jadwal Seminar 1</a></li>
 						<li><a href="#">Persyaratan Seminar 1</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 2</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/uploadDokumenAnlSRS' ?>">Upload Dokumen Analisis dan SRS</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/daftarDokumenAnlSRS' ?>">Daftar Dokumen Analisis dan SRS Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
 						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/uploadDokumenDsgSDD' ?>">Upload Dokumen Desain dan SDD</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/daftarDokumenDsgSDD' ?>">Daftar Dokumen Desain dan SDD Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/lihatJadwalSeminarTiga' ?>">Jadwal Seminar 3</a></li>
 						<li><a href="#">Persyaratan Seminar 3</a></li>
 					</ul>
 				</li>
-				<li class="">
+				<li>
 					<a href="#" class="dropdown-toggle">Pengelolaan Sidang <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
-						<li><a href="#">Jadwal Sidang</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSidang/lihatJadwalSidang' ?>">Jadwal Sidang</a></li>
 						<li><a href="#">Persyaratan Sidang</a></li>
 					</ul>
 				</li>
@@ -74,7 +74,7 @@
 				    </div>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Pesan</a></li>
-						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Guest!</a></li>
+						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Ida!</a></li>
 						<div id="popover-login-content" class="hide">
 					      <form class="form-inline" role="form">
 					        <div class="form-group">
@@ -92,7 +92,9 @@
 		<!-- Main Content -->
 		<div class="container flex-container container-below-navbar-fixed-top">
 			<div class="page-header">
-				<h1><small>Pengelolaan Kelompok</small></h1>
+				<h1><small><ol class="breadcrumb">
+					<li><a href="#">Pengelolaan Kelompok</a></li>
+				</ol></small></h1>
 			</div>
 			<?php if ($status_is_created === true) { ?>
 			<div class="alert alert-success" role="alert">
@@ -131,54 +133,168 @@
 			<table class="table table-hover table-bordered table-striped">
 				<thead>
 					<tr>
-						<th>ID Kelompok</th>
-						<th>Nama Topik</th>
+						<th width="130">Kode Kelompok</th>
+						<th>Nama Topik Tugas Akhir</th>
 						<th width="80" style="text-align: center;">Status</th>
 						<th width="80" style="text-align: center;">Detail</th>
 						<th width="80" style="text-align: center;">Edit</th>
 					</tr>
 				</thead>
 				<tbody>
-				<?php foreach ($list_detail_kota as $value_ldk) { ?>
+					<div>
 					<tr>
-						<td class="id_kota"><?php echo $id_kota = $value_ldk['id_kota']; ?></td>
-						<td class="nama_topik"><?php echo $nama_topik = $value_ldk['nama_topik']; ?></td>
-					<?php
-					$idx = 0;
-					foreach ($value_ldk['list_ak']->result() as $value_lak) 
-					{ 
-						$ak_nim[$idx] = $value_lak->nim;
-						$ak_nama[$idx] = $value_lak->nama_mahasiswa;
-						$idx++;
-					} 
-
-					$idx = 0;
-					foreach ($value_ldk['list_pb']->result() as $value_lpb) 
-					{
-						$pb_kode[$idx] = $value_lpb->kode_dosen;
-						$pb_nama[$idx] = $value_lpb->nama_dosen;
-						$idx++; 
-					}
-					?>
+						<td class="id_kota">KOTA 101</td>
+						<td class="nama_topik">Penerapan Semantic Web terhadap Portal Inkubator Bisnis POLBAN</td>
 						<td style="text-align: center;">
-							<?php if ($value_ldk['ispublished'] == true) { ?>
-							<div class="alert alert-success cell" role="alert">Published</div>
-							<?php } else { ?>
-							<div class="alert alert-warning cell" role="alert">Not Published</div>
-							<?php } ?>
+							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
-							data-id-kota="<?php echo $id_kota; ?>"
-							data-nama-topik="<?php echo $nama_topik; ?>"
-							data-ak-1="<?php echo $ak_nama[0]; ?>"
-							data-ak-2="<?php echo $ak_nama[1]; ?>"
-							data-ak-3="<?php echo $ak_nama[2]; ?>"
-							data-pb-1="<?php echo $pb_nama[0]; ?>"
-							data-pb-2="<?php echo $pb_nama[1]; ?>"
+							data-id-kota="KOTA 101"
+							data-nama-topik="Penerapan Semantic Web terhadap Portal Inkubator Bisnis POLBAN"
+							data-ak-1="Ahmad Fadel Khairi"
+							data-ak-2="Fahmi Iqbal Abdillah"
+							data-ak-3="Medina Nur Fauziah"
+							data-pb-1="Joe Lian Min"
+							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
 						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
 					</tr>
-				<?php } ?>
+					<tr>
+						<td class="id_kota">KOTA 102</td>
+						<td class="nama_topik">Aplikasi Pemesanan Travel Berbasis Android</td>
+						<td style="text-align: center;">
+							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						</td>
+						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+							data-id-kota="KOTA 102"
+							data-nama-topik="Aplikasi Pemesanan Travel Berbasis Android"
+							data-ak-1="Andri Astra Prakarsa"
+							data-ak-2="Caesario Shiddieq P"
+							data-ak-3="Hasbah Bunyamin"
+							data-pb-1="Joe Lian Min"
+							data-pb-2="Irwan Setiawan"
+							><span class="glyphicon glyphicon-info-sign"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					</tr>
+					<tr>
+						<td class="id_kota">KOTA 103</td>
+						<td class="nama_topik">Software Tools dengan Menggunakan AHP</td>
+						<td style="text-align: center;">
+							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						</td>
+						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+							data-id-kota="KOTA 103"
+							data-nama-topik="Software Tools dengan Menggunakan AHP"
+							data-ak-1="Bagus Al-qodri"
+							data-ak-2="Dani Prihat Bren"
+							data-ak-3="Ritman Sigit Kurniawan"
+							data-pb-1="Joe Lian Min"
+							data-pb-2="Irwan Setiawan"
+							><span class="glyphicon glyphicon-info-sign"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					</tr>
+					<tr>
+						<td class="id_kota">KOTA 104</td>
+						<td class="nama_topik">Aplikasi Tempat Wisata dan Kuliner di Indonesia</td>
+						<td style="text-align: center;">
+							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						</td>
+						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+							data-id-kota="KOTA 104"
+							data-nama-topik="Aplikasi Tempat Wisata dan Kuliner di Indonesia"
+							data-ak-1="Dimas Jodi Prakoso"
+							data-ak-2="Putri Amalia"
+							data-ak-3="Rafli Ahmad Zulfikar"
+							data-pb-1="Joe Lian Min"
+							data-pb-2="Irwan Setiawan"
+							><span class="glyphicon glyphicon-info-sign"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					</tr>
+					<tr>
+						<td class="id_kota">KOTA 105</td>
+						<td class="nama_topik">Aplikasi Penghitung Jumlah Trombosit Berbasis Pengolahan Citra Digital</td>
+						<td style="text-align: center;">
+							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						</td>
+						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+							data-id-kota="KOTA 105"
+							data-nama-topik="Aplikasi Penghitung Jumlah Trombosit Berbasis Pengolahan Citra Digital"
+							data-ak-1="Dinar Hartanto"
+							data-ak-2="Khairil Tasnim Nasution"
+							data-ak-3="Sannie Ragistia"
+							data-pb-1="Joe Lian Min"
+							data-pb-2="Irwan Setiawan"
+							><span class="glyphicon glyphicon-info-sign"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					</tr>
+					<tr>
+						<td class="id_kota">KOTA 106</td>
+						<td class="nama_topik">Aplikasi Animasi 3D pada Android untuk Pembelajaran Shalat Anak Usia 6-8 Tahun</td>
+						<td style="text-align: center;">
+							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						</td>
+						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+							data-id-kota="KOTA 106"
+							data-nama-topik="Aplikasi Animasi 3D pada Android untuk Pembelajaran Shalat Anak Usia 6-8 Tahun"
+							data-ak-1="Gilang Surya Gumilar"
+							data-ak-2="Muhammad Dimas Dewantara"
+							data-ak-3="Muhammad Taufiq Ismail"
+							data-pb-1="Joe Lian Min"
+							data-pb-2="Irwan Setiawan"
+							><span class="glyphicon glyphicon-info-sign"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					</tr>
+					<tr>
+						<td class="id_kota">KOTA 107</td>
+						<td class="nama_topik">Penerapan Metode Event Stream Processing untuk Memperoleh Informasi Kegiatan Coding Mahasiswa di Lab secara Real-Time</td>
+						<td style="text-align: center;">
+							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						</td>
+						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+							data-id-kota="KOTA 107"
+							data-nama-topik="Penerapan Metode Event Stream Processing untuk Memperoleh Informasi Kegiatan Coding Mahasiswa di Lab secara Real-Time"
+							data-ak-1="Harris Chaerul Irsan"
+							data-ak-2="Muhammad Adiputra"
+							data-ak-3="Trisna Ari Roshinta"
+							data-pb-1="Joe Lian Min"
+							data-pb-2="Irwan Setiawan"
+							><span class="glyphicon glyphicon-info-sign"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					</tr>
+					<tr>
+						<td class="id_kota">KOTA 108</td>
+						<td class="nama_topik">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</td>
+						<td style="text-align: center;">
+							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						</td>
+						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+							data-id-kota="KOTA 108"
+							data-nama-topik="Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web"
+							data-ak-1="Januar Muhtadiin"
+							data-ak-2="Rizki Pratama"
+							data-ak-3="Yudha Arie Fargitha"
+							data-pb-1="Joe Lian Min"
+							data-pb-2="Irwan Setiawan"
+							><span class="glyphicon glyphicon-info-sign"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					</tr>
+					<tr>
+						<td class="id_kota">KOTA 109</td>
+						<td class="nama_topik">Sistem Informasi Pengelolaan Perkuliahan Proyek di JTK</td>
+						<td style="text-align: center;">
+							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						</td>
+						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+							data-id-kota="KOTA 109"
+							data-nama-topik="Sistem Informasi Pengelolaan Perkuliahan Proyek di JTK"
+							data-ak-1="Kevin Yoasman Tupu"
+							data-ak-2="Nurul Rasti Wahyuni"
+							data-ak-3="Stephanus Soekendar"
+							data-pb-1="Irwan Setiawan"
+							data-pb-2="Jonner Hutahaean"
+							><span class="glyphicon glyphicon-info-sign"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					</tr>
 				</tbody>
 			</table>
 
@@ -236,6 +352,11 @@
 								</div>
 							</form>
 						</div>
+						<div class="modal-footer">
+							<div class="col-sm-12">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -267,9 +388,9 @@
 									<div class="col-sm-8">
 										<select id='anggota_1' class="form-control" name='anggota_1'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
-											<?php foreach ($list_mhs->result() as $data) { ?>
-											<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-											<?php } ?>
+											<option value='121511015'>Januar Muhtadiin</option>
+											<option value='121511027'>Rizki Pratama</option>
+											<option value='121511032'>Yudha Arie Fargitha</option>
 										</select>
 									</div>
 								</div>
@@ -278,9 +399,9 @@
 									<div class="col-sm-8">
 										<select id='anggota_2' class="form-control" name='anggota_2'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
-											<?php foreach ($list_mhs->result() as $data) { ?>
-											<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-											<?php } ?>
+											<option value='121511015'>Januar Muhtadiin</option>
+											<option value='121511027'>Rizki Pratama</option>
+											<option value='121511032'>Yudha Arie Fargitha</option>
 										</select>
 									</div>
 								</div>
@@ -289,9 +410,9 @@
 									<div class="col-sm-8">
 										<select id='anggota_3' class="form-control" name='anggota_3'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
-											<?php foreach ($list_mhs->result() as $data) { ?>
-											<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-											<?php } ?>
+											<option value='121511015'>Januar Muhtadiin</option>
+											<option value='121511027'>Rizki Pratama</option>
+											<option value='121511032'>Yudha Arie Fargitha</option>
 										</select>
 									</div>
 								</div>
@@ -300,9 +421,14 @@
 									<div class="col-sm-8">
 										<select id='pemb_1' class="form-control" name='pemb_1'>
 											<option value='0'>--- Pilih Dosen ---</option>
-											<?php foreach ($list_dsn->result() as $data) { ?>
-											<option value='<?php echo $data->KODE_DOSEN ?>'><?php echo $data->NAMA_DOSEN ?></option>
-											<?php } ?>
+											<option>Joe Lian Min</option>
+											<option>Irwan Setiawan</option>
+											<option>Eddy Bambang Soewono</option>
+											<option>Ida Suhartini</option>
+											<option>Santi Sundari</option>
+											<option>Suprihanto</option>
+											<option>Yadhi Aditya</option>
+											<option>Yudi Widhiyasana</option>
 										</select>
 									</div>
 								</div>
@@ -311,13 +437,18 @@
 									<div class="col-sm-8">
 										<select id='pemb_2' class="form-control" name='pemb_2'>
 											<option value='0'>--- Pilih Dosen ---</option>
-											<?php foreach ($list_dsn->result() as $data) { ?>
-											<option value='<?php echo $data->KODE_DOSEN ?>'><?php echo $data->NAMA_DOSEN ?></option>
-											<?php } ?>
+											<option>Joe Lian Min</option>
+											<option>Irwan Setiawan</option>
+											<option>Eddy Bambang Soewono</option>
+											<option>Ida Suhartini</option>
+											<option>Santi Sundari</option>
+											<option>Suprihanto</option>
+											<option>Yadhi Aditya</option>
+											<option>Yudi Widhiyasana</option>
 										</select>
 									</div>
 								</div>
-								<div class="form-group">
+								<div class="form-group hide">
 									<div class="col-sm-offset-4 col-sm-8">
 										<input id='submit_kota' class="btn btn-primary" name='submit_kota' type='submit' value='Buat Kelompok TA' />
 									</div>
@@ -325,6 +456,14 @@
 							</form>
 							<div class="alert alert-info" role="alert">
 								<strong>Keterangan:</strong> Kelompok TA tidak dipublikasikan sebelum Anda melakukannya sendiri pada halaman Pengelolaan Kelompok TA.
+							</div>
+						</div>
+						<div class="modal-footer">
+							<div class="col-sm-6" style="text-align: left;">
+								<label for="submit_kota" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Buat Kelompok</label>
+							</div>
+							<div class="col-sm-6">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
 						</div>
 					</div>
@@ -340,91 +479,106 @@
 							<h4 class="modal-title">Edit Kelompok TA</h4>
 						</div>
 						<div class="modal-body">
-							<form id="form_create_kota" name="form_create_kota" class="form-signin" action='c_mengelolaKelompokTA/inputKelompokTA' method='post'>
-								<table>
-									<tr> 
-										<td width="120"><label for='id_kota'>Kode Kelompok</label></td>
-										<td><input id='id_kota' class="form-control" name='id_kota' type='text'></td>
-									</tr>
-									<tr> 
-										<td><label for='nama_topik'>Topik TA</label></td>
-										<td><input id='nama_topik' class="form-control" name='nama_topik' type='text'></td>
-									</tr>
-									<tr>
-										<td><label for='anggota_1'>Anggota 1</label></td>
-										<td>
-											<select id='anggota_1' class="form-control" name='anggota_1'>
-												<option value='0'>--- Pilih Mahasiswa ---</option>
-												<?php foreach ($list_mhs->result() as $data) { ?>
-												<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='anggota_2'>Anggota 2</label></td>
-										<td>
-											<select id='anggota_2' class="form-control" name='anggota_2'>
-												<option value='0'>--- Pilih Mahasiswa ---</option>
-												<?php foreach ($list_mhs->result() as $data) { ?>
-												<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='anggota_3'>Anggota 3</label></td>
-										<td>
-											<select id='anggota_3' class="form-control" name='anggota_3'>
-												<option value='0'>--- Pilih Mahasiswa ---</option>
-												<?php foreach ($list_mhs->result() as $data) { ?>
-												<option value='<?php echo $data->NIM ?>'><?php echo $data->NAMA_MAHASISWA ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='pemb_1'>Pembimbing 1</label></td>
-										<td>
-											<select id='pemb_1' class="form-control" name='pemb_1'>
-												<option value='0'>--- Pilih Dosen ---</option>
-												<?php foreach ($list_dsn->result() as $data) { ?>
-												<option value='<?php echo $data->KODE_DOSEN ?>'><?php echo $data->NAMA_DOSEN ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<tr> 
-										<td><label for='pemb_2'>Pembimbing 2</label></td>
-										<td>
-											<select id='pemb_2' class="form-control" name='pemb_2'>
-												<option value='0'>--- Pilih Dosen ---</option>
-												<?php foreach ($list_dsn->result() as $data) { ?>
-												<option value='<?php echo $data->KODE_DOSEN ?>'><?php echo $data->NAMA_DOSEN ?></option>
-												<?php } ?>
-											</select>
-										</td>
-									</tr>
-									<!--tr> 
-										<td>isPublished</td>
-										<td><input type='checkbox' name='isPublished' value='0' disabled></td>
-									</tr-->
-									<tr> 
-										<td colspan="2"><input id='submit_kota' class="btn btn-primary" name='submit_kota' type='submit' value='Create Kelompok TA' /></td>
-									</tr>
-								</table>
+							<form id="form_create_kota" name="form_create_kota" class="form-horizontal" action="<?php echo base_url().'c_mengelolaKelompokTA/inputKelompokTA' ?>" method="post">
+								<div class="form-group">
+									<label for="id_kota" class="col-sm-4 control-label">Kode Kelompok</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="id_kota" name="id_kota" value="KOTA 108" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="nama_topik" class="col-sm-4 control-label">Topik TA</label>
+									<div class="col-sm-8">
+										<input id="nama_topik" class="form-control" name="nama_topik" type="text" value="Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web" />
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="anggota_1" class="col-sm-4 control-label">Anggota 1</label>
+									<div class="col-sm-8">
+										<select id='anggota_1' class="form-control" name='anggota_1'>
+											<option value='0'>--- Pilih Mahasiswa ---</option>
+											<option value='121511015' selected="true">Januar Muhtadiin</option>
+											<option value='121511027'>Rizki Pratama</option>
+											<option value='121511032'>Yudha Arie Fargitha</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="anggota_2" class="col-sm-4 control-label">Anggota 2</label>
+									<div class="col-sm-8">
+										<select id='anggota_2' class="form-control" name='anggota_2'>
+											<option value='0'>--- Pilih Mahasiswa ---</option>
+											<option value='121511015'>Januar Muhtadiin</option>
+											<option value='121511027' selected="true">Rizki Pratama</option>
+											<option value='121511032'>Yudha Arie Fargitha</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="anggota_3" class="col-sm-4 control-label">Anggota 3</label>
+									<div class="col-sm-8">
+										<select id='anggota_3' class="form-control" name='anggota_3'>
+											<option value='0'>--- Pilih Mahasiswa ---</option>
+											<option value='121511015'>Januar Muhtadiin</option>
+											<option value='121511027'>Rizki Pratama</option>
+											<option value='121511032' selected="true">Yudha Arie Fargitha</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="pemb_1" class="col-sm-4 control-label">Pembimbing 1</label>
+									<div class="col-sm-8">
+										<select id='pemb_1' class="form-control" name='pemb_1'>
+											<option value='0'>--- Pilih Dosen ---</option>
+											<option selected="true">Joe Lian Min</option>
+											<option>Irwan Setiawan</option>
+											<option>Eddy Bambang Soewono</option>
+											<option>Ida Suhartini</option>
+											<option>Santi Sundari</option>
+											<option>Suprihanto</option>
+											<option>Yadhi Aditya</option>
+											<option>Yudi Widhiyasana</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="pemb_2" class="col-sm-4 control-label">Pembimbing 2</label>
+									<div class="col-sm-8">
+										<select id='pemb_2' class="form-control" name='pemb_2'>
+											<option value='0'>--- Pilih Dosen ---</option>
+											<option>Joe Lian Min</option>
+											<option selected="true">Irwan Setiawan</option>
+											<option>Eddy Bambang Soewono</option>
+											<option>Ida Suhartini</option>
+											<option>Santi Sundari</option>
+											<option>Suprihanto</option>
+											<option>Yadhi Aditya</option>
+											<option>Yudi Widhiyasana</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group hide">
+									<div class="col-sm-offset-4 col-sm-8">
+										<input id='submit_kota' class="btn btn-primary" name='submit_kota' type='submit' value='Buat Kelompok TA' />
+									</div>
+								</div>
 							</form>
 							<div class="alert alert-info" role="alert">
 								<strong>Keterangan:</strong> Kelompok TA tidak dipublikasikan sebelum Anda melakukannya sendiri pada halaman Pengelolaan Kelompok TA.
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<div class="col-sm-6" style="text-align: left;">
+								<label for="submit_kota" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Update Kelompok</label>
+							</div>
+							<div class="col-sm-6">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-	    </div>
+		</div>	
 
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
