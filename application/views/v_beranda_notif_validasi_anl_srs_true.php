@@ -123,7 +123,7 @@
 							</div>
 						</div>
 					</form>
-					telah divalidasi oleh Koordinator Santi Sundari dengan status <h4 style="display: inline-block; margin-bottom: 0; margin-top: 0;"><span class="label label-success">LAYAK</span></h4> untuk melaksanakan Seminar 2.
+					telah divalidasi oleh Santi Sundari dengan status <h4 style="display: inline-block; margin-bottom: 0; margin-top: 0;"><span class="label label-success">LAYAK</span></h4> untuk melaksanakan Seminar 2.
 				</div>
 				<div class="panel-footer">
 					<div class="row">

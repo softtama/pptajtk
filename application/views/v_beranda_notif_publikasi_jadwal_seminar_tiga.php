@@ -111,7 +111,7 @@
 							</div>
 						</div>
 					</form>
-					<p style="margin: 10px 0;">telah dipublikasikan oleh Koordinator Ida Suhartini ke setiap Kelompok TA yang bersangkutan, dengan detail sebagai berikut:</p>
+					<p style="margin: 10px 0;">telah dipublikasikan oleh Ida Suhartini ke setiap Kelompok TA yang bersangkutan, dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
 							<label class="col-sm-2 control-label" style="text-align: left;">Rentang Tanggal Seminar</label>

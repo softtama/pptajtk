@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/jasny-bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/bootstrap-datetimepicker.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
 	</head>
 	<body>
@@ -14,6 +15,7 @@
 
 			<ul class="nav navmenu-nav">
 				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaKelompokTAtemp' ?>">Pengelolaan Kelompok Sementara</a></li>
 				<li><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
 				<li>
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
@@ -169,12 +171,11 @@
 							KOTA 106 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
 						</div></td>
 						<td><div>
-							
 							KOTA 202 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
 						</div></td>
 						<td><div>
-							
-							KOTA 204 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
+							KOTA 204 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
+							KOTA 108 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar_108"><span class="glyphicon glyphicon-info-sign"></span></a>
 						</div></td>
 						<td><div></div></td>
 						<td><div></div></td>
@@ -203,8 +204,8 @@
 						<td><div></div></td>
 						<td><div></div></td>
 						<td><div>
-							KOTA 209 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a><br>
-							KOTA 108 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar_108"><span class="glyphicon glyphicon-info-sign"></span></a>
+							KOTA 209 <a href="#" class="btn btn-info btn-sm cell" data-toggle="modal" data-target="#modalViewDetailJadwalSeminar"><span class="glyphicon glyphicon-info-sign"></span></a>
+							
 						</div></td>
 						<td><div></div></td>
 						<td><div></div></td>
@@ -235,7 +236,7 @@
 						<form id="form_viewdet_kota" class="form-horizontal" name="form_viewdet_kota">
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Kode Kelompok</label>
-								<div class="col-sm-8">
+								<div class="col-sm-6">
 									<select id="input_id_kota" class="form-control" name="input_id_kota">
 										<option>--- Pilih Kelompok TA ---</option>
 										<optgroup label="Dokumen Sudah Divalidasi dan Layak">
@@ -246,41 +247,40 @@
 											<option>KOTA 108</option>
 											<option>KOTA 109</option>
 										</optgroup>
-										<optgroup label="Dokumen Sudah Divalidasi dan Tidak Layak">
-											<option>KOTA 104</option>
-											<option>KOTA 106</option>
-											<option>KOTA 107</option>
-										</optgroup>
 									</select>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Topik TA</label>
+								<label class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
 								<div class="col-sm-8">
-									<p id="show_topik_ta" class="form-control-static"><i>Pilih Kelompok TA terlebih dahulu</i></p>
+									<p id="show_topik_ta" class="form-control-static"><i>Nama Topik Tugas Akhir akan muncul jika Anda sudah memilih Kelompok TA pada field Kode Kelompok</i></p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Status Validasi Dokumen</label>
-								<div class="col-sm-8">
-									<p id="show_stat_proposal" class="form-control-static"><i>Pilih Kelompok TA terlebih dahulu</i></p>
+								<label class="col-sm-4 control-label">Tanggal Seminar</label>
+								<div class="col-sm-6">
+									<div class='input-group date' id='input-date-picker'>
+					                    <input id='input-date' name='input-date' type='text' class="form-control" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Tanggal Sidang</label>
-								<div class="col-sm-8">
-									<input id="input_tgl_seminar" class="form-control" name="input_tgl_seminar" type="date" />
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-4 control-label">Jam Sidang</label>
-								<div class="col-sm-8">
-									<input id="input_jam_seminar" class="form-control" name="input_jam_seminar" type="time" />
+								<label class="col-sm-4 control-label">Jam Seminar</label>
+								<div class="col-sm-6">
+									<div class='input-group date' id='input-time-picker'>
+										<input id='input-time' name='input-time' type='text' class="form-control" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-time"></span>
+										</span>
+									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Ruangan Sidang</label>
-								<div class="col-sm-8">
+								<div class="col-sm-6">
 									<select id="input_rng_seminar" class="form-control" name="input_rng_seminar">
 										<option>--- Pilih Ruangan ---</option>
 										<optgroup label="Ruangan">
@@ -295,34 +295,44 @@
 							</div>
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Penguji Sidang</label>
-								<div class="col-sm-8">
-									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
-										<option>--- Pilih Penguji Satu ---</option>
-										<optgroup label="Penguji Seminar">
-											<option>Dosen 01</option>
-											<option>Dosen 02</option>
-											<option>Dosen 03</option>
-											<option>Dosen 04</option>
-											<option>Dosen 05</option>
-											<option>Dosen 06</option>
+								<div class="col-sm-6">
+								<select id="input-pembimbing-sidang" class="form-control" name="input_penguji_seminar">
+										<option>--- Pilih Pembimbing ---</option>
+										<optgroup label="Pembimbing yang Hadir di Sidang">
+											<option>Joe Lian Min</option>
+											<option>Irwan Setiawan</option>
 										</optgroup>
 									</select>
 
-									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
+									<select id="input-penguji-1-sidang" class="form-control" name="input_penguji_seminar">
+										<option>--- Pilih Penguji Satu ---</option>
+										<optgroup label="Penguji Sidang">
+											<option>Joe Lian Min</option>
+											<option>Eddy Bambang Soewono</option>
+											<option>Ida Suhartini</option>
+											<option>Santi Sundari</option>
+											<option>Suprihanto</option>
+											<option>Yadhi Aditya</option>
+											<option>Yudi Widhiyasana</option>
+										</optgroup>
+									</select>
+
+									<select id="input-penguji-2-sidang" class="form-control" name="input_penguji_seminar">
 										<option>--- Pilih Penguji Dua ---</option>
-										<optgroup label="Penguji Seminar">
-											<option>Dosen 01</option>
-											<option>Dosen 02</option>
-											<option>Dosen 03</option>
-											<option>Dosen 04</option>
-											<option>Dosen 05</option>
-											<option>Dosen 06</option>
+										<optgroup label="Penguji Sidang">
+											<option>Joe Lian Min</option>
+											<option>Eddy Bambang Soewono</option>
+											<option>Ida Suhartini</option>
+											<option>Santi Sundari</option>
+											<option>Suprihanto</option>
+											<option>Yadhi Aditya</option>
+											<option>Yudi Widhiyasana</option>
 										</optgroup>
 									</select>
 								</div>
 							</div>
 							<div class="form-group hide">
-								<div class="col-sm-offset-4 col-sm-8">
+								<div class="col-sm-offset-4 col-sm-6">
 									<input id="submit_jadwal_seminar_satu" name="submit_jadwal_seminar_satu" class="btn btn-primary" type="submit" value="Buat Jadwal" />
 								</div>
 							</div>
@@ -340,7 +350,7 @@
 			</div>
 		</div>
 
-		<!-- Modal for View Detail Jadwal Seminar Satu -->
+		<!-- Modal for View Detail Jadwal Sidang -->
 		<div class="modal fade" id="modalViewDetailJadwalSeminar_108" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -352,43 +362,37 @@
 						<form id="form_viewdet_kota" class="form-horizontal" name="form_viewdet_kota">
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Kode Kelompok</label>
-								<div class="col-sm-8">
+								<div class="col-sm-6">
 									<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Topik Tugas Akhir</label>
+								<label class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
 								<div class="col-sm-8">
 									<p id="show_topik_ta" class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Status Validasi Dokumen</label>
-								<div class="col-sm-8">
-									<p id="show_stat_proposal" class="form-control-static">Sudah Divalidasi, Layak</p>
-								</div>
-							</div>
-							<div class="form-group">
 								<label class="col-sm-4 control-label">Tanggal Sidang</label>
-								<div class="col-sm-8">
-									<p id="show_stat_proposal" class="form-control-static">Kamis, 25 Juni 2015</p>
+								<div class="col-sm-6">
+									<p id="show_stat_proposal" class="form-control-static">Jumat, 10 Juli 2015</p>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Jam Sidang</label>
-								<div class="col-sm-8">
+								<div class="col-sm-6">
 									<p id="show_stat_proposal" class="form-control-static">13.00 WIB</p>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Ruangan Sidang</label>
-								<div class="col-sm-8">
+								<div class="col-sm-6">
 									<p id="show_stat_proposal" class="form-control-static">Ruang Rapat</p>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Penguji Sidang</label>
-								<div class="col-sm-8">
+								<div class="col-sm-6">
 									<p id="show_stat_proposal" class="form-control-static">Joe Lian Min</p>
 									<p id="show_stat_proposal" class="form-control-static">Santi Sundari</p>
 									<p id="show_stat_proposal" class="form-control-static">Ferry Feirizal</p>
@@ -420,37 +424,41 @@
 						<form id="form_viewdet_kota" class="form-horizontal" name="form_viewdet_kota">
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Kode Kelompok</label>
-								<div class="col-sm-8">
+								<div class="col-sm-6">
 									<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Topik TA</label>
+								<label class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
 								<div class="col-sm-8">
 									<p id="show_topik_ta" class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Status Validasi Dokumen</label>
-								<div class="col-sm-8">
-									<p id="show_stat_proposal" class="form-control-static">Sudah Divalidasi, Layak</p>
+								<label class="col-sm-4 control-label">Tanggal Seminar</label>
+								<div class="col-sm-6">
+									<div class='input-group date' id='input-date-picker'>
+					                    <input id='input-date' name='input-date' type='text' class="form-control" value="10/07/2015" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Tanggal Sidang</label>
-								<div class="col-sm-8">
-									<input id="input_tgl_seminar" class="form-control" name="input_tgl_seminar" type="date" value="2015-06-25" />
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-sm-4 control-label">Jam Sidang</label>
-								<div class="col-sm-8">
-									<input id="input_jam_seminar" class="form-control" name="input_jam_seminar" type="time" value="13:00" />
+								<label class="col-sm-4 control-label">Jam Seminar</label>
+								<div class="col-sm-6">
+									<div class='input-group date' id='input-time-picker'>
+										<input id='input-time' name='input-time' type='text' class="form-control" value="13.00" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-time"></span>
+										</span>
+									</div>
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Ruangan Sidang</label>
-								<div class="col-sm-8">
+								<div class="col-sm-6">
 									<select id="input_rng_seminar" class="form-control" name="input_rng_seminar">
 										<option>--- Pilih Ruangan ---</option>
 										<optgroup label="Ruangan">
@@ -465,23 +473,18 @@
 							</div>
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Penguji Sidang</label>
-								<div class="col-sm-8">
+								<div class="col-sm-6">
 									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
-										<option>--- Pilih Penguji Satu ---</option>
-										<optgroup label="Penguji Seminar">
+										<option>--- Pilih Pembimbing ---</option>
+										<optgroup label="Pembimbing yang Hadir di Sidang">
 											<option selected="true">Joe Lian Min</option>
-											<option>Eddy Bambang Soewono</option>
-											<option>Ida Suhartini</option>
-											<option>Santi Sundari</option>
-											<option>Suprihanto</option>
-											<option>Yadhi Aditya</option>
-											<option>Yudi Widhiyasana</option>
+											<option>Irwan Setiawan</option>
 										</optgroup>
 									</select>
 
 									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
-										<option>--- Pilih Penguji Dua ---</option>
-										<optgroup label="Penguji Seminar">
+										<option>--- Pilih Penguji Satu ---</option>
+										<optgroup label="Penguji Sidang">
 											<option>Eddy Bambang Soewono</option>
 											<option>Ida Suhartini</option>
 											<option selected="true">Santi Sundari</option>
@@ -492,8 +495,8 @@
 									</select>
 
 									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
-										<option>--- Pilih Penguji Tiga ---</option>
-										<optgroup label="Penguji Seminar">
+										<option>--- Pilih Penguji Dua ---</option>
+										<optgroup label="Penguji Sidang">
 											<option>Eddy Bambang Soewono</option>
 											<option selected="true">Ferry Feirizal</option>
 											<option>Ida Suhartini</option>
@@ -506,15 +509,15 @@
 								</div>
 							</div>
 							<div class="form-group hide">
-								<div class="col-sm-offset-4 col-sm-8">
-									<input id="submit_jadwal_seminar_satu" name="submit_jadwal_seminar_satu" class="btn btn-primary" type="submit" value="Update Jadwal" />
+								<div class="col-sm-offset-4 col-sm-6">
+									<input id="submit_jadwal_seminar_satu" name="submit_jadwal_seminar_satu" class="btn btn-primary" type="submit" value="Simpan Jadwal" />
 								</div>
 							</div>
 						</form>
 					</div>
 					<div class="modal-footer">
 						<div class="col-sm-6" style="text-align: left;">
-							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Update Jadwal</label>
+							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Simpan Jadwal</label>
 						</div>
 						<div class="col-sm-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -525,7 +528,9 @@
 		</div>
 
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/moment-with-locales.js"></script>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-datetimepicker.js"></script>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jasny-bootstrap.min.js"></script>
 		<script type="text/javascript">
 			$('#modalViewDetailKelompokTA').on('show.bs.modal', function(e) {
@@ -554,5 +559,21 @@
 		        }
 			});
 		</script>
+		<script type="text/javascript">
+            $(function () {
+                $('#input-date-picker').datetimepicker({
+                	format: 'DD/MM/YYYY',
+                    locale: 'id',
+                    daysOfWeekDisabled: [6,0],
+                    showTodayButton: true
+                });
+            });
+            $(function () {
+                $('#input-time-picker').datetimepicker({
+                    format: 'LT',
+                    locale: 'id'
+                });
+            });
+        </script>
 	</body>
 </html>

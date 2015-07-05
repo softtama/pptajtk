@@ -24,7 +24,7 @@
 						<li><a href="#">Persyaratan Seminar 1</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 2</li>
-						<li class="active"><a href="<?php echo base_url().'c_mengelolaSeminarDua/uploadDokumenAnlSRS' ?>">Upload Dokumen Analisis dan SRS</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/daftarDokumenAnlSRS' ?>">Daftar Dokumen Analisis dan SRS Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
 						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>

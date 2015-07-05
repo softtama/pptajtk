@@ -14,8 +14,9 @@
 
 			<ul class="nav navmenu-nav">
 				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaKelompokTAtemp' ?>">Pengelolaan Kelompok Sementara</a></li>
 				<li class="active"><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
-				<li class="">
+				<li>
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li class="dropdown-header">Seminar 1</li>
@@ -119,13 +120,13 @@
 				<div class="col-md-6">
 					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_publish' type="button" data-toggle="modal" data-target="#modalTambahKelompokTA">
 						<span class="glyphicon glyphicon-plus"></span>
-						&nbsp;Tambah Baru Kelompok TA
+						&nbsp;Tambah Kelompok
 					</a>
 				</div>
 				<div class="col-md-6" align="right">
 					<a href="<?php echo base_url().'c_mengelolaKelompokTA/postKelompokTA' ?>" id='btn_addnew' class="btn btn-success" name='btn_publish' type="button">
 						<span class="glyphicon glyphicon-bullhorn"></span>
-						&nbsp;Publikasikan Semua Kelompok TA
+						&nbsp;Publikasikan Semua Kelompok
 					</a>
 				</div>
 			</div>
@@ -135,9 +136,10 @@
 					<tr>
 						<th width="130">Kode Kelompok</th>
 						<th>Nama Topik Tugas Akhir</th>
-						<th width="80" style="text-align: center;">Status</th>
+						<th width="100" style="text-align: center;">Status</th>
 						<th width="80" style="text-align: center;">Detail</th>
 						<th width="80" style="text-align: center;">Edit</th>
+						<th width="80" style="text-align: center;">Hapus</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -145,8 +147,8 @@
 					<tr>
 						<td class="id_kota">KOTA 101</td>
 						<td class="nama_topik">Penerapan Semantic Web terhadap Portal Inkubator Bisnis POLBAN</td>
-						<td style="text-align: center;">
-							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						<td style="text-align: center;" class="success">
+							Terpublikasi
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 101"
@@ -158,12 +160,13 @@
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
 						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 102</td>
 						<td class="nama_topik">Aplikasi Pemesanan Travel Berbasis Android</td>
-						<td style="text-align: center;">
-							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						<td style="text-align: center;" class="success">
+							Terpublikasi
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 102"
@@ -175,12 +178,13 @@
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
 						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 103</td>
 						<td class="nama_topik">Software Tools dengan Menggunakan AHP</td>
-						<td style="text-align: center;">
-							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						<td style="text-align: center;" class="success">
+							Terpublikasi
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 103"
@@ -192,12 +196,13 @@
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
 						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 104</td>
 						<td class="nama_topik">Aplikasi Tempat Wisata dan Kuliner di Indonesia</td>
-						<td style="text-align: center;">
-							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						<td style="text-align: center;" class="success">
+							Terpublikasi
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 104"
@@ -209,12 +214,13 @@
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
 						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 105</td>
 						<td class="nama_topik">Aplikasi Penghitung Jumlah Trombosit Berbasis Pengolahan Citra Digital</td>
-						<td style="text-align: center;">
-							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						<td style="text-align: center;" class="success">
+							Terpublikasi
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 105"
@@ -226,12 +232,13 @@
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
 						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 106</td>
 						<td class="nama_topik">Aplikasi Animasi 3D pada Android untuk Pembelajaran Shalat Anak Usia 6-8 Tahun</td>
-						<td style="text-align: center;">
-							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						<td style="text-align: center;" class="success">
+							Terpublikasi
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 106"
@@ -243,12 +250,13 @@
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
 						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 107</td>
 						<td class="nama_topik">Penerapan Metode Event Stream Processing untuk Memperoleh Informasi Kegiatan Coding Mahasiswa di Lab secara Real-Time</td>
-						<td style="text-align: center;">
-							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						<td style="text-align: center;" class="success">
+							Terpublikasi
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 107"
@@ -260,12 +268,13 @@
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
 						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 108</td>
 						<td class="nama_topik">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</td>
-						<td style="text-align: center;">
-							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						<td style="text-align: center;" class="success">
+							Terpublikasi
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 108"
@@ -276,13 +285,22 @@
 							data-pb-1="Joe Lian Min"
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"
+							data-id-kota="KOTA 108"
+							data-nama-topik="Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web"
+							data-ak-1="Januar Muhtadiin"
+							data-ak-2="Rizki Pratama"
+							data-ak-3="Yudha Arie Fargitha"
+							data-pb-1="Joe Lian Min"
+							data-pb-2="Irwan Setiawan"
+							><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 109</td>
 						<td class="nama_topik">Sistem Informasi Pengelolaan Perkuliahan Proyek di JTK</td>
-						<td style="text-align: center;">
-							<div class="alert alert-success cell" role="alert">Terpublikasi</div>
+						<td style="text-align: center;" class="success">
+							Terpublikasi
 						</td>
 						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 109"
@@ -294,6 +312,7 @@
 							data-pb-2="Jonner Hutahaean"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
 						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -304,7 +323,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Detail Kelompok TA</h4>
+							<h4 class="modal-title">Detail Kelompok</h4>
 						</div>
 						<div class="modal-body">
 							<form id="form_viewdet_kota" name="form_viewdet_kota" class="form-horizontal">
@@ -315,7 +334,7 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-4 control-label">Topik TA</label>
+									<label class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
 									<div class="col-sm-8">
 										<p id='vd_nama_topik' class="form-control-static"></p>
 									</div>
@@ -335,7 +354,7 @@
 								<div class="form-group">
 									<label class="col-sm-4 control-label">Anggota 3</label>
 									<div class="col-sm-8">
-										<p id='vd_ak_3' class="form-control-static"></p>
+										
 									</div>
 								</div>
 								<div class="form-group">
@@ -367,25 +386,25 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Tambah Baru Kelompok TA</h4>
+							<h4 class="modal-title">Tambah Kelompok</h4>
 						</div>
 						<div class="modal-body">
 							<form id="form_create_kota" name="form_create_kota" class="form-horizontal" action="<?php echo base_url().'c_mengelolaKelompokTA/inputKelompokTA' ?>" method="post">
 								<div class="form-group">
 									<label for="id_kota" class="col-sm-4 control-label">Kode Kelompok</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<input type="text" class="form-control" id="id_kota" name="id_kota" />
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="nama_topik" class="col-sm-4 control-label">Topik TA</label>
-									<div class="col-sm-8">
+									<label for="nama_topik" class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
+									<div class="col-sm-6">
 										<input id="nama_topik" class="form-control" name="nama_topik" type="text" />
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="anggota_1" class="col-sm-4 control-label">Anggota 1</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='anggota_1' class="form-control" name='anggota_1'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -396,7 +415,7 @@
 								</div>
 								<div class="form-group">
 									<label for="anggota_2" class="col-sm-4 control-label">Anggota 2</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='anggota_2' class="form-control" name='anggota_2'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -407,7 +426,7 @@
 								</div>
 								<div class="form-group">
 									<label for="anggota_3" class="col-sm-4 control-label">Anggota 3</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='anggota_3' class="form-control" name='anggota_3'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -418,7 +437,7 @@
 								</div>
 								<div class="form-group">
 									<label for="pemb_1" class="col-sm-4 control-label">Pembimbing 1</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='pemb_1' class="form-control" name='pemb_1'>
 											<option value='0'>--- Pilih Dosen ---</option>
 											<option>Joe Lian Min</option>
@@ -434,7 +453,7 @@
 								</div>
 								<div class="form-group">
 									<label for="pemb_2" class="col-sm-4 control-label">Pembimbing 2</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='pemb_2' class="form-control" name='pemb_2'>
 											<option value='0'>--- Pilih Dosen ---</option>
 											<option>Joe Lian Min</option>
@@ -449,7 +468,7 @@
 									</div>
 								</div>
 								<div class="form-group hide">
-									<div class="col-sm-offset-4 col-sm-8">
+									<div class="col-sm-offset-4 col-sm-6">
 										<input id='submit_kota' class="btn btn-primary" name='submit_kota' type='submit' value='Buat Kelompok TA' />
 									</div>
 								</div>
@@ -476,25 +495,25 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Edit Kelompok TA</h4>
+							<h4 class="modal-title">Edit Kelompok</h4>
 						</div>
 						<div class="modal-body">
 							<form id="form_create_kota" name="form_create_kota" class="form-horizontal" action="<?php echo base_url().'c_mengelolaKelompokTA/inputKelompokTA' ?>" method="post">
 								<div class="form-group">
 									<label for="id_kota" class="col-sm-4 control-label">Kode Kelompok</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<input type="text" class="form-control" id="id_kota" name="id_kota" value="KOTA 108" />
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="nama_topik" class="col-sm-4 control-label">Topik TA</label>
-									<div class="col-sm-8">
+									<label for="nama_topik" class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
+									<div class="col-sm-6">
 										<input id="nama_topik" class="form-control" name="nama_topik" type="text" value="Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web" />
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="anggota_1" class="col-sm-4 control-label">Anggota 1</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='anggota_1' class="form-control" name='anggota_1'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015' selected="true">Januar Muhtadiin</option>
@@ -505,7 +524,7 @@
 								</div>
 								<div class="form-group">
 									<label for="anggota_2" class="col-sm-4 control-label">Anggota 2</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='anggota_2' class="form-control" name='anggota_2'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -516,7 +535,7 @@
 								</div>
 								<div class="form-group">
 									<label for="anggota_3" class="col-sm-4 control-label">Anggota 3</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='anggota_3' class="form-control" name='anggota_3'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -527,7 +546,7 @@
 								</div>
 								<div class="form-group">
 									<label for="pemb_1" class="col-sm-4 control-label">Pembimbing 1</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='pemb_1' class="form-control" name='pemb_1'>
 											<option value='0'>--- Pilih Dosen ---</option>
 											<option selected="true">Joe Lian Min</option>
@@ -543,7 +562,7 @@
 								</div>
 								<div class="form-group">
 									<label for="pemb_2" class="col-sm-4 control-label">Pembimbing 2</label>
-									<div class="col-sm-8">
+									<div class="col-sm-6">
 										<select id='pemb_2' class="form-control" name='pemb_2'>
 											<option value='0'>--- Pilih Dosen ---</option>
 											<option>Joe Lian Min</option>
@@ -558,7 +577,7 @@
 									</div>
 								</div>
 								<div class="form-group hide">
-									<div class="col-sm-offset-4 col-sm-8">
+									<div class="col-sm-offset-4 col-sm-6">
 										<input id='submit_kota' class="btn btn-primary" name='submit_kota' type='submit' value='Buat Kelompok TA' />
 									</div>
 								</div>
@@ -579,6 +598,29 @@
 				</div>
 			</div>
 		</div>	
+
+		<!-- Modal for View Detail -->
+		<div class="modal fade" id="modalKonfHapusKelompokTA" role="dialog">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Hapus Kelompok</h4>
+					</div>
+					<div class="modal-body" style="text-align: center;">
+						<p>Apakah Anda yakin ingin menghapus data Kelompok TA untuk KOTA 108?</p>
+					</div>
+					<div class="modal-footer">
+						<div class="col-sm-6" style="text-align: left;">
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Ya, Hapus</button>
+						</div>
+						<div class="col-sm-6">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>

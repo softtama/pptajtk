@@ -39,7 +39,7 @@
 
 			$data['list_detail_kota'] = $this->getDataKelompokTA();
 
-			$this->load->view('v_mengelolaKelompokTA', $data);
+			$this->load->view('v_mengelola_kel_ta_fix', $data);
 		}
 		
 		public function inputKelompokTA()
@@ -61,7 +61,7 @@
 			// Validation
 			if ($id_kota == '' || $anggota_1 == '0' || $pemb_1 == '0' || $pemb_2 == '0')
 			{
-				redirect(base_url().'c_mengelolaKelompokTA?is_created=false');
+				redirect(base_url().'C_mengelolaKelompokTA?is_created=false');
 			}
 
 			// Query
@@ -73,7 +73,7 @@
 			$this->m_pembimbing->addPembimbingKelompok($pemb_2, $id_kota, '2');
 			
 			// Redirect to index, show notification to current User
-			redirect(base_url().'c_mengelolaKelompokTA?is_created=true');
+			redirect(base_url().'C_mengelolaKelompokTA?is_created=true');
 		}
 
 		public function getDataKelompokTA()
@@ -105,7 +105,7 @@
 			$this->m_kelompokTA->setStatusKePublished();
 
 			// Redirect to index, show notification to current User
-			redirect(base_url().'c_mengelolaKelompokTA?is_published=true');	
+			redirect(base_url().'C_mengelolaKelompokTA?is_published=true');	
 		}
 	}
 ?>

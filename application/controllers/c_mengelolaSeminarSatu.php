@@ -12,15 +12,9 @@
 			$data['status_is_validated'] = null;
 			$data['status_is_updated'] = null;
 
-			$this->load->view('v_mengelolaSeminarSatu', $data);
+			$this->load->view('v_mengelola_seminar_satu', $data);
 		}
 		
-		// User: Mahasiswa Anggota Kelompok TA
-		public function uploadDokumenProposal()
-		{
-			$this->load->view('v_uploadDokumenProposal');
-		}
-
 		// User: Koordinator
 		public function daftarDokumenProposal()
 		{
@@ -40,7 +34,7 @@
 				$data['status_is_updated'] = true;
 			}
 
-			$this->load->view('v_daftarDokumenProposal', $data);
+			$this->load->view('v_daftar_dokumen_proposal', $data);
 		}
 
 		// User: Koordinator
@@ -73,7 +67,7 @@
 		// User: All and Guest
 		public function lihatJadwalSeminarSatu()
 		{
-			$this->load->view('v_jadwalSeminarSatu');
+			$this->load->view('v_jadwal_seminar_satu');
 		}
 	}
 ?>

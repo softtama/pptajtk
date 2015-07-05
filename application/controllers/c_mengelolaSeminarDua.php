@@ -10,19 +10,13 @@
 		{
 			$data['is_published'] = null;
 
-			$this->load->view('v_mengelolaSeminarDua');
+			$this->load->view('v_mengelola_seminar_dua');
 		}
 		
-		// User: Mahasiswa Anggota Kelompok TA
-		public function uploadDokumenAnlSRS()
-		{
-			$this->load->view('v_uploadDokumenAnlSRS');
-		}
-
 		// User: Koordinator
 		public function daftarDokumenAnlSRS()
 		{
-			$this->load->view('v_daftarDokumenAnlSRS');
+			$this->load->view('v_daftar_dokumen_anl_srs');
 		}
 
 		// User: Koordinator
@@ -55,7 +49,7 @@
 		// User: All and Guest
 		public function lihatJadwalSeminarDua()
 		{
-			$this->load->view('v_jadwalSeminarDua');
+			$this->load->view('v_jadwal_seminar_dua');
 		}
 	}
 ?>

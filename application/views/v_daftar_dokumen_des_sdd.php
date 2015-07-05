@@ -14,6 +14,7 @@
 
 			<ul class="nav navmenu-nav">
 				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaKelompokTAtemp' ?>">Pengelolaan Kelompok Sementara</a></li>
 				<li class=""><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
 				<li class="active">
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
@@ -24,12 +25,12 @@
 						<li><a href="#">Persyaratan Seminar 1</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 2</li>
-						<li class="active"><a href="<?php echo base_url().'c_mengelolaSeminarDua/daftarDokumenAnlSRS' ?>">Daftar Dokumen Analisis dan SRS Kelompok</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/daftarDokumenAnlSRS' ?>">Daftar Dokumen Analisis dan SRS Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
 						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/daftarDokumenDsgSDD' ?>">Daftar Dokumen Desain dan SDD Kelompok</a></li>
+						<li class="active"><a href="<?php echo base_url().'c_mengelolaSeminarTiga/daftarDokumenDsgSDD' ?>">Daftar Dokumen Desain dan SDD Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/lihatJadwalSeminarTiga' ?>">Jadwal Seminar 3</a></li>
 						<li><a href="#">Persyaratan Seminar 3</a></li>
 					</ul>
@@ -94,8 +95,8 @@
 			<div class="page-header">
 				<h1><small><ol class="breadcrumb">
 					<li><a href="#">Pengelolaan Seminar</a></li>
-					<li><a href="#">Seminar 2</a></li>
-					<li><a href="#">Daftar Dokumen Analisis dan SRS Kelompok</a></li>
+					<li><a href="#">Seminar 3</a></li>
+					<li><a href="#">Daftar Dokumen Desain dan SDD Kelompok</a></li>
 				</ol></small></h1>
 			</div>
 
@@ -209,7 +210,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Detail Dokumen Analisis dan SRS</h4>
+						<h4 class="modal-title">Detail Dokumen Desain dan SRS</h4>
 					</div>
 					<div class="modal-body">
 						<form id="form_detail_proposal" class="form-horizontal" name="form_detail_proposal">
@@ -226,7 +227,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<h4><label class="col-sm-12 control-label" style="text-align: left;">History Upload Dokumen Analisis dan SRS</label></h4>
+								<h4><label class="col-sm-12 control-label" style="text-align: left;">History Upload Dokumen Desain dan SRS</label></h4>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
@@ -273,7 +274,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Detail Dokumen Analisis dan SRS</h4>
+						<h4 class="modal-title">Detail Dokumen Desain dan SRS</h4>
 					</div>
 					<div class="modal-body">
 						<form id="form_detail_proposal" class="form-horizontal" name="form_detail_proposal">
@@ -290,7 +291,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<h4><label class="col-sm-12 control-label" style="text-align: left;">History Upload Dokumen Analisis dan SRS</label></h4>
+								<h4><label class="col-sm-12 control-label" style="text-align: left;">History Upload Dokumen Desain dan SRS</label></h4>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
@@ -305,7 +306,7 @@
 										</thead>
 										<tbody>
 											<tr>
-												<td>Kamis, 30 April 2015, 14.00 WIB</td>
+												<td>Minggu, 2 Maret 2015, 14.00 WIB</td>
 												<td style="text-align: center;">
 													<a href="#" class="btn btn-info btn-lg cell">
 														<span class="glyphicon glyphicon-arrow-down"></span>
@@ -337,7 +338,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Detail Dokumen Analisis dan SRS</h4>
+						<h4 class="modal-title">Detail Dokumen Desain dan SRS</h4>
 					</div>
 					<div class="modal-body">
 						<form id="form_detail_proposal" class="form-horizontal" name="form_detail_proposal">
@@ -354,7 +355,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<h4><label class="col-sm-12 control-label" style="text-align: left;">History Upload Dokumen Analisis dan SRS</label></h4>
+								<h4><label class="col-sm-12 control-label" style="text-align: left;">History Upload Dokumen Desain dan SRS</label></h4>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
@@ -369,7 +370,7 @@
 										</thead>
 										<tbody>
 											<tr>
-												<td>Minggu, 26 April 2015, 09.00 WIB</td>
+												<td>Senin, 25 Mei 2015, 11.00 WIB</td>
 												<td style="text-align: center;">
 													<a href="#" class="btn btn-info btn-lg cell">
 														<span class="glyphicon glyphicon-arrow-down"></span>
@@ -383,7 +384,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td>Rabu, 29 April 2015, 08.00 WIB</td>
+												<td>Rabu, 27 Mei 2015, 08.00 WIB</td>
 												<td style="text-align: center;">
 													<a href="#" class="btn btn-info btn-lg cell">
 														<span class="glyphicon glyphicon-arrow-down"></span>
@@ -415,10 +416,10 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Konfirmasi Validasi Dokumen Analisis dan SRS</h4>
+						<h4 class="modal-title">Konfirmasi Validasi Dokumen Proposal TA</h4>
 					</div>
 					<div class="modal-body" style="text-align: center;">
-						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen Analisis dan SRS Kelompok TA 101 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 2?</p>
+						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen proposal Kelompok TA 101 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 1?</p>
 						<form id="validasi_dok_proposal" class="form-horizontal" name="validasi_dok_proposal">
 							<div class="form-group hide">
 								<div class="col-sm-offset-4 col-sm-8">
@@ -447,11 +448,11 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Konfirmasi Validasi Dokumen Analisis dan SRS</h4>
+						<h4 class="modal-title">Konfirmasi Validasi Dokumen Proposal TA</h4>
 					</div>
 					<div class="modal-body" style="text-align: center;">
-						<p>Anda sudah memberi status TIDAK LAYAK pada dokumen Analisis dan SRS ini sebelumnya.</p>
-						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen Analisis dan SRS Kelompok TA 106 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 2?</p>
+						<p>Anda sudah memberi status TIDAK LAYAK pada dokumen proposal ini sebelumnya.</p>
+						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen proposal Kelompok TA 106 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 1?</p>
 						<form id="validasi_dok_proposal" class="form-horizontal" name="validasi_dok_proposal">
 							<div class="form-group hide">
 								<div class="col-sm-offset-4 col-sm-8">
@@ -480,11 +481,11 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Konfirmasi Validasi Dokumen Analisis dan SRS</h4>
+						<h4 class="modal-title">Konfirmasi Validasi Dokumen Proposal TA</h4>
 					</div>
 					<div class="modal-body" style="text-align: center;">
-						<p>Anda sudah memberi status LAYAK pada dokumen Analisis dan SRS ini sebelumnya.</p>
-						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen Analisis dan SRS Kelompok TA 108 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 2?</p>
+						<p>Anda sudah memberi status LAYAK pada dokumen proposal ini sebelumnya.</p>
+						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen proposal Kelompok TA 108 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 1?</p>
 						<form id="validasi_dok_proposal" class="form-horizontal" name="validasi_dok_proposal">
 							<div class="form-group hide">
 								<div class="col-sm-offset-4 col-sm-8">

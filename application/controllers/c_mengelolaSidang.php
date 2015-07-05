@@ -28,7 +28,7 @@
 		// User: All and Guest
 		public function lihatJadwalSidang()
 		{
-			$this->load->view('v_jadwalSidang');
+			$this->load->view('v_jadwal_sidang');
 		}
 	}
 ?>

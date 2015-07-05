@@ -95,6 +95,8 @@
 				<h1><small>Pengelolaan Kegiatan Seminar 1 / Upload Dokumen Proposal</small></h1>
 			</div>
 			
+			
+			
 			<div class="row">
 				<div class="col-md-6">
 					<input id='btn_addnew' class="btn btn-primary" name='btn_addnew' type="button" value="Upload Dokumen Proposal" data-toggle="modal" data-target="#modalUploadDokumenProposal" />

@@ -117,7 +117,7 @@
 							</div>
 						</div>
 					</form>
-					<p style="margin: 10px 0;">yang dibuat oleh Koordinator Santi Sundari pada Kamis, 30 April 2015, 11.00 WIB dengan detail sebagai berikut:</p>
+					<p style="margin: 10px 0;">yang dibuat oleh Santi Sundari pada Kamis, 30 April 2015, 11.00 WIB dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
 							<label class="col-sm-2 control-label" style="text-align: left;">Tanggal Seminar</label>

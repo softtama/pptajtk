@@ -10,19 +10,13 @@
 		{
 			$data['is_published'] = null;
 
-			$this->load->view('v_mengelolaSeminarTiga');
+			$this->load->view('v_mengelola_seminar_tiga');
 		}
 		
-		// User: Mahasiswa Anggota Kelompok TA
-		public function uploadDokumenDsgSDD()
-		{
-			$this->load->view('v_uploadDokumenDsgSDD');
-		}
-
 		// User: Koordinator
 		public function daftarDokumenDsgSDD()
 		{
-			$this->load->view('v_daftarDokumenDsgSDD');
+			$this->load->view('v_daftar_dokumen_des_sdd');
 		}
 
 		// User: Koordinator
@@ -55,7 +49,7 @@
 		// User: All and Guest
 		public function lihatJadwalSeminarTiga()
 		{
-			$this->load->view('v_jadwalSeminarTiga');
+			$this->load->view('v_jadwal_seminar_tiga');
 		}
 	}
 ?>

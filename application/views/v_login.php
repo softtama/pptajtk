@@ -19,25 +19,25 @@
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
 						<li class="dropdown-header">Seminar 1</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/uploadDokumenProposal' ?>">Upload Dokumen Proposal</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/daftarDokumenProposal' ?>">Daftar Dokumen Proposal TA Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/lihatJadwalSeminarSatu' ?>">Jadwal Seminar 1</a></li>
 						<li><a href="#">Persyaratan Seminar 1</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 2</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/uploadDokumenAnlSRS' ?>">Upload Dokumen Analisis dan SRS</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/daftarDokumenAnlSRS' ?>">Daftar Dokumen Analisis dan SRS Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
 						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
-						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/uploadDokumenDsgSDD' ?>">Upload Dokumen Desain dan SDD</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/daftarDokumenDsgSDD' ?>">Daftar Dokumen Desain dan SDD Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/lihatJadwalSeminarTiga' ?>">Jadwal Seminar 3</a></li>
 						<li><a href="#">Persyaratan Seminar 3</a></li>
 					</ul>
 				</li>
-				<li class="">
+				<li>
 					<a href="#" class="dropdown-toggle">Pengelolaan Sidang <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
-						<li><a href="#">Jadwal Sidang</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSidang/lihatJadwalSidang' ?>">Jadwal Sidang</a></li>
 						<li><a href="#">Persyaratan Sidang</a></li>
 					</ul>
 				</li>
@@ -73,8 +73,7 @@
 				        </form>
 				    </div>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?php echo base_url().'c_pesan' ?>"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Pesan</a></li>
-						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Halo, Ida!</a></li>
+						<li><a data-placement="bottom" data-toggle="popover-login" data-title="Login" data-container="body" type="button" data-html="true" href="#" id="login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Silakan login!</a></li>
 						<div id="popover-login-content" class="hide">
 					      <form class="form-inline" role="form">
 					        <div class="form-group">
@@ -93,43 +92,40 @@
 		<div class="container flex-container container-below-navbar-fixed-top">
 			<div class="page-header">
 				<h1><small><ol class="breadcrumb">
-					<li><a href="#">Beranda</a></li>
+					<li><a href="#">Login</a></li>
 				</ol></small></h1>
 			</div>
-			<div class="panel panel-primary">
-				<div class="panel-heading">
-					<h3 class="panel-title" style="margin-bottom: 10px;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;Notifikasi</h3>
-					<h4 class="panel-title">Pengelolaan Seminar / Seminar 3 / Validasi Dokumen Desain dan SDD Tugas Akhir</h4>
-				</div>
-				<div class="panel-body">
-					<p>Dokumen Desain dan SDD Tugas Akhir milik</p>
-					<form class="form-horizontal">
-						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-sm-7">
-								<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
-							</div>
+		</div>
+
+		<div>
+			<div class="col-md-6">
+				<form id="form_login" class="form-horizontal" name="form_login" method="post">
+					<div class="form-group">
+						<label class="col-sm-2 control-label" style="text-align: left;">Username</label>
+						<div class="col-sm-4">
+							<input id="input_username" class="form-control" name="input_username" type="text" />
 						</div>
-						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Topik Tugas Akhir</label>
-							<div class="col-sm-7">
-								<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="col-sm-3 control-label" style="text-align: left;">Waktu Upload Dokumen</label>
-							<div class="col-sm-7">
-								<p id='vd_id_kota' class="form-control-static">Rabu, 27 Mei 2015, 08.00 WIB <a href="#">(Unduh Dokumen)</a></p>
-							</div>
-						</div>
-					</form>
-					telah divalidasi oleh Ida Suhartini dengan status <h4 style="display: inline-block; margin-bottom: 0; margin-top: 0;"><span class="label label-success">LAYAK</span></h4> untuk melaksanakan Seminar 3.
-				</div>
-				<div class="panel-footer">
-					<div class="row">
-						<div class="col-md-12">Dipublikasikan oleh Ida Suhartini, pada Jumat, 29 Mei 2015, 09.00 WIB</div>
 					</div>
-				</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label" style="text-align: left;">Password</label>
+						<div class="col-sm-4">
+							<input id="input_password" class="form-control" name="input_username" type="password" />
+						</div>
+					</div>
+					<div class="form-group hide">
+						<div class="col-sm-8">
+							<input id="input_submit" class="form-control btn btn-primary" name="input_submit" type="submit" value="Login" />
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-6">
+							<label for ="input_submit" class="form-control btn btn-primary"><span class="glyphicon glyphicon-user"></span> &nbsp;Login</label>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-md-8">
+				<a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Login Koordinator</a> | <a href="http://localhost/pptajtk_kota/">Login Mahasiswa</a> | <a href="http://localhost/pptajtk_pp/">Login Pembimbing Penguji</a>
 			</div>
 		</div>
 

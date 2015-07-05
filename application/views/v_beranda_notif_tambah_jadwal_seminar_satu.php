@@ -117,7 +117,7 @@
 							</div>
 						</div>
 					</form>
-					<p style="margin: 10px 0;">telah dibuat oleh Koordinator Ida Suhartini, dengan detail sebagai berikut:</p>
+					<p style="margin: 10px 0;">telah dibuat oleh Ida Suhartini, dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
 							<label class="col-sm-2 control-label" style="text-align: left;">Tanggal Seminar</label>

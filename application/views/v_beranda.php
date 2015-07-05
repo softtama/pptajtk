@@ -14,6 +14,7 @@
 
 			<ul class="nav navmenu-nav">
 				<li class="active"><a href="<?php echo base_url() ?>">Beranda</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaKelompokTAtemp' ?>">Pengelolaan Kelompok Sementara</a></li>
 				<li><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
 				<li class="">
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>

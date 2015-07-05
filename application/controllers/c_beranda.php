@@ -8,7 +8,7 @@
 		
 		public function index()
 		{
-			// Seminar 1
+			// Pengelolaan Seminar 1
 			if ($this->input->get('beranda') == 'notifikasi_validasi_proposal_true')
 			{
 				$this->load->view('v_beranda_notif_validasi_prop_true');
@@ -25,7 +25,7 @@
 			{
 				$this->load->view('v_beranda_notif_publikasi_jadwal_seminar_satu');
 			}
-			// Seminar 2
+			// Pengelolaan Seminar 2
 			elseif ($this->input->get('beranda') == 'notifikasi_validasi_analisis_srs_true')
 			{
 				$this->load->view('v_beranda_notif_validasi_anl_srs_true');
@@ -50,7 +50,7 @@
 			{
 				$this->load->view('v_beranda_notif_publikasi_jadwal_seminar_dua');
 			}
-			// Seminar 3
+			// Pengelolaan Seminar 3
 			elseif ($this->input->get('beranda') == 'notifikasi_validasi_desain_sdd_true')
 			{
 				$this->load->view('v_beranda_notif_validasi_des_sdd_true');
@@ -75,10 +75,26 @@
 			{
 				$this->load->view('v_beranda_notif_publikasi_jadwal_seminar_tiga');
 			}
+			// Pengelolaan Kelompok Sementara TA
+			elseif ($this->input->get('beranda') == 'notifikasi_tambah_kota_temp')
+			{
+				$this->load->view('v_beranda_notif_tambah_kota_temp');
+			}
+			// Pengelolaan Kelompok TA
+			elseif ($this->input->get('beranda') == 'notifikasi_tambah_kota_fix')
+			{
+				$this->load->view('v_beranda_notif_tambah_kota_fix');
+			}
+			// Beranda kosong
 			else
 			{
 				$this->load->view('v_beranda');
 			}
+		}
+
+		public function login()
+		{
+			$this->load->view('v_login');
 		}
 	}
 ?>

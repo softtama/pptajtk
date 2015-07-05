@@ -8,7 +8,7 @@
 		
 		public function index()
 		{
-			$this->load->view('v_kirimPesan');
+			$this->load->view('v_kirim_pesan');
 		}
 		
 		public function kirimPesan()
