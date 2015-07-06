@@ -99,7 +99,7 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title" style="margin-bottom: 10px;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;Notifikasi</h3>
-					<h4 class="panel-title">Pengelolaan Kelompok TA / Pembuatan Data Sementara Kelompok TA</h4>
+					<h4 class="panel-title">Pengelolaan Kelompok TA Sementara / Pembuatan Data Kelompok TA Sementara</h4>
 				</div>
 				<div class="panel-body">
 					<p>Pembuatan data sementara Kelompok TA telah dilakukan oleh Santi Sundari dengan detail sebagai berikut:</p>

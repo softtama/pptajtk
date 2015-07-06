@@ -103,10 +103,10 @@
 			
 			<div class="row">
 				<div class="col-md-6">
-					<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalAddJadwalSeminarSatu"><span class="glyphicon glyphicon-plus"></span>&nbsp;Tambah Jadwal Seminar</a>
+					<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalAddJadwalSeminarSatu"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Tambah Jadwal Seminar</a>
 				</div>
 				<div class="col-md-6" align="right">
-					<a href="<?php echo base_url().'' ?>" id="" name="btn_addnew" class="btn btn-success" type="button"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;Publikasikan Semua Jadwal</a>
+					<a href="<?php echo base_url().'' ?>" id="" name="btn_addnew" class="btn btn-success" type="button"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;&nbsp;Publikasikan Semua Jadwal</a>
 				</div>
 			</div>
 			<br>

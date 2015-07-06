@@ -100,6 +100,64 @@
 				</ol></small></h1>
 			</div>
 
+			<?php if ($is_validated_yes === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Validasi dokumen Analisis dan SRS KOTA 101 dengan status LAYAK berhasil dilakukan!</strong>
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($is_validated_yes === false) { ?>
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Error:</span>
+				<strong>Validasi dokumen Analisis dan SRS KOTA 101 dengan status LAYAK gagal dilakukan!</strong> Silakan coba lagi.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($is_validated_no === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Validasi dokumen Analisis dan SRS KOTA 101 dengan status TIDAK LAYAK berhasil dilakukan!</strong>
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($is_validated_no === false) { ?>
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Error:</span>
+				<strong>Validasi dokumen Analisis dan SRS KOTA 101 dengan status TIDAK LAYAK gagal dilakukan!</strong> Silakan coba lagi.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($is_updated_yes === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Perubahan status dokumen Analisis dan SRS KOTA 106 dari TIDAK LAYAK menjadi LAYAK berhasil dilakukan!</strong>
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($is_updated_yes === false) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Perubahan status dokumen Analisis dan SRS KOTA 106 dari TIDAK LAYAK menjadi LAYAK gagal dilakukan!</strong> Silakan coba lagi.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($is_updated_no === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Perubahan status dokumen Analisis dan SRS KOTA 108 dari LAYAK menjadi TIDAK LAYAK berhasil dilakukan!</strong>
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($is_updated_no === false) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Perubahan status dokumen Analisis dan SRS KOTA 108 dari LAYAK menjadi TIDAK LAYAK gagal dilakukan!</strong> Silakan coba lagi.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } ?>
+
 			<table class="table table-hover table-bordered table-striped" style="margin-top: 0;">
 				<thead>
 					<tr>
@@ -115,7 +173,7 @@
 						<td>Penerapan Semantic Web terhadap Portal Inkubator Bisnis POLBAN</td>
 						<td style="text-align: center;" class="info">Sudah Mengumpulkan</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalLihatDetailProposal_101">
+							<a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalLihatDetailProposal_101">
 								<span class="glyphicon glyphicon-file"></span>
 							</a>
 						</td>
@@ -125,7 +183,7 @@
 						<td>Aplikasi Pemesanan Travel Berbasis Android</td>
 						<td style="text-align: center;" class="info">Sudah Mengumpulkan</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalLihatDetailProposal">
+							<a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalLihatDetailProposal">
 								<span class="glyphicon glyphicon-file"></span>
 							</a>
 						</td>
@@ -135,7 +193,7 @@
 						<td>Software Tools dengan Menggunakan AHP</td>
 						<td style="text-align: center;" class="warning">Belum Mengumpulkan</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-info btn-lg cell disabled" data-toggle="modal" data-target="#modalLihatDetailProposal">
+							<a href="#" class="btn btn-info cell disabled" data-toggle="modal" data-target="#modalLihatDetailProposal">
 								<span class="glyphicon glyphicon-file"></span>
 							</a>
 						</td>
@@ -145,7 +203,7 @@
 						<td>Aplikasi Tempat Wisata dan Kuliner di Indonesia</td>
 						<td style="text-align: center;" class="warning">Belum Mengumpulkan</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-info btn-lg cell disabled" data-toggle="modal" data-target="#modalLihatDetailProposal">
+							<a href="#" class="btn btn-info cell disabled" data-toggle="modal" data-target="#modalLihatDetailProposal">
 								<span class="glyphicon glyphicon-file"></span>
 							</a>
 						</td>
@@ -155,7 +213,7 @@
 						<td>Aplikasi Penghitung Jumlah Trombosit Berbasis Pengolahan Citra Digital</td>
 						<td style="text-align: center;" class="success">Sudah Divalidasi, Layak</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalLihatDetailProposal">
+							<a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalLihatDetailProposal">
 								<span class="glyphicon glyphicon-file"></span>
 							</a>
 						</td>
@@ -165,7 +223,7 @@
 						<td>Aplikasi Animasi 3D pada Android untuk Pembelajaran Shalat Anak Usia 6-8 Tahun</td>
 						<td style="text-align: center;" class="danger">Sudah Divalidasi, Tidak Layak</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalLihatDetailProposal_106">
+							<a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalLihatDetailProposal_106">
 								<span class="glyphicon glyphicon-file"></span>
 							</a>
 						</td>
@@ -175,7 +233,7 @@
 						<td>Penerapan Metode Event Stream Processing untuk Memperoleh Informasi Kegiatan Coding Mahasiswa di Lab secara Real-Time</td>
 						<td style="text-align: center;" class="success">Sudah Divalidasi, Layak</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalLihatDetailProposal">
+							<a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalLihatDetailProposal">
 								<span class="glyphicon glyphicon-file"></span>
 							</a>
 						</td>
@@ -185,7 +243,7 @@
 						<td>Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</td>
 						<td style="text-align: center;" class="success">Sudah Divalidasi, Layak</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalLihatDetailProposal_108">
+							<a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalLihatDetailProposal_108">
 								<span class="glyphicon glyphicon-file"></span>
 							</a>
 						</td>
@@ -195,7 +253,7 @@
 						<td>Sistem Informasi Pengelolaan Perkuliahan Proyek di JTK</td>
 						<td style="text-align: center;" class="danger">Sudah Divalidasi, Tidak Layak</td>
 						<td style="text-align: center;">
-							<a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalLihatDetailProposal">
+							<a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalLihatDetailProposal">
 								<span class="glyphicon glyphicon-file"></span>
 							</a>
 						</td>
@@ -244,13 +302,13 @@
 											<tr>
 												<td>Minggu, 2 Maret 2015, 17.00 WIB</td>
 												<td style="text-align: center;">
-													<a href="#" class="btn btn-info btn-lg cell">
+													<a href="#" class="btn btn-info cell">
 														<span class="glyphicon glyphicon-arrow-down"></span>
 													</a>
 												</td>
 												<td class="warning" style="text-align: center;">Belum Divalidasi</td>
 												<td style="text-align: center;">
-													<a href="#" class="btn btn-success btn-lg cell" data-toggle="modal" data-target="#modalKonfirmasiValidasiProposal_101">
+													<a href="#" class="btn btn-success cell" data-toggle="modal" data-target="#modalKonfirmasiValidasiProposal_101">
 														<span class="glyphicon glyphicon-check"></span>
 													</a>
 												</td>
@@ -308,13 +366,13 @@
 											<tr>
 												<td>Kamis, 30 April 2015, 14.00 WIB</td>
 												<td style="text-align: center;">
-													<a href="#" class="btn btn-info btn-lg cell">
+													<a href="#" class="btn btn-info cell">
 														<span class="glyphicon glyphicon-arrow-down"></span>
 													</a>
 												</td>
 												<td class="danger" style="text-align: center;">Tidak Layak</td>
 												<td style="text-align: center;">
-													<a href="#" class="btn btn-success btn-lg cell" data-toggle="modal" data-target="#modalKonfirmasiValidasiProposal_106">
+													<a href="#" class="btn btn-success cell" data-toggle="modal" data-target="#modalKonfirmasiValidasiProposal_106">
 														<span class="glyphicon glyphicon-check"></span>
 													</a>
 												</td>
@@ -372,13 +430,13 @@
 											<tr>
 												<td>Minggu, 26 April 2015, 09.00 WIB</td>
 												<td style="text-align: center;">
-													<a href="#" class="btn btn-info btn-lg cell">
+													<a href="#" class="btn btn-info cell">
 														<span class="glyphicon glyphicon-arrow-down"></span>
 													</a>
 												</td>
 												<td class="danger" style="text-align: center;">Tidak Layak</td>
 												<td style="text-align: center;">
-													<a href="#" class="btn btn-success btn-lg cell disabled">
+													<a href="#" class="btn btn-success cell disabled">
 														<span class="glyphicon glyphicon-check"></span>
 													</a>
 												</td>
@@ -386,13 +444,13 @@
 											<tr>
 												<td>Rabu, 29 April 2015, 08.00 WIB</td>
 												<td style="text-align: center;">
-													<a href="#" class="btn btn-info btn-lg cell">
+													<a href="#" class="btn btn-info cell">
 														<span class="glyphicon glyphicon-arrow-down"></span>
 													</a>
 												</td>
 												<td class="success" style="text-align: center;">Layak</td>
 												<td style="text-align: center;">
-													<a href="#" class="btn btn-success btn-lg cell" data-toggle="modal" data-target="#modalKonfirmasiValidasiProposal_108">
+													<a href="#" class="btn btn-success cell" data-toggle="modal" data-target="#modalKonfirmasiValidasiProposal_108">
 														<span class="glyphicon glyphicon-check"></span>
 													</a>
 												</td>
@@ -410,20 +468,20 @@
 			</div>
 		</div>
 
-		<!-- Modal for Konfirmasi Validasi Proposal -->
+		<!-- Modal for Konfirmasi Validasi Dokumen -->
 		<div class="modal fade" id="modalKonfirmasiValidasiProposal_101" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Konfirmasi Validasi Dokumen Analisis dan SRS</h4>
+						<h4 class="modal-title">Konfirmasi Validasi Dokumen Analisis dan SRS TA</h4>
 					</div>
 					<div class="modal-body" style="text-align: center;">
 						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen Analisis dan SRS Kelompok TA 101 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 2?</p>
 						<form id="validasi_dok_proposal" class="form-horizontal" name="validasi_dok_proposal">
 							<div class="form-group hide">
 								<div class="col-sm-offset-4 col-sm-8">
-									<input id="submit_validasi_proposal_true" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="true" />
+									<input id="submit_validasi_proposal_true" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="true" onclick="location.href='<?php echo base_url().'c_mengelolaSeminarDua/daftarDokumenAnlSRS?status_is_validated=true' ?>'" />
 									<input id="submit_validasi_proposal_false" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="false" />
 								</div>
 							</div>
@@ -431,8 +489,8 @@
 					</div>
 					<div class="modal-footer">
 						<div class="col-sm-6" style="text-align: left;">
-							<label for="submit_validasi_proposal_true" class="btn btn-success">Ya, Layak</label>
-							<label for="submit_validasi_proposal_false" class="btn btn-danger">Tidak Layak</label>
+							<a href="<?php echo base_url().'c_mengelolaSeminarDua/validate_yes' ?>" class="btn btn-success">Ya, Layak</a>
+							<a href="<?php echo base_url().'c_mengelolaSeminarDua/validate_no' ?>" class="btn btn-danger">Tidak Layak</a>
 						</div>
 						<div class="col-sm-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -442,13 +500,13 @@
 			</div>
 		</div>
 
-		<!-- Modal for Konfirmasi Validasi Proposal -->
+		<!-- Modal for Konfirmasi Validasi Dokumen -->
 		<div class="modal fade" id="modalKonfirmasiValidasiProposal_106" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Konfirmasi Validasi Dokumen Analisis dan SRS</h4>
+						<h4 class="modal-title">Konfirmasi Validasi Dokumen Analisis dan SRS TA</h4>
 					</div>
 					<div class="modal-body" style="text-align: center;">
 						<p>Anda sudah memberi status TIDAK LAYAK pada dokumen Analisis dan SRS ini sebelumnya.</p>
@@ -456,7 +514,7 @@
 						<form id="validasi_dok_proposal" class="form-horizontal" name="validasi_dok_proposal">
 							<div class="form-group hide">
 								<div class="col-sm-offset-4 col-sm-8">
-									<input id="submit_validasi_proposal_true" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="true" />
+									<input id="submit_validasi_proposal_true" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="true" onclick="location.href='<?php echo base_url().'c_mengelolaSeminarSatu/daftarDokumenProposal?status_is_updated=true' ?>'" />
 									<input id="submit_validasi_proposal_false" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="false" />
 								</div>
 							</div>
@@ -464,8 +522,8 @@
 					</div>
 					<div class="modal-footer">
 						<div class="col-sm-6" style="text-align: left;">
-							<label for="submit_validasi_proposal_true" class="btn btn-success">Ya, Layak</label>
-							<label for="submit_validasi_proposal_false" class="btn btn-danger">Tidak Layak</label>
+							<a href="<?php echo base_url().'c_mengelolaSeminarDua/update_yes' ?>" class="btn btn-success">Ya, Layak</a>
+							<a href="#" class="btn btn-danger" data-dismiss="modal">Tidak Layak</a>
 						</div>
 						<div class="col-sm-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -475,13 +533,13 @@
 			</div>
 		</div>
 
-		<!-- Modal for Konfirmasi Validasi Proposal -->
+		<!-- Modal for Konfirmasi Validasi Dokumen -->
 		<div class="modal fade" id="modalKonfirmasiValidasiProposal_108" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Konfirmasi Validasi Dokumen Analisis dan SRS</h4>
+						<h4 class="modal-title">Konfirmasi Validasi Dokumen Analisis dan SRS TA</h4>
 					</div>
 					<div class="modal-body" style="text-align: center;">
 						<p>Anda sudah memberi status LAYAK pada dokumen Analisis dan SRS ini sebelumnya.</p>
@@ -497,8 +555,8 @@
 					</div>
 					<div class="modal-footer">
 						<div class="col-sm-6" style="text-align: left;">
-							<label for="submit_validasi_proposal_true" class="btn btn-success">Ya, Layak</label>
-							<label for="submit_validasi_proposal_false" class="btn btn-danger">Tidak Layak</label>
+							<a href="#" class="btn btn-success" data-dismiss="modal">Ya, Layak</a>
+							<a href="<?php echo base_url().'c_mengelolaSeminarDua/update_no' ?>" class="btn btn-danger">Tidak Layak</a>
 						</div>
 						<div class="col-sm-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -519,6 +577,11 @@
 		        	return $('#popover-login-content').html();
 		        }
 			});
+		</script>
+		<script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();   
+		});
 		</script>
 	</body>
 </html>

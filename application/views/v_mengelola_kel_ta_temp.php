@@ -97,25 +97,65 @@
 					<li><a href="#">Pengelolaan Kelompok Sementara</a></li>
 				</ol></small></h1>
 			</div>
+			
 			<?php if ($status_is_created === true) { ?>
 			<div class="alert alert-success" role="alert">
 				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
 				<span class="sr-only">Success:</span>
-				<strong>Pembuatan Kelompok sementara TA berhasil!</strong> Silakan lanjutkan penambahan Kelompok TA lainnya, atau kembali ke Home.
+				<strong>Data Kelompok TA sementara berhasil dibuat!</strong> Silakan lanjutkan penambahan data Kelompok TA sementara lainnya, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
 			</div>
 			<?php } elseif ($status_is_created === false) { ?>
 			<div class="alert alert-danger" role="alert">
 				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
 				<span class="sr-only">Error:</span>
-				<strong>Pembuatan Kelompok sementara TA gagal!</strong> Silakan coba lagi.
+				<strong>Data Kelompok TA sementara gagal dibuat!</strong> Silakan coba lagi, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_updated === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Data Kelompok TA sementara berhasil diperbarui!</strong> Silakan lanjutkan perubahan data Kelompok TA sementara lainnya, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_updated === false) { ?>
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Data Kelompok TA sementara gagal diperbarui!</strong> Silakan coba lagi, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_deleted === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Data Kelompok TA sementara berhasil dihapus!</strong> Silakan lanjutkan penghapusan data Kelompok TA sementara lainnya, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_deleted === false) { ?>
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Data Kelompok TA sementara gagal dihapus!</strong> Silakan coba lagi, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
 			</div>
 			<?php } elseif ($status_is_published === true) { ?>
 			<div class="alert alert-success" role="alert">
 				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
 				<span class="sr-only">Success:</span>
-				<strong>Kelompok sementara TA berhasil dipublikasikan!</strong> Jangan lupa untuk melakukan publikasi setiap ada perubahan.
+				<strong>Data Kelompok TA sementara berhasil dipublikasikan!</strong> Jangan lupa untuk melakukan publikasi setiap ada penambahan dan perubahan data.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_published === false) { ?>
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Failed:</span>
+				<strong>Data Kelompok TA sementara gagal dipublikasikan!</strong> Silakan coba lagi, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
 			</div>
 			<?php } ?>
+
 			<div class="row">
 				<div class="col-md-6">
 					<a href="#" id='btn-add' class="btn btn-primary" name='btn-add' type="button" data-toggle="modal" data-target="#modalTambahKelompokTAtemp">
@@ -124,7 +164,7 @@
 					</a>
 				</div>
 				<div class="col-md-6" align="right">
-					<a href="<?php echo base_url().'c_mengelolaKelompokTAtemp/postKelompokTAtemp' ?>" id='btn-publish' class="btn btn-success" name='btn-publish' type="button">
+					<a href="#" id='btn-publish' class="btn btn-success" name='btn-publish' type="button" data-toggle="modal" data-target="#modalPublikasiDataKelompokTAtemp">
 						<span class="glyphicon glyphicon-bullhorn"></span>
 						&nbsp;Publikasikan Semua Data Kelompok Sementara
 					</a>
@@ -150,7 +190,7 @@
 						<td style="text-align: center;" class="success">
 							Terpublikasi
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 101"
 							data-nama-topik="Penerapan Semantic Web terhadap Portal Inkubator Bisnis POLBAN"
 							data-ak-1="Ahmad Fadel Khairi"
@@ -159,8 +199,8 @@
 							data-pb-1="Joe Lian Min"
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 102</td>
@@ -168,7 +208,7 @@
 						<td style="text-align: center;" class="success">
 							Terpublikasi
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 102"
 							data-nama-topik="Aplikasi Pemesanan Travel Berbasis Android"
 							data-ak-1="Andri Astra Prakarsa"
@@ -177,8 +217,8 @@
 							data-pb-1="Joe Lian Min"
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 103</td>
@@ -186,7 +226,7 @@
 						<td style="text-align: center;" class="success">
 							Terpublikasi
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 103"
 							data-nama-topik="Software Tools dengan Menggunakan AHP"
 							data-ak-1="Bagus Al-qodri"
@@ -195,8 +235,8 @@
 							data-pb-1="Joe Lian Min"
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 104</td>
@@ -204,7 +244,7 @@
 						<td style="text-align: center;" class="success">
 							Terpublikasi
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 104"
 							data-nama-topik="Aplikasi Tempat Wisata dan Kuliner di Indonesia"
 							data-ak-1="Dimas Jodi Prakoso"
@@ -213,8 +253,8 @@
 							data-pb-1="Joe Lian Min"
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 105</td>
@@ -222,7 +262,7 @@
 						<td style="text-align: center;" class="success">
 							Terpublikasi
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 105"
 							data-nama-topik="Aplikasi Penghitung Jumlah Trombosit Berbasis Pengolahan Citra Digital"
 							data-ak-1="Dinar Hartanto"
@@ -231,8 +271,8 @@
 							data-pb-1="Joe Lian Min"
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 106</td>
@@ -240,7 +280,7 @@
 						<td style="text-align: center;" class="success">
 							Terpublikasi
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 106"
 							data-nama-topik="Aplikasi Animasi 3D pada Android untuk Pembelajaran Shalat Anak Usia 6-8 Tahun"
 							data-ak-1="Gilang Surya Gumilar"
@@ -249,8 +289,8 @@
 							data-pb-1="Joe Lian Min"
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 107</td>
@@ -258,7 +298,7 @@
 						<td style="text-align: center;" class="success">
 							Terpublikasi
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 107"
 							data-nama-topik="Penerapan Metode Event Stream Processing untuk Memperoleh Informasi Kegiatan Coding Mahasiswa di Lab secara Real-Time"
 							data-ak-1="Harris Chaerul Irsan"
@@ -267,8 +307,8 @@
 							data-pb-1="Joe Lian Min"
 							data-pb-2="Irwan Setiawan"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 108</td>
@@ -276,7 +316,7 @@
 						<td style="text-align: center;" class="success">
 							Terpublikasi
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 108"
 							data-nama-topik="Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web"
 							data-ak-1="Januar Muhtadiin"
@@ -288,7 +328,7 @@
 							data-cp-4="Irwan Setiawan"
 							data-cp-5="Yudi Widhiyasana"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-primary cell" data-toggle="modal" data-target="#modalEditKelompokTA"
 							data-id-kota="KOTA 108"
 							data-nama-topik="Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web"
 							data-ak-1="Januar Muhtadiin"
@@ -300,7 +340,7 @@
 							data-cp-4="Irwan Setiawan"
 							data-cp-5="Yudi Widhiyasana"
 							><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 					<tr>
 						<td class="id_kota">KOTA 109</td>
@@ -308,7 +348,7 @@
 						<td style="text-align: center;" class="success">
 							Terpublikasi
 						</td>
-						<td style="text-align: center;"><a href="#" class="btn btn-info btn-lg cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
+						<td style="text-align: center;"><a href="#" class="btn btn-info cell" data-toggle="modal" data-target="#modalViewDetailKelompokTA"
 							data-id-kota="KOTA 109"
 							data-nama-topik="Sistem Informasi Pengelolaan Perkuliahan Proyek di JTK"
 							data-ak-1="Kevin Yoasman Tupu"
@@ -317,8 +357,8 @@
 							data-pb-1="Irwan Setiawan"
 							data-pb-2="Jonner Hutahaean"
 							><span class="glyphicon glyphicon-info-sign"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-primary btn-lg cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td style="text-align: center;"><a href="#" class="btn btn-danger btn-lg cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-primary cell" data-toggle="modal" data-target="#modalEditKelompokTA"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td style="text-align: center;"><a href="#" class="btn btn-danger cell" data-toggle="modal" data-target="#modalKonfHapusKelompokTA"><span class="glyphicon glyphicon-trash"></span></a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -420,7 +460,7 @@
 							<h4 class="modal-title">Tambah Kelompok Sementara</h4>
 						</div>
 						<div class="modal-body">
-							<form id="form_create_kota" name="form_create_kota" class="form-horizontal" action="<?php echo base_url().'c_mengelolaKelompokTA/inputKelompokTA' ?>" method="post">
+							<form id="form_create_kota" name="form_create_kota" class="form-horizontal" action="<?php echo base_url().'c_mengelolaKelompokTAtemp/create' ?>" method="post">
 								<div class="form-group">
 									<label for="id_kota" class="col-sm-4 control-label">Kode Kelompok</label>
 									<div class="col-sm-6">
@@ -527,7 +567,7 @@
 							<h4 class="modal-title">Edit Kelompok Sementara</h4>
 						</div>
 						<div class="modal-body">
-							<form id="form_create_kota" name="form_create_kota" class="form-horizontal" action="<?php echo base_url().'c_mengelolaKelompokTA/inputKelompokTA' ?>" method="post">
+							<form id="form_create_kota" name="form_create_kota" class="form-horizontal" action="<?php echo base_url().'c_mengelolaKelompokTAtemp/update' ?>" method="post">
 								<div class="form-group">
 									<label for="id_kota" class="col-sm-4 control-label">Kode Kelompok</label>
 									<div class="col-sm-6">
@@ -639,7 +679,7 @@
 								</div>
 								<div class="form-group hide">
 									<div class="col-sm-offset-4 col-sm-6">
-										<input id='submit_kota' class="btn btn-primary" name='submit_kota' type='submit' value='Buat Kelompok TA' />
+										<input id='update_kota' class="btn btn-primary" name='update_kota' type='submit' value='Update Data' />
 									</div>
 								</div>
 							</form>
@@ -649,7 +689,7 @@
 						</div>
 						<div class="modal-footer">
 							<div class="col-sm-6" style="text-align: left;">
-								<label for="submit_kota" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Update Kelompok</label>
+								<label for="update_kota" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Update Data</label>
 							</div>
 							<div class="col-sm-6">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -669,11 +709,34 @@
 						<h4 class="modal-title">Hapus Kelompok Sementara</h4>
 					</div>
 					<div class="modal-body" style="text-align: center;">
-						<p>Apakah Anda yakin ingin menghapus data sementara Kelompok TA untuk KOTA 108?</p>
+						<p>Apakah Anda yakin ingin menghapus data Kelompok TA sementara untuk KOTA 108?</p>
 					</div>
 					<div class="modal-footer">
 						<div class="col-sm-6" style="text-align: left;">
-							<button type="button" class="btn btn-danger" data-dismiss="modal">Ya, Hapus</button>
+							<a href="<?php echo base_url().'c_mengelolaKelompokTAtemp/delete' ?>" class="btn btn-danger">Ya, Hapus</a>
+						</div>
+						<div class="col-sm-6">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for Publish -->
+		<div class="modal fade" id="modalPublikasiDataKelompokTAtemp" role="dialog">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Publikasi Data Kelompok TA Sementara</h4>
+					</div>
+					<div class="modal-body" style="text-align: center;">
+						<p>Apakah Anda yakin ingin mempublikasi semua data Kelompok TA sementara yang ada ke mahasiswa anggota Kelompok TA sementara yang bersangkutan?</p>
+					</div>
+					<div class="modal-footer">
+						<div class="col-sm-6" style="text-align: left;">
+							<a href="<?php echo base_url().'c_mengelolaKelompokTAtemp/publish' ?>" class="btn btn-success">Publikasikan</a>
 						</div>
 						<div class="col-sm-6">
 							<button type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
@@ -712,6 +775,11 @@
 		        	return $('#popover-login-content').html();
 		        }
 			});
+		</script>
+		<script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();   
+		});
 		</script>
 	</body>
 </html>

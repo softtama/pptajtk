@@ -80,10 +80,18 @@
 			{
 				$this->load->view('v_beranda_notif_tambah_kota_temp');
 			}
+			elseif ($this->input->get('beranda') == 'notifikasi_update_kota_temp')
+			{
+				$this->load->view('v_beranda_notif_update_kota_temp');
+			}
 			// Pengelolaan Kelompok TA
 			elseif ($this->input->get('beranda') == 'notifikasi_tambah_kota_fix')
 			{
 				$this->load->view('v_beranda_notif_tambah_kota_fix');
+			}
+			elseif ($this->input->get('beranda') == 'notifikasi_update_kota_fix')
+			{
+				$this->load->view('v_beranda_notif_update_kota_fix');
 			}
 			// Beranda kosong
 			else

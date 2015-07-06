@@ -96,15 +96,72 @@
 					<li><a href="#">Pengelolaan Nilai</a></li>
 				</ol></small></h1>
 			</div>
+			<?php if ($status_is_created === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Pembuatan data nilai Tugas Akhir berhasil!</strong> Silakan lanjutkan penambahan data nilai Tugas Akhir lainnya, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_created === false) { ?>
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Pembuatan data nilai Tugas Akhir gagal!</strong> Silakan coba lagi, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_updated === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Perubahan data nilai Tugas Akhir berhasil!</strong> Silakan lanjutkan perubahan data nilai Tugas Akhir lainnya, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_updated === false) { ?>
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Perubahan data nilai Tugas Akhir gagal!</strong> Silakan coba lagi, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_deleted === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Penghapusan data nilai Tugas Akhir berhasil!</strong> Silakan lanjutkan penghapusan data nilai Tugas Akhir lainnya, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_deleted === false) { ?>
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Penghapusan data nilai Tugas Akhir gagal!</strong> Silakan coba lagi, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_published === true) { ?>
+			<div class="alert alert-success" role="alert">
+				<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Publikasi data nilai Tugas Akhir berhasil!</strong> Jangan lupa untuk melakukan publikasi setiap setelah melakukan penambahan atau perubahan data.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } elseif ($status_is_published === false) { ?>
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Success:</span>
+				<strong>Publikasi data nilai Tugas Akhir gagal!</strong> Silakan coba lagi, atau lakukan kegiatan lainnya.
+				<button type="button" class="close" data-dismiss="alert" data-toggle="tooltip" data-placement="top" title="Tutup" style="margin-top: -2px;">&times;</button>
+			</div>
+			<?php } ?>
 			<div class="row">
 				<div class="col-md-6">
-					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_publish' type="button" data-toggle="modal" data-target="#modalTambahKelompokTA">
+					<a href="#" id='btn_addnew' class="btn btn-primary" name='btn_publish' type="button" data-toggle="modal" data-target="#modalTambahDataNilai">
 						<span class="glyphicon glyphicon-plus"></span>
 						&nbsp;Tambah Data Nilai
 					</a>
 				</div>
 				<div class="col-md-6" align="right">
-					<a href="<?php echo base_url().'c_mengelolaKelompokTA/postKelompokTA' ?>" id='btn_addnew' class="btn btn-success" name='btn_publish' type="button">
+					<a href="#" id='btn_addnew' class="btn btn-success" name='btn_publish' type="button" data-toggle="modal" data-target="#modalPublikasiDataNilai">
 						<span class="glyphicon glyphicon-bullhorn"></span>
 						&nbsp;Publikasikan Semua Data Nilai
 					</a>
@@ -119,7 +176,8 @@
 						<th class="info" width="270" colspan="3" style="text-align: center;">Nilai Kegiatan</th>
 						<th class="info" width="90" rowspan="2" style="text-align: center;">Nilai Pembimbing</th>
 						<th class="success" width="90" rowspan="2" style="text-align: center;">Nilai Akhir</th>
-						<th rowspan="2" style="text-align: center;">Opsi</th>
+						<th rowspan="2" width="80" style="text-align: center;">Edit</th>
+						<th rowspan="2" width="80" style="text-align: center;">Hapus</th>
 					</tr>
 					<tr>
 						<th class="info" width="90" style="text-align: center;">Seminar 2</th>
@@ -138,10 +196,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -154,10 +214,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -170,10 +232,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -186,10 +250,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -202,10 +268,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -218,10 +286,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -234,10 +304,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -250,10 +322,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -266,10 +340,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -282,10 +358,12 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 					<tr align="center">
@@ -298,14 +376,195 @@
 						<td>80</td>
 						<td>90</td>
 						<td>
-							<a href="#" id="" name='btn_addnew' class="btn btn-danger" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
-							<span class="glyphicon glyphicon-trash"></span>&nbsp;Hapus</a>
-							<a href="#" id="" name='btn_addnew' class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEditNilai">
-							<span class="glyphicon glyphicon-pencil"></span>&nbsp;Edit</a>
+							<a href="#" id="" name='btn_addnew' class="btn btn-primary cell" type="button" data-toggle="modal" data-target="#modalEditNilai">
+							<span class="glyphicon glyphicon-pencil"></span></a>
+						</td>
+						<td>
+							<a href="#" id="" name='btn_addnew' class="btn btn-danger cell" type="button" data-toggle="modal" data-target="#modalHapusDataNilai">
+							<span class="glyphicon glyphicon-trash"></span></a>
 						</td>
 					</tr>
 				</tbody>
 			</table>	
+		</div>
+
+		<!-- Modal for Add -->
+		<div class="modal fade" id="modalTambahDataNilai" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Tambah Data Nilai</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">NIM</label>
+								<div class="col-sm-6">
+									<p id='ed_nim_ro' class="form-control-static"><i>NIM akan muncul jika Anda sudah memilih Nama Mahasiswa pada field Nama Mahasiswa</i></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nama Mahasiswa</label>
+								<div class="col-sm-6">
+									<select class="form-control">
+										<option>--- Pilih Nama Mahasiswa ---</option>
+										<optgroup label="KoTA 101">
+											<option>Ahmad Fadel Khairi</option>
+											<option>Fahmi Iqbal Abdillah</option>	
+											<option>Medina Nur Fauziah</option>
+										</optgroup>
+										<optgroup label="KoTA 102">
+											<option>Andri Astra P. Siagian</option>
+											<option>Caesario Shiddieq Pamungkas</option>
+											<option>Hasbah Bunyamin</option>
+										</optgroup>
+										<optgroup label="KoTA 103">
+											<option>Bagus Al-Qodri</option>
+											<option>Dani Prihat Bren</option>
+											<option>Ritman Sigit Kurniawan</option>
+										</optgroup>
+										<optgroup label="KoTA 104">
+											<option>Dimas Jodi Prakoso</option>
+											<option>Putri Amalia</option>
+											<option>Rafli Ahmad Zulfikar</option>
+										</optgroup>
+										<optgroup label="KoTA 105">
+											<option>Dinar Hartanto</option>
+											<option>Khairil Tasnim Nasution</option>
+											<option>Sannie Ragistia</option>
+										</optgroup>
+										<optgroup label="KoTA 106">
+											<option>Gilang Surya Gumilar</option>
+											<option>Muhammad Dimas Dewantara</option>
+											<option>Muhammad Taufiq Ismail</option>
+										</optgroup>
+										<optgroup label="KoTA 107">
+											<option>Harris Chaerul Irsan</option>
+											<option>Muhammad Adiputra</option>
+											<option>Trisna Ari Roshinta</option>	
+										</optgroup>
+										<optgroup label="KoTA 108">
+											<option>Januar Muhtadiin</option>
+											<option>Rizki Pratama</option>
+											<option>Yudha Arie Fargita</option>
+										</optgroup>
+										<optgroup label="KoTA 109">
+											<option>Kevin Yoasman Tupu</option>
+											<option>Nurul Rasti Wahyuni</option>
+											<option>Stephanus Soekendar</option>
+										</optgroup>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 2</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" min="0" max="100" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 3</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" min="0" max="100" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Sidang</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" min="0" max="100" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Pembimbing</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" min="0" max="100" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Akhir</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" readonly />
+								</div>
+							</div>				  
+						</form>
+					</div>
+					<div class="modal-footer">
+						<div class="col-sm-6" style="text-align: left;">
+							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> &nbsp;Simpan Data</label>
+						</div>
+						<div class="col-sm-6">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal for Edit -->
+		<div class="modal fade" id="modalEditNilai" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Edit Data Nilai</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">NIM</label>
+								<div class="col-sm-6">
+									<p id='ed_nim_ro' class="form-control-static">121511015</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nama</label>
+								<div class="col-sm-6">
+									<p id='ed_nama_ro' class="form-control-static">Januar Muhtadiin</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 2</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" value="80" min="0" max="100" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 3</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" value="80" min="0" max="100" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Sidang</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" value="80" min="0" max="100" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Pembimbing</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" value="80" min="0" max="100" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Akhir</label>
+								<div class="col-sm-2">
+									<input type="number" class="form-control" readonly value="80" min="0" max="100" />
+								</div>
+							</div>				  
+						</form>
+					</div>
+					<div class="modal-footer">
+						<div class="col-sm-6" style="text-align: left;">
+							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> &nbsp;Simpan Data</label>
+						</div>
+						<div class="col-sm-6">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Modal for Delete -->
@@ -331,66 +590,23 @@
 			</div>
 		</div>
 
-		<!-- Modal for Edit -->
-		<div class="modal fade" id="modalEditNilai" role="dialog">
-			<div class="modal-dialog">
+		<!-- Modal for Publish -->
+		<div class="modal fade" id="modalPublikasiDataNilai" role="dialog">
+			<div class="modal-dialog modal-sm">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Edit Data</h4>
+						<h4 class="modal-title">Publikasi Data Nilai</h4>
 					</div>
-					<div class="modal-body">
-						<form class="form-horizontal">
-							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">NIM</label>
-								<div class="col-sm-6">
-									<p id='ed_nim_ro' class="form-control-static">121511015</p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nama</label>
-								<div class="col-sm-6">
-									<p id='ed_nama_ro' class="form-control-static">Januar Muhtadiin</p>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 2</label>
-								<div class="col-sm-3">
-									<input type="number" class="form-control" value="80" />
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 3</label>
-								<div class="col-sm-3">
-									<input type="number" class="form-control" value="80" />
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Sidang</label>
-								<div class="col-sm-3">
-									<input type="number" class="form-control" value="80" />
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Pembimbing</label>
-								<div class="col-sm-3">
-									<input type="number" class="form-control" value="80" />
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Akhir</label>
-								<div class="col-sm-3">
-									<input type="number" class="form-control" readonly value="80" />
-								</div>
-							</div>				  
-						</form>
+					<div class="modal-body" style="text-align: center;">
+						<p>Apakah Anda yakin ingin mempublikasi semua data nilai yang ada ke mahasiswa yang bersangkutan?</p>
 					</div>
 					<div class="modal-footer">
 						<div class="col-sm-6" style="text-align: left;">
-							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> &nbsp;Simpan Data</label>
+							<a href="<?php echo base_url().'c_mengelolaNilai/postDataNilai' ?>" class="btn btn-success">Publikasikan</a>
 						</div>
 						<div class="col-sm-6">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
 						</div>
 					</div>
 				</div>
@@ -407,6 +623,11 @@
 		        	return $('#popover-login-content').html();
 		        }
 			});
+		</script>
+		<script>
+		$(document).ready(function(){
+		    $('[data-toggle="tooltip"]').tooltip();   
+		});
 		</script>
 	</body>
 </html>

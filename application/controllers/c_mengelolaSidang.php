@@ -20,9 +20,9 @@
 		}
 
 		// User: Koordinator
-		public function postJadwalSidang()
+		public function publish()
 		{
-			
+			redirect(base_url().'C_mengelolaSidang/?is_published=true');
 		}
 
 		// User: All and Guest

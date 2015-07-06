@@ -9,6 +9,8 @@
 		public function index()
 		{
 			$data['status_is_created'] = null;
+			$data['status_is_updated'] = null;
+			$data['status_is_deleted'] = null;
 			$data['status_is_published'] = null;
 
 			if ($this->input->get('is_created') == 'true')
@@ -21,6 +23,26 @@
 				$data['status_is_created'] = false;
 			}
 
+			if ($this->input->get('is_updated') == 'true')
+			{
+				$data['status_is_updated'] = true;
+			}
+
+			if ($this->input->get('is_updated') == 'false')
+			{
+				$data['status_is_updated'] = false;
+			}
+
+			if ($this->input->get('is_deleted') == 'true')
+			{
+				$data['status_is_deleted'] = true;
+			}
+
+			if ($this->input->get('is_deleted') == 'false')
+			{
+				$data['status_is_deleted'] = false;
+			}
+
 			if ($this->input->get('is_published') == 'true')
 			{
 				$data['status_is_published'] = true;
@@ -31,22 +53,26 @@
 				$data['status_is_published'] = false;
 			}
 
-			$this->load->model('m_mahasiswa', '', true);
-			$this->load->model('m_dosen', '', true);
-
-			$data['list_mhs'] = $this->m_mahasiswa->getDataMhs();
-			$data['list_dsn'] = $this->m_dosen->getDataDosen();
-
 			$this->load->view('v_mengelola_kel_ta_temp', $data);
 		}
 
-		public function postKelompokTAtemp()
+		public function create()
 		{
-			//$this->load->model('m_kelompokTA', '', true);
+			redirect(base_url().'C_mengelolaKelompokTAtemp?is_created=true');
+		}
 
-			//$this->m_kelompokTA->setStatusKePublished();
+		public function update()
+		{
+			redirect(base_url().'C_mengelolaKelompokTAtemp?is_updated=true');
+		}
 
-			// Redirect to index, show notification to current User
+		public function delete()
+		{
+			redirect(base_url().'C_mengelolaKelompokTAtemp?is_deleted=true');
+		}
+
+		public function publish()
+		{
 			redirect(base_url().'C_mengelolaKelompokTAtemp?is_published=true');	
 		}
 	}
