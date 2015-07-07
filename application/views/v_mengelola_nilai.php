@@ -11,6 +11,7 @@
 		<!-- Fixed Left Sidebar Nav Menu -->
 		<nav class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm" role="navigation">
 			<a class="navmenu-brand" href="#">Pengelolaan Pelaksanaan TA JTK</a>
+
 			<ul class="nav navmenu-nav">
 				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
 				<li><a href="<?php echo base_url().'c_mengelolaKelompokTAtemp' ?>">Pengelolaan Kelompok Sementara</a></li>
@@ -21,29 +22,28 @@
 						<li class="dropdown-header">Seminar 1</li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/daftarDokumenProposal' ?>">Daftar Dokumen Proposal TA Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarSatu/lihatJadwalSeminarSatu' ?>">Jadwal Seminar 1</a></li>
-					
+						<li><a href="#">Persyaratan Seminar 1</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 2</li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/daftarDokumenAnlSRS' ?>">Daftar Dokumen Analisis dan SRS Kelompok</a></li>
-						<li class=""><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
-						
+						<li><a href="<?php echo base_url().'c_mengelolaSeminarDua/lihatJadwalSeminarDua' ?>">Jadwal Seminar 2</a></li>
+						<li><a href="#">Persyaratan Seminar 2</a></li>
 						<li class="divider"></li>
 						<li class="dropdown-header">Seminar 3</li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/daftarDokumenDsgSDD' ?>">Daftar Dokumen Desain dan SDD Kelompok</a></li>
 						<li><a href="<?php echo base_url().'c_mengelolaSeminarTiga/lihatJadwalSeminarTiga' ?>">Jadwal Seminar 3</a></li>
-						
+						<li><a href="#">Persyaratan Seminar 3</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#" class="dropdown-toggle">Pengelolaan Sidang <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
-						<li><a href="#">Jadwal Sidang</a></li>
+						<li><a href="<?php echo base_url().'c_mengelolaSidang/lihatJadwalSidang' ?>">Jadwal Sidang</a></li>
 						<li><a href="#">Persyaratan Sidang</a></li>
 					</ul>
 				</li>
 				<li class="active"><a href="<?php echo base_url().'c_mengelolaNilai' ?>">Pengelolaan Nilai</a></li>
 				<li><a href="<?php echo base_url().'c_mengelolaRevisi' ?>">Pengelolaan Revisi</a></li>
-			
 			</ul>
 		</nav>
 

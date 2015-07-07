@@ -99,10 +99,10 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title" style="margin-bottom: 10px;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;Notifikasi</h3>
-					<h4 class="panel-title">Pengelolaan Seminar / Seminar 1 / Publikasi Jadwal Seminar 1</h4>
+					<h4 class="panel-title">Pengelolaan Kelompok TA / Publikasi Data Kelompok TA</h4>
 				</div>
 				<div class="panel-body">
-					<p>Jadwal pelaksanaan Seminar 1 untuk</p>
+					<p>Data Kelompok TA dari:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
 							<label class="col-md-2 control-label" style="text-align: left;">Kode Kelompok</label>
@@ -111,27 +111,7 @@
 							</div>
 						</div>
 					</form>
-					<p style="margin: 10px 0;">telah dipublikasikan oleh Ida Suhartini ke setiap Kelompok TA yang bersangkutan, dengan detail sebagai berikut:</p>
-					<form class="form-horizontal">
-						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-2 control-label" style="text-align: left;">Rentang Tanggal Seminar</label>
-							<div class="col-md-8">
-								<p id='vd_id_kota' class="form-control-static">Senin, 2 Maret 2015 - Senin, 23 Maret 2015</p>
-							</div>
-						</div>
-						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-2 control-label" style="text-align: left;">Rentang Jam Seminar</label>
-							<div class="col-md-8">
-								<p id='vd_id_kota' class="form-control-static">08.40 WIB - 10.10 WIB hingga 13.00 WIB - 14.30 WIB</p>
-							</div>
-						</div>
-						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-2 control-label" style="text-align: left;">Ruangan Seminar</label>
-							<div class="col-md-8">
-								<p id='vd_id_kota' class="form-control-static">Ruang A201, Ruang A202, Ruang A203</p>
-							</div>
-						</div>
-					</form>
+					<p style="margin: 10px 0 0 0; ">telah dipublikasikan oleh Ida Suhartini ke setiap Kelompok TA yang bersangkutan.</p>
 				</div>
 				<div class="panel-footer">
 					<div class="row">

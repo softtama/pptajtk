@@ -99,114 +99,147 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title" style="margin-bottom: 10px;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;Notifikasi</h3>
-					<h4 class="panel-title">Pengelolaan Kelompok TA Sementara / Penghapusan Data Kelompok TA Sementara</h4>
+					<h4 class="panel-title">Pengelolaan Seminar / Seminar 2 / Perubahan Jadwal Seminar 2</h4>
 				</div>
 				<div class="panel-body">
-					<p>Penghapusan data Kelompok TA sementara telah dilakukan oleh Santi Sundari dengan detail sebagai berikut:</p>
+					<p>Jadwal pelaksanaan Seminar 2 untuk</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-3 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-md-7">
+							<label class="col-md-2 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-3 control-label" style="text-align: left;">Nama Topik Tugas Akhir</label>
-							<div class="col-md-7">
+							<label class="col-md-2 control-label" style="text-align: left;">Topik Tugas Akhir</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 							</div>
 						</div>
+					</form>
+					<p style="margin: 10px 0;">telah diperbarui oleh Ida Suhartini, dengan detail sebagai berikut:</p>
+					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-3 control-label" style="text-align: left;">Detail Kelompok</label>
-							<div class="col-md-7">
-								<a href="#" id='vd_id_kota' class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalLihatDetailKota">Lihat</a>
+							<label class="col-md-2 control-label" style="text-align: left;">Data Awal Jadwal</label>
+							<div class="col-md-8">
+								<a href="#" id="vd-data-awal-kota-temp" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalLihatDataAwalKOTAtemp">Lihat</a>
+							</div>
+						</div>
+						<div class="form-group" style="margin-bottom: 0;">
+							<label class="col-md-2 control-label" style="text-align: left;">Data Terkini Jadwal</label>
+							<div class="col-md-8">
+								<a href="#" id="vd-data-awal-kota-temp" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalLihatDataBaruKOTAtemp">Lihat</a>
 							</div>
 						</div>
 					</form>
 				</div>
 				<div class="panel-footer">
 					<div class="row">
-						<div class="col-md-12">Dipublikasikan oleh Santi Sundari, pada Kamis, 30 April 2015, 11.00 WIB</div>
+						<div class="col-md-12">Dipublikasikan oleh Ida Suhartini, pada Jumat, 27 Februari 2015, 14.00 WIB</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Modal Lihat Detail Kelompok TA Sementara -->
-		<div class="modal fade" id="modalLihatDetailKota" role="dialog">
+		<!-- Modal Lihat Data Awal Jadwal Seminar 2 -->
+		<div class="modal fade" id="modalLihatDataAwalKOTAtemp" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title">Detail Kelompok</h4>
+						<h4 class="modal-title">Data Awal Jadwal Seminar 2</h4>
 					</div>
 					<div class="modal-body">
-						<form id="form_viewdet_kota" name="form_viewdet_kota" class="form-horizontal">
+						<form class="form-horizontal">
 							<div class="form-group" style="margin-bottom: 0;">
-								<label class="col-md-4 control-label">Kode Kelompok</label>
-								<div class="col-md-8">
+								<label class="col-md-4 control-label" style="text-align: left;">Kode Kelompok</label>
+								<div class="col-md-6">
 									<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 								</div>
 							</div>
 							<div class="form-group" style="margin-bottom: 0;">
-								<label class="col-md-4 control-label">Nama Topik Tugas Akhir</label>
+								<label class="col-md-4 control-label" style="text-align: left;">Nama Topik Tugas Akhir</label>
 								<div class="col-md-8">
-									<p id='vd_nama_topik' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
+									<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 								</div>
 							</div>
 							<div class="form-group" style="margin-bottom: 0;">
-								<label class="col-md-4 control-label">Anggota 1</label>
+								<label class="col-md-4 control-label" style="text-align: left;">Tanggal Seminar</label>
 								<div class="col-md-8">
-									<p id='vd_ak_1' class="form-control-static">Januar Muhtadiin</p>
+									<p id='vd_id_kota' class="form-control-static">Senin, 11 Mei 2015</p>
 								</div>
 							</div>
 							<div class="form-group" style="margin-bottom: 0;">
-								<label class="col-md-4 control-label">Anggota 2</label>
+								<label class="col-md-4 control-label" style="text-align: left;">Jam Seminar</label>
 								<div class="col-md-8">
-									<p id='vd_ak_2' class="form-control-static">Rizki Pratama</p>
+									<p id='vd_id_kota' class="form-control-static">08.40 WIB</p>
 								</div>
 							</div>
 							<div class="form-group" style="margin-bottom: 0;">
-								<label class="col-md-4 control-label">Anggota 3</label>
+								<label class="col-md-4 control-label" style="text-align: left;">Ruangan Seminar</label>
 								<div class="col-md-8">
-									<p id='vd_ak_3' class="form-control-static">Yudha Arie Fargitha</p>
+									<p id='vd_id_kota' class="form-control-static">Ruang Rapat</p>
 								</div>
 							</div>
 							<div class="form-group" style="margin-bottom: 0;">
-								<h4><label class="col-md-12 control-label" style="text-align: left;">Daftar Calon Pembimbing</label></h4>
+								<label class="col-md-4 control-label" style="text-align: left;">Penguji Seminar</label>
+								<div class="col-md-8">
+									<p id='vd_id_kota' class="form-control-static">Joe Lian Min; Ida Suhartini</p>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Lihat Data Terkini Jadwal Seminar 2 -->
+		<div class="modal fade" id="modalLihatDataBaruKOTAtemp" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Data Terkini Jadwal Seminar 2</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group" style="margin-bottom: 0;">
+								<label class="col-md-4 control-label" style="text-align: left;">Kode Kelompok</label>
+								<div class="col-md-6">
+									<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
+								</div>
 							</div>
 							<div class="form-group" style="margin-bottom: 0;">
-								<div class="col-md-12">
-									<table class="table table-hover table-bordered table-striped" style="margin-top: 10px; margin-bottom: 0;">
-										<thead>
-											<tr>
-												<th width="100">Urutan ke-</th>
-												<th>Nama Calon Pembimbing</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Suprihanto</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Ani Rahmani</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>Joe Lian Min</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>Irwan Setiawan</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>Yudi Widhiyasana</td>
-											</tr>
-										</tbody>
-									</table>
+								<label class="col-md-4 control-label" style="text-align: left;">Nama Topik Tugas Akhir</label>
+								<div class="col-md-8">
+									<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
+								</div>
+							</div>
+							<div class="form-group" style="margin-bottom: 0;">
+								<label class="col-md-4 control-label" style="text-align: left;">Tanggal Seminar</label>
+								<div class="col-md-8">
+									<p id='vd_id_kota' class="form-control-static">Senin, 11 Mei 2015</p>
+								</div>
+							</div>
+							<div class="form-group" style="margin-bottom: 0;">
+								<label class="col-md-4 control-label" style="text-align: left;">Jam Seminar</label>
+								<div class="col-md-8">
+									<p id='vd_id_kota' class="form-control-static">13.00 WIB</p>
+								</div>
+							</div>
+							<div class="form-group" style="margin-bottom: 0;">
+								<label class="col-md-4 control-label" style="text-align: left;">Ruangan Seminar</label>
+								<div class="col-md-8">
+									<p id='vd_id_kota' class="form-control-static">Ruang Serba Guna</p>
+								</div>
+							</div>
+							<div class="form-group" style="margin-bottom: 0;">
+								<label class="col-md-4 control-label" style="text-align: left;">Penguji Seminar</label>
+								<div class="col-md-8">
+									<p id='vd_id_kota' class="form-control-static">Joe Lian Min; Ida Suhartini</p>
 								</div>
 							</div>
 						</form>

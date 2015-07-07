@@ -21,6 +21,10 @@
 			{
 				$this->load->view('v_beranda_notif_tambah_jadwal_seminar_satu');
 			}
+			elseif ($this->input->get('beranda') == 'notifikasi_update_jadwal_seminar_satu')
+			{
+				$this->load->view('v_beranda_notif_update_jadwal_seminar_satu');
+			}
 			elseif ($this->input->get('beranda') == 'notifikasi_publikasi_jadwal_seminar_satu')
 			{
 				$this->load->view('v_beranda_notif_publikasi_jadwal_seminar_satu');
@@ -45,6 +49,10 @@
 			elseif ($this->input->get('beranda') == 'notifikasi_tambah_jadwal_seminar_dua_denied')
 			{
 				$this->load->view('v_beranda_notif_tambah_jadwal_seminar_dua_denied');
+			}
+			elseif ($this->input->get('beranda') == 'notifikasi_update_jadwal_seminar_dua')
+			{
+				$this->load->view('v_beranda_notif_update_jadwal_seminar_dua');
 			}
 			elseif ($this->input->get('beranda') == 'notifikasi_publikasi_jadwal_seminar_dua')
 			{
@@ -71,6 +79,10 @@
 			{
 				$this->load->view('v_beranda_notif_tambah_jadwal_seminar_tiga_denied');
 			}
+			elseif ($this->input->get('beranda') == 'notifikasi_update_jadwal_seminar_tiga')
+			{
+				$this->load->view('v_beranda_notif_update_jadwal_seminar_tiga');
+			}
 			elseif ($this->input->get('beranda') == 'notifikasi_publikasi_jadwal_seminar_tiga')
 			{
 				$this->load->view('v_beranda_notif_publikasi_jadwal_seminar_tiga');
@@ -84,6 +96,14 @@
 			{
 				$this->load->view('v_beranda_notif_update_kota_temp');
 			}
+			elseif ($this->input->get('beranda') == 'notifikasi_hapus_kota_temp')
+			{
+				$this->load->view('v_beranda_notif_hapus_kota_temp');
+			}
+			elseif ($this->input->get('beranda') == 'notifikasi_publikasi_kota_temp')
+			{
+				$this->load->view('v_beranda_notif_publikasi_kota_temp');
+			}
 			// Pengelolaan Kelompok TA
 			elseif ($this->input->get('beranda') == 'notifikasi_tambah_kota_fix')
 			{
@@ -92,6 +112,14 @@
 			elseif ($this->input->get('beranda') == 'notifikasi_update_kota_fix')
 			{
 				$this->load->view('v_beranda_notif_update_kota_fix');
+			}
+			elseif ($this->input->get('beranda') == 'notifikasi_hapus_kota_fix')
+			{
+				$this->load->view('v_beranda_notif_hapus_kota_fix');
+			}
+			elseif ($this->input->get('beranda') == 'notifikasi_publikasi_kota_fix')
+			{
+				$this->load->view('v_beranda_notif_publikasi_kota_fix');
 			}
 			// Beranda kosong
 			else

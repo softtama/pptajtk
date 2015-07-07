@@ -16,7 +16,7 @@
 			<ul class="nav navmenu-nav">
 				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
 				<li><a href="<?php echo base_url().'c_mengelolaKelompokTAtemp' ?>">Pengelolaan Kelompok Sementara</a></li>
-				<li class=""><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaKelompokTA' ?>">Pengelolaan Kelompok</a></li>
 				<li class="active">
 					<a href="#" class="dropdown-toggle">Pengelolaan Seminar <b class="caret"></b></a>
 					<ul class="dropdown-menu navmenu-nav" role="menu">
@@ -43,9 +43,8 @@
 						<li><a href="#">Persyaratan Sidang</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Pengelolaan Nilai</a></li>
-				<li><a href="#">Pengelolaan Revisi</a></li>
-				<li><a href="#">Tren Topik Tugas Akhir</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaNilai' ?>">Pengelolaan Nilai</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaRevisi' ?>">Pengelolaan Revisi</a></li>
 			</ul>
 		</nav>
 

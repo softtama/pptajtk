@@ -43,9 +43,8 @@
 						<li><a href="#">Persyaratan Sidang</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Pengelolaan Nilai</a></li>
-				<li><a href="#">Pengelolaan Revisi</a></li>
-				<li><a href="#">Tren Topik Tugas Akhir</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaNilai' ?>">Pengelolaan Nilai</a></li>
+				<li><a href="<?php echo base_url().'c_mengelolaRevisi' ?>">Pengelolaan Revisi</a></li>
 			</ul>
 		</nav>
 
@@ -226,7 +225,7 @@
 			</table>	
 	    </div>
 
-		<!-- Modal for Tambah Jadwal Seminar Satu -->
+		<!-- Modal for Tambah Jadwal Seminar 3 -->
 		<div class="modal fade" id="modalAddJadwalSeminarSatu" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -342,7 +341,7 @@
 			</div>
 		</div>
 
-		<!-- Modal for View Detail Jadwal Seminar Satu -->
+		<!-- Modal for View Detail Jadwal Seminar 3 -->
 		<div class="modal fade" id="modalViewDetailJadwalSeminar_108" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -404,7 +403,7 @@
 			</div>
 		</div>
 
-		<!-- Modal for Edit Jadwal Seminar Satu -->
+		<!-- Modal for Edit Jadwal Seminar 3 -->
 		<div class="modal fade" id="modalEditJadwalSeminarSatu" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">

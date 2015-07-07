@@ -102,7 +102,7 @@
 					<h4 class="panel-title">Pengelolaan Kelompok TA Sementara / Pembuatan Data Kelompok TA Sementara</h4>
 				</div>
 				<div class="panel-body">
-					<p>Pembuatan data sementara Kelompok TA telah dilakukan oleh Santi Sundari dengan detail sebagai berikut:</p>
+					<p>Pembuatan data Kelompok TA sementara telah dilakukan oleh Santi Sundari dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
 							<label class="col-md-3 control-label" style="text-align: left;">Kode Kelompok</label>
