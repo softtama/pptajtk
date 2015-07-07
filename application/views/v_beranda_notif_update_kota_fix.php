@@ -62,7 +62,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -105,26 +105,26 @@
 					<p>Perubahan data Kelompok TA telah dilakukan oleh Suprihanto dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-sm-8">
+							<label class="col-md-3 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Data Awal Kelompok</label>
-							<div class="col-sm-8">
+							<label class="col-md-3 control-label" style="text-align: left;">Data Awal Kelompok</label>
+							<div class="col-md-8">
 								<a href="#" id="vd-data-awal-kota-temp" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalLihatDataAwalKOTAtemp">Lihat</a>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Data Terkini Kelompok</label>
-							<div class="col-sm-8">
+							<label class="col-md-3 control-label" style="text-align: left;">Data Terkini Kelompok</label>
+							<div class="col-md-8">
 								<a href="#" id="vd-data-awal-kota-temp" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalLihatDataBaruKOTAtemp">Lihat</a>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Waktu Perubahan</label>
-							<div class="col-sm-8">
+							<label class="col-md-3 control-label" style="text-align: left;">Waktu Perubahan</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Senin, 2 Maret 2015, 10.00 WIB</p>
 							</div>
 						</div>
@@ -149,44 +149,44 @@
 					<div class="modal-body">
 						<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Nama Topik Tugas Akhir</label>
-							<div class="col-sm-8">
+							<label class="col-md-4 control-label" style="text-align: left;">Nama Topik Tugas Akhir</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir di Jurusan Teknik Komputer Politeknik Negeri Bandung</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Anggota 1</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Anggota 1</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Januar Muhtadiin</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Anggota 2</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Anggota 2</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Rizki Pratama</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Anggota 3</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Anggota 3</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Yudha Arie Fargitha</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Pembimbing 1</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Pembimbing 1</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Joe Lian Min</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Pembimbing 2</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Pembimbing 2</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Ida Suhartini</p>
 							</div>
 						</div>
@@ -210,44 +210,44 @@
 					<div class="modal-body">
 						<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Nama Topik Tugas Akhir</label>
-							<div class="col-sm-8">
+							<label class="col-md-4 control-label" style="text-align: left;">Nama Topik Tugas Akhir</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir di Jurusan Teknik Komputer Politeknik Negeri Bandung</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Anggota 1</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Anggota 1</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Januar Muhtadiin</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Anggota 2</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Anggota 2</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Rizki Pratama</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Anggota 3</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Anggota 3</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Yudha Arie Fargitha</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Pembimbing 1</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Pembimbing 1</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Joe Lian Min</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-4 control-label" style="text-align: left;">Pembimbing 2</label>
-							<div class="col-sm-6">
+							<label class="col-md-4 control-label" style="text-align: left;">Pembimbing 2</label>
+							<div class="col-md-6">
 								<p id='vd_id_kota' class="form-control-static">Irwan Setiawan</p>
 							</div>
 						</div>

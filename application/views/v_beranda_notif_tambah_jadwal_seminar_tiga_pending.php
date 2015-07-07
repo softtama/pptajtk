@@ -62,7 +62,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -105,14 +105,14 @@
 					<p>Jadwal pelaksanaan Seminar 3 untuk</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Topik Tugas Akhir</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Topik Tugas Akhir</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 							</div>
 						</div>
@@ -120,26 +120,26 @@
 					<p style="margin: 10px 0;">telah dibuat oleh Santi Sundari, dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Tanggal Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Tanggal Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Kamis, 25 Juni 2015</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Jam Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Jam Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">13.00 WIB - 14.30 WIB</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Ruangan Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Ruangan Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Ruang Rapat</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Penguji Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Penguji Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Joe Lian Min; Santi Sundari; Ferry Feirizal</p>
 							</div>
 						</div>

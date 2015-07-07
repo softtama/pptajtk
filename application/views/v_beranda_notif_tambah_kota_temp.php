@@ -62,7 +62,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -105,38 +105,38 @@
 					<p>Pembuatan data sementara Kelompok TA telah dilakukan oleh Santi Sundari dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-sm-7">
+							<label class="col-md-3 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-md-7">
 								<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Nama Topik Tugas Akhir</label>
-							<div class="col-sm-7">
+							<label class="col-md-3 control-label" style="text-align: left;">Nama Topik Tugas Akhir</label>
+							<div class="col-md-7">
 								<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Anggota 1</label>
-							<div class="col-sm-7">
+							<label class="col-md-3 control-label" style="text-align: left;">Anggota 1</label>
+							<div class="col-md-7">
 								<p id='vd_id_kota' class="form-control-static">Januar Muhtadiin</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Anggota 2</label>
-							<div class="col-sm-7">
+							<label class="col-md-3 control-label" style="text-align: left;">Anggota 2</label>
+							<div class="col-md-7">
 								<p id='vd_id_kota' class="form-control-static">Rizki Pratama</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Anggota 3</label>
-							<div class="col-sm-7">
+							<label class="col-md-3 control-label" style="text-align: left;">Anggota 3</label>
+							<div class="col-md-7">
 								<p id='vd_id_kota' class="form-control-static">Yudha Arie Fargitha</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Calon Pembimbing</label>
-							<div class="col-sm-7">
+							<label class="col-md-3 control-label" style="text-align: left;">Calon Pembimbing</label>
+							<div class="col-md-7">
 								<a href="#" id='vd_id_kota' class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalLihatCalonPemb">Lihat</a>
 							</div>
 						</div>

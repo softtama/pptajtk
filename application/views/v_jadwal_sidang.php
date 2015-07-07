@@ -64,7 +64,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -235,8 +235,8 @@
 					<div class="modal-body">
 						<form id="form_viewdet_kota" class="form-horizontal" name="form_viewdet_kota">
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Kode Kelompok</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Kode Kelompok</label>
+								<div class="col-md-6">
 									<select id="input_id_kota" class="form-control" name="input_id_kota">
 										<option>--- Pilih Kelompok TA ---</option>
 										<optgroup label="Dokumen Sudah Divalidasi dan Layak">
@@ -251,14 +251,14 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
-								<div class="col-sm-8">
+								<label class="col-md-4 control-label">Nama Topik Tugas Akhir</label>
+								<div class="col-md-8">
 									<p id="show_topik_ta" class="form-control-static"><i>Nama Topik Tugas Akhir akan muncul jika Anda sudah memilih Kelompok TA pada field Kode Kelompok</i></p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Tanggal Seminar</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Tanggal Seminar</label>
+								<div class="col-md-6">
 									<div class='input-group date' id='input-date-picker'>
 					                    <input id='input-date' name='input-date' type='text' class="form-control" />
 					                    <span class="input-group-addon">
@@ -268,8 +268,8 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Jam Seminar</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Jam Seminar</label>
+								<div class="col-md-6">
 									<div class='input-group date' id='input-time-picker'>
 										<input id='input-time' name='input-time' type='text' class="form-control" />
 										<span class="input-group-addon">
@@ -279,8 +279,8 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Ruangan Sidang</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Ruangan Sidang</label>
+								<div class="col-md-6">
 									<select id="input_rng_seminar" class="form-control" name="input_rng_seminar">
 										<option>--- Pilih Ruangan ---</option>
 										<optgroup label="Ruangan">
@@ -294,8 +294,8 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Penguji Sidang</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Penguji Sidang</label>
+								<div class="col-md-6">
 								<select id="input-pembimbing-sidang" class="form-control" name="input_penguji_seminar">
 										<option>--- Pilih Pembimbing ---</option>
 										<optgroup label="Pembimbing yang Hadir di Sidang">
@@ -332,17 +332,17 @@
 								</div>
 							</div>
 							<div class="form-group hide">
-								<div class="col-sm-offset-4 col-sm-6">
+								<div class="col-md-offset-4 col-md-6">
 									<input id="submit_jadwal_seminar_satu" name="submit_jadwal_seminar_satu" class="btn btn-primary" type="submit" value="Buat Jadwal" />
 								</div>
 							</div>
 						</form>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Buat Jadwal</label>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
@@ -361,38 +361,38 @@
 					<div class="modal-body">
 						<form id="form_viewdet_kota" class="form-horizontal" name="form_viewdet_kota">
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Kode Kelompok</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Kode Kelompok</label>
+								<div class="col-md-6">
 									<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
-								<div class="col-sm-8">
+								<label class="col-md-4 control-label">Nama Topik Tugas Akhir</label>
+								<div class="col-md-8">
 									<p id="show_topik_ta" class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Tanggal Sidang</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Tanggal Sidang</label>
+								<div class="col-md-6">
 									<p id="show_stat_proposal" class="form-control-static">Jumat, 10 Juli 2015</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Jam Sidang</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Jam Sidang</label>
+								<div class="col-md-6">
 									<p id="show_stat_proposal" class="form-control-static">13.00 WIB</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Ruangan Sidang</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Ruangan Sidang</label>
+								<div class="col-md-6">
 									<p id="show_stat_proposal" class="form-control-static">Ruang Rapat</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Penguji Sidang</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Penguji Sidang</label>
+								<div class="col-md-6">
 									<p id="show_stat_proposal" class="form-control-static">Joe Lian Min</p>
 									<p id="show_stat_proposal" class="form-control-static">Santi Sundari</p>
 									<p id="show_stat_proposal" class="form-control-static">Ferry Feirizal</p>
@@ -401,10 +401,10 @@
 						</form>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<a class="btn btn-primary" data-toggle="modal" data-target="#modalEditJadwalSeminarSatu" data-dismiss="modal"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit Jadwal</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
@@ -423,20 +423,20 @@
 					<div class="modal-body">
 						<form id="form_viewdet_kota" class="form-horizontal" name="form_viewdet_kota">
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Kode Kelompok</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Kode Kelompok</label>
+								<div class="col-md-6">
 									<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
-								<div class="col-sm-8">
+								<label class="col-md-4 control-label">Nama Topik Tugas Akhir</label>
+								<div class="col-md-8">
 									<p id="show_topik_ta" class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Tanggal Seminar</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Tanggal Seminar</label>
+								<div class="col-md-6">
 									<div class='input-group date' id='input-date-picker'>
 					                    <input id='input-date' name='input-date' type='text' class="form-control" value="10/07/2015" />
 					                    <span class="input-group-addon">
@@ -446,8 +446,8 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Jam Seminar</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Jam Seminar</label>
+								<div class="col-md-6">
 									<div class='input-group date' id='input-time-picker'>
 										<input id='input-time' name='input-time' type='text' class="form-control" value="13.00" />
 										<span class="input-group-addon">
@@ -457,8 +457,8 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Ruangan Sidang</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Ruangan Sidang</label>
+								<div class="col-md-6">
 									<select id="input_rng_seminar" class="form-control" name="input_rng_seminar">
 										<option>--- Pilih Ruangan ---</option>
 										<optgroup label="Ruangan">
@@ -472,8 +472,8 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label">Penguji Sidang</label>
-								<div class="col-sm-6">
+								<label class="col-md-4 control-label">Penguji Sidang</label>
+								<div class="col-md-6">
 									<select id="input_penguji_seminar" class="form-control" name="input_penguji_seminar">
 										<option>--- Pilih Pembimbing ---</option>
 										<optgroup label="Pembimbing yang Hadir di Sidang">
@@ -509,17 +509,17 @@
 								</div>
 							</div>
 							<div class="form-group hide">
-								<div class="col-sm-offset-4 col-sm-6">
+								<div class="col-md-offset-4 col-md-6">
 									<input id="submit_jadwal_seminar_satu" name="submit_jadwal_seminar_satu" class="btn btn-primary" type="submit" value="Simpan Jadwal" />
 								</div>
 							</div>
 						</form>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Simpan Jadwal</label>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>

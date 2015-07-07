@@ -63,7 +63,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -374,40 +374,40 @@
 						<div class="modal-body">
 							<form id="form_viewdet_kota" name="form_viewdet_kota" class="form-horizontal">
 								<div class="form-group">
-									<label class="col-sm-4 control-label">Kode Kelompok</label>
-									<div class="col-sm-8">
+									<label class="col-md-4 control-label">Kode Kelompok</label>
+									<div class="col-md-8">
 										<p id='vd_id_kota' class="form-control-static"></p>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
-									<div class="col-sm-8">
+									<label class="col-md-4 control-label">Nama Topik Tugas Akhir</label>
+									<div class="col-md-8">
 										<p id='vd_nama_topik' class="form-control-static"></p>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-4 control-label">Anggota 1</label>
-									<div class="col-sm-8">
+									<label class="col-md-4 control-label">Anggota 1</label>
+									<div class="col-md-8">
 										<p id='vd_ak_1' class="form-control-static"></p>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-4 control-label">Anggota 2</label>
-									<div class="col-sm-8">
+									<label class="col-md-4 control-label">Anggota 2</label>
+									<div class="col-md-8">
 										<p id='vd_ak_2' class="form-control-static"></p>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-4 control-label">Anggota 3</label>
-									<div class="col-sm-8">
+									<label class="col-md-4 control-label">Anggota 3</label>
+									<div class="col-md-8">
 										<p id='vd_ak_3' class="form-control-static"></p>
 									</div>
 								</div>
 								<div class="form-group">
-									<h4><label class="col-sm-12 control-label" style="text-align: left;">Daftar Calon Pembimbing</label></h4>
+									<h4><label class="col-md-12 control-label" style="text-align: left;">Daftar Calon Pembimbing</label></h4>
 								</div>
 								<div class="form-group">
-									<div class="col-sm-12">
+									<div class="col-md-12">
 										<table class="table table-hover table-bordered table-striped" style="margin-top: 10px;">
 											<thead>
 												<tr>
@@ -443,7 +443,7 @@
 							</form>
 						</div>
 						<div class="modal-footer">
-							<div class="col-sm-12">
+							<div class="col-md-12">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
 						</div>
@@ -462,20 +462,20 @@
 						<div class="modal-body">
 							<form id="form_create_kota" name="form_create_kota" class="form-horizontal" action="<?php echo base_url().'c_mengelolaKelompokTAtemp/create' ?>" method="post">
 								<div class="form-group">
-									<label for="id_kota" class="col-sm-4 control-label">Kode Kelompok</label>
-									<div class="col-sm-6">
+									<label for="id_kota" class="col-md-4 control-label">Kode Kelompok</label>
+									<div class="col-md-6">
 										<input type="text" class="form-control" id="id_kota" name="id_kota" />
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="nama_topik" class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
-									<div class="col-sm-6">
+									<label for="nama_topik" class="col-md-4 control-label">Nama Topik Tugas Akhir</label>
+									<div class="col-md-6">
 										<input id="nama_topik" class="form-control" name="nama_topik" type="text" />
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="anggota_1" class="col-sm-4 control-label">Anggota 1</label>
-									<div class="col-sm-6">
+									<label for="anggota_1" class="col-md-4 control-label">Anggota 1</label>
+									<div class="col-md-6">
 										<select id='anggota_1' class="form-control" name='anggota_1'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -485,8 +485,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="anggota_2" class="col-sm-4 control-label">Anggota 2</label>
-									<div class="col-sm-6">
+									<label for="anggota_2" class="col-md-4 control-label">Anggota 2</label>
+									<div class="col-md-6">
 										<select id='anggota_2' class="form-control" name='anggota_2'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -496,8 +496,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="anggota_3" class="col-sm-4 control-label">Anggota 3</label>
-									<div class="col-sm-6">
+									<label for="anggota_3" class="col-md-4 control-label">Anggota 3</label>
+									<div class="col-md-6">
 										<select id='anggota_3' class="form-control" name='anggota_3'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -507,8 +507,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="pemb_1" class="col-sm-4 control-label">Calon Pembimbing</label>
-									<div class="col-sm-6">
+									<label for="pemb_1" class="col-md-4 control-label">Calon Pembimbing</label>
+									<div class="col-md-6">
 										<select class="form-control" style="margin-bottom: 10px;">
 											<option>--- Pilih Calon Pembimbing ---</option>
 											<option>Ani Rahmani</option>
@@ -537,7 +537,7 @@
 									</div>
 								</div>
 								<div class="form-group hide">
-									<div class="col-sm-offset-4 col-sm-6">
+									<div class="col-md-offset-4 col-md-6">
 										<input id='submit_kota' class="btn btn-primary" name='submit_kota' type='submit' value='Buat Kelompok TA' />
 									</div>
 								</div>
@@ -547,10 +547,10 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<div class="col-sm-6" style="text-align: left;">
+							<div class="col-md-6" style="text-align: left;">
 								<label for="submit_kota" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Buat Kelompok</label>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-md-6">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
 						</div>
@@ -569,20 +569,20 @@
 						<div class="modal-body">
 							<form id="form_create_kota" name="form_create_kota" class="form-horizontal" action="<?php echo base_url().'c_mengelolaKelompokTAtemp/update' ?>" method="post">
 								<div class="form-group">
-									<label for="id_kota" class="col-sm-4 control-label">Kode Kelompok</label>
-									<div class="col-sm-6">
+									<label for="id_kota" class="col-md-4 control-label">Kode Kelompok</label>
+									<div class="col-md-6">
 										<input type="text" class="form-control" id="id_kota" name="id_kota" value="KOTA 108" />
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="nama_topik" class="col-sm-4 control-label">Nama Topik Tugas Akhir</label>
-									<div class="col-sm-6">
+									<label for="nama_topik" class="col-md-4 control-label">Nama Topik Tugas Akhir</label>
+									<div class="col-md-6">
 										<input id="nama_topik" class="form-control" name="nama_topik" type="text" value="Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web" />
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="anggota_1" class="col-sm-4 control-label">Anggota 1</label>
-									<div class="col-sm-6">
+									<label for="anggota_1" class="col-md-4 control-label">Anggota 1</label>
+									<div class="col-md-6">
 										<select id='anggota_1' class="form-control" name='anggota_1'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015' selected="true">Januar Muhtadiin</option>
@@ -592,8 +592,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="anggota_2" class="col-sm-4 control-label">Anggota 2</label>
-									<div class="col-sm-6">
+									<label for="anggota_2" class="col-md-4 control-label">Anggota 2</label>
+									<div class="col-md-6">
 										<select id='anggota_2' class="form-control" name='anggota_2'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -603,8 +603,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="anggota_3" class="col-sm-4 control-label">Anggota 3</label>
-									<div class="col-sm-6">
+									<label for="anggota_3" class="col-md-4 control-label">Anggota 3</label>
+									<div class="col-md-6">
 										<select id='anggota_3' class="form-control" name='anggota_3'>
 											<option value='0'>--- Pilih Mahasiswa ---</option>
 											<option value='121511015'>Januar Muhtadiin</option>
@@ -614,8 +614,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="pemb_1" class="col-sm-4 control-label">Calon Pembimbing</label>
-									<div class="col-sm-6">
+									<label for="pemb_1" class="col-md-4 control-label">Calon Pembimbing</label>
+									<div class="col-md-6">
 										<select class="form-control" style="margin-bottom: 10px;">
 											<option>Ani Rahmani</option>
 											<option>Eddy Bambang Soewono</option>
@@ -639,7 +639,7 @@
 											<option>Yudi Widhiyasana</option>
 										</select>
 										<div class="row">
-											<div class="col-sm-10">
+											<div class="col-md-10">
 												<select class="form-control" style="margin-bottom: 10px;">
 													<option>Ani Rahmani</option>
 													<option>Eddy Bambang Soewono</option>
@@ -652,12 +652,12 @@
 													<option>Yudi Widhiyasana</option>
 												</select>
 											</div>
-											<div class="col-sm-2" style="margin-left: -20px;">
+											<div class="col-md-2" style="margin-left: -20px;">
 												<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-sm-10">
+											<div class="col-md-10">
 												<select class="form-control" style="margin-bottom: 10px;">
 													<option>Ani Rahmani</option>
 													<option>Eddy Bambang Soewono</option>
@@ -670,7 +670,7 @@
 													<option>Yudi Widhiyasana</option>
 												</select>
 											</div>
-											<div class="col-sm-2" style="margin-left: -20px;">
+											<div class="col-md-2" style="margin-left: -20px;">
 												<a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 											</div>
 										</div>
@@ -678,7 +678,7 @@
 									</div>
 								</div>
 								<div class="form-group hide">
-									<div class="col-sm-offset-4 col-sm-6">
+									<div class="col-md-offset-4 col-md-6">
 										<input id='update_kota' class="btn btn-primary" name='update_kota' type='submit' value='Update Data' />
 									</div>
 								</div>
@@ -688,10 +688,10 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<div class="col-sm-6" style="text-align: left;">
+							<div class="col-md-6" style="text-align: left;">
 								<label for="update_kota" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;&nbsp;Update Data</label>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-md-6">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							</div>
 						</div>
@@ -712,10 +712,10 @@
 						<p>Apakah Anda yakin ingin menghapus data Kelompok TA sementara untuk KOTA 108?</p>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<a href="<?php echo base_url().'c_mengelolaKelompokTAtemp/delete' ?>" class="btn btn-danger">Ya, Hapus</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
 						</div>
 					</div>
@@ -735,10 +735,10 @@
 						<p>Apakah Anda yakin ingin mempublikasi semua data Kelompok TA sementara yang ada ke mahasiswa anggota Kelompok TA sementara yang bersangkutan?</p>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<a href="<?php echo base_url().'c_mengelolaKelompokTAtemp/publish' ?>" class="btn btn-success">Publikasikan</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
 						</div>
 					</div>

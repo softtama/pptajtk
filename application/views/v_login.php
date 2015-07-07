@@ -62,7 +62,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -101,24 +101,24 @@
 			<div class="col-md-6">
 				<form id="form_login" class="form-horizontal" name="form_login" method="post">
 					<div class="form-group">
-						<label class="col-sm-2 control-label" style="text-align: left;">Username</label>
-						<div class="col-sm-4">
+						<label class="col-md-2 control-label" style="text-align: left;">Username</label>
+						<div class="col-md-4">
 							<input id="input_username" class="form-control" name="input_username" type="text" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-2 control-label" style="text-align: left;">Password</label>
-						<div class="col-sm-4">
+						<label class="col-md-2 control-label" style="text-align: left;">Password</label>
+						<div class="col-md-4">
 							<input id="input_password" class="form-control" name="input_username" type="password" />
 						</div>
 					</div>
 					<div class="form-group hide">
-						<div class="col-sm-8">
+						<div class="col-md-8">
 							<input id="input_submit" class="form-control btn btn-primary" name="input_submit" type="submit" value="Login" />
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<label for ="input_submit" class="form-control btn btn-primary"><span class="glyphicon glyphicon-user"></span> &nbsp;Login</label>
 						</div>
 					</div>

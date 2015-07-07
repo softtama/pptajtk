@@ -99,57 +99,43 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title" style="margin-bottom: 10px;"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;Notifikasi</h3>
-					<h4 class="panel-title">Pengelolaan Seminar / Seminar 3 / Persetujuan Jadwal Seminar 3</h4>
+					<h4 class="panel-title">Pengelolaan Kelompok Sementara / Publikasi Data Kelompok TA Sementara</h4>
 				</div>
 				<div class="panel-body">
-					<p>Jadwal pelaksanaan Seminar 3 untuk</p>
+					<p>Jadwal pelaksanaan Seminar 1 untuk</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
 							<label class="col-md-2 control-label" style="text-align: left;">Kode Kelompok</label>
 							<div class="col-md-8">
-								<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
-							</div>
-						</div>
-						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-2 control-label" style="text-align: left;">Topik Tugas Akhir</label>
-							<div class="col-md-8">
-								<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
+								<p id='vd_id_kota' class="form-control-static">KOTA 101, KOTA 102, KOTA 105, KOTA 106, KOTA 107, KOTA 108, KOTA 109</p>
 							</div>
 						</div>
 					</form>
-					<p style="margin: 10px 0;">yang dibuat oleh Santi Sundari pada Kamis, 30 April 2015, 11.00 WIB dengan detail sebagai berikut:</p>
+					<p style="margin: 10px 0;">telah dipublikasikan oleh Ida Suhartini ke setiap Kelompok TA yang bersangkutan, dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-2 control-label" style="text-align: left;">Tanggal Seminar</label>
+							<label class="col-md-2 control-label" style="text-align: left;">Rentang Tanggal Seminar</label>
 							<div class="col-md-8">
-								<p id='vd_id_kota' class="form-control-static">Senin, 1 Juni 2015</p>
+								<p id='vd_id_kota' class="form-control-static">Senin, 2 Maret 2015 - Senin, 23 Maret 2015</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-2 control-label" style="text-align: left;">Jam Seminar</label>
+							<label class="col-md-2 control-label" style="text-align: left;">Rentang Jam Seminar</label>
 							<div class="col-md-8">
-								<p id='vd_id_kota' class="form-control-static">08.40 WIB - 10.10 WIB</p>
+								<p id='vd_id_kota' class="form-control-static">08.40 WIB - 10.10 WIB hingga 13.00 WIB - 14.30 WIB</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
 							<label class="col-md-2 control-label" style="text-align: left;">Ruangan Seminar</label>
 							<div class="col-md-8">
-								<p id='vd_id_kota' class="form-control-static">Ruang Rapat</p>
-							</div>
-						</div>
-						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-md-2 control-label" style="text-align: left;">Penguji Seminar</label>
-							<div class="col-md-8">
-								<p id='vd_id_kota' class="form-control-static">Joe Lian Min; Ida Suhartini</p>
+								<p id='vd_id_kota' class="form-control-static">Ruang A201, Ruang A202, Ruang A203</p>
 							</div>
 						</div>
 					</form>
-					<div style="margin: 10px 0;">telah dicermati oleh Joe Lian Min, Santi Sundari, Ferry Feirizal berturut-turut sebagai Pembimbing I, Penguji I, Penguji II, dan jadwal tersebut <h4 style="display: inline; margin-bottom: 0; margin-top: 0;"><span class="label label-success">DISETUJUI</span></h4>.</div>
-					<div style="margin-top: 10px;">Harap segera mempublikasikan jadwal ini ke Kelompok TA yang bersangkutan.</div>
 				</div>
 				<div class="panel-footer">
 					<div class="row">
-						<div class="col-md-12">Dipublikasikan oleh sistem, pada Jumat, 29 Mei 2015, 10.30 WIB</div>
+						<div class="col-md-12">Dipublikasikan oleh Ida Suhartini, pada Jumat, 27 Februari 2015, 14.30 WIB</div>
 					</div>
 				</div>
 			</div>

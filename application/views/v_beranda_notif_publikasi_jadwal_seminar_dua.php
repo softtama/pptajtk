@@ -62,7 +62,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -105,8 +105,8 @@
 					<p>Jadwal pelaksanaan Seminar 2 untuk</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">KOTA 101, KOTA 102, KOTA 105, KOTA 106, KOTA 107, KOTA 108, KOTA 109</p>
 							</div>
 						</div>
@@ -114,20 +114,20 @@
 					<p style="margin: 10px 0;">telah dipublikasikan oleh Ida Suhartini ke setiap Kelompok TA yang bersangkutan, dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Rentang Tanggal Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Rentang Tanggal Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Senin, 4 Mei 2015 - Senin, 18 Mei 2015</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Rentang Jam Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Rentang Jam Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">08.40 WIB - 10.10 WIB hingga 13.00 WIB - 14.30 WIB</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Ruangan Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Ruangan Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Ruang A201, Ruang A202, Ruang A203, Ruang Rapat, Ruang Serba Guna</p>
 							</div>
 						</div>

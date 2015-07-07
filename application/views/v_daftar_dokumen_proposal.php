@@ -63,7 +63,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -273,22 +273,22 @@
 					<div class="modal-body">
 						<form id="form_detail_proposal" class="form-horizontal" name="form_detail_proposal">
 							<div class="form-group">
-								<label class="col-sm-4 control-label" style="text-align: left;">Kode Kelompok</label>
-								<div class="col-sm-8">
+								<label class="col-md-4 control-label" style="text-align: left;">Kode Kelompok</label>
+								<div class="col-md-8">
 									<p id='vd_id_kota' class="form-control-static">KOTA 101</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label" style="text-align: left;">Topik Tugas Akhir</label>
-								<div class="col-sm-8">
+								<label class="col-md-4 control-label" style="text-align: left;">Topik Tugas Akhir</label>
+								<div class="col-md-8">
 									<p id='vd_id_kota' class="form-control-static">Penerapan Semantic Web terhadap Portal Inkubator Bisnis POLBAN</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<h4><label class="col-sm-12 control-label" style="text-align: left;">History Upload Dokumen Proposal</label></h4>
+								<h4><label class="col-md-12 control-label" style="text-align: left;">History Upload Dokumen Proposal</label></h4>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-12">
+								<div class="col-md-12">
 									<table class="table table-hover table-bordered table-striped" style="margin-top: 10px;">
 										<thead>
 											<tr>
@@ -337,22 +337,22 @@
 					<div class="modal-body">
 						<form id="form_detail_proposal" class="form-horizontal" name="form_detail_proposal">
 							<div class="form-group">
-								<label class="col-sm-4 control-label" style="text-align: left;">Kode Kelompok</label>
-								<div class="col-sm-8">
+								<label class="col-md-4 control-label" style="text-align: left;">Kode Kelompok</label>
+								<div class="col-md-8">
 									<p id='vd_id_kota' class="form-control-static">KOTA 106</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label" style="text-align: left;">Topik Tugas Akhir</label>
-								<div class="col-sm-8">
+								<label class="col-md-4 control-label" style="text-align: left;">Topik Tugas Akhir</label>
+								<div class="col-md-8">
 									<p id='vd_id_kota' class="form-control-static">Aplikasi Animasi 3D pada Android untuk Pembelajaran Shalat Anak Usia 6-8 Tahun</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<h4><label class="col-sm-12 control-label" style="text-align: left;">History Upload Dokumen Proposal</label></h4>
+								<h4><label class="col-md-12 control-label" style="text-align: left;">History Upload Dokumen Proposal</label></h4>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-12">
+								<div class="col-md-12">
 									<table class="table table-hover table-bordered table-striped" style="margin-top: 10px;">
 										<thead>
 											<tr>
@@ -401,22 +401,22 @@
 					<div class="modal-body">
 						<form id="form_detail_proposal" class="form-horizontal" name="form_detail_proposal">
 							<div class="form-group">
-								<label class="col-sm-4 control-label" style="text-align: left;">Kode Kelompok</label>
-								<div class="col-sm-8">
+								<label class="col-md-4 control-label" style="text-align: left;">Kode Kelompok</label>
+								<div class="col-md-8">
 									<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label class="col-sm-4 control-label" style="text-align: left;">Topik Tugas Akhir</label>
-								<div class="col-sm-8">
+								<label class="col-md-4 control-label" style="text-align: left;">Topik Tugas Akhir</label>
+								<div class="col-md-8">
 									<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<h4><label class="col-sm-12 control-label" style="text-align: left;">History Upload Dokumen Proposal</label></h4>
+								<h4><label class="col-md-12 control-label" style="text-align: left;">History Upload Dokumen Proposal</label></h4>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-12">
+								<div class="col-md-12">
 									<table class="table table-hover table-bordered table-striped" style="margin-top: 10px;">
 										<thead>
 											<tr>
@@ -480,7 +480,7 @@
 						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen proposal Kelompok TA 101 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 1?</p>
 						<form id="validasi_dok_proposal" class="form-horizontal" name="validasi_dok_proposal">
 							<div class="form-group hide">
-								<div class="col-sm-offset-4 col-sm-8">
+								<div class="col-md-offset-4 col-md-8">
 									<input id="submit_validasi_proposal_true" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="true" onclick="location.href='<?php echo base_url().'c_mengelolaSeminarSatu/daftarDokumenProposal?status_is_validated=true' ?>'" />
 									<input id="submit_validasi_proposal_false" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="false" />
 								</div>
@@ -488,11 +488,11 @@
 						</form>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<a href="<?php echo base_url().'c_mengelolaSeminarSatu/validate_yes' ?>" class="btn btn-success">Ya, Layak</a>
 							<a href="<?php echo base_url().'c_mengelolaSeminarSatu/validate_no' ?>" class="btn btn-danger">Tidak Layak</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
@@ -513,7 +513,7 @@
 						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen proposal Kelompok TA 106 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 1?</p>
 						<form id="validasi_dok_proposal" class="form-horizontal" name="validasi_dok_proposal">
 							<div class="form-group hide">
-								<div class="col-sm-offset-4 col-sm-8">
+								<div class="col-md-offset-4 col-md-8">
 									<input id="submit_validasi_proposal_true" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="true" onclick="location.href='<?php echo base_url().'c_mengelolaSeminarSatu/daftarDokumenProposal?status_is_updated=true' ?>'" />
 									<input id="submit_validasi_proposal_false" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="false" />
 								</div>
@@ -521,11 +521,11 @@
 						</form>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<a href="<?php echo base_url().'c_mengelolaSeminarSatu/update_yes' ?>" class="btn btn-success">Ya, Layak</a>
 							<a href="#" class="btn btn-danger" data-dismiss="modal">Tidak Layak</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
@@ -546,7 +546,7 @@
 						<p>Apakah Anda yakin ingin memvalidasi<br>dokumen proposal Kelompok TA 108 ini<br>sebagai dokumen yang layak untuk melaksanakan Seminar 1?</p>
 						<form id="validasi_dok_proposal" class="form-horizontal" name="validasi_dok_proposal">
 							<div class="form-group hide">
-								<div class="col-sm-offset-4 col-sm-8">
+								<div class="col-md-offset-4 col-md-8">
 									<input id="submit_validasi_proposal_true" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="true" />
 									<input id="submit_validasi_proposal_false" class="btn btn-success" name="submit_validasi_proposal" type="submit" value="false" />
 								</div>
@@ -554,11 +554,11 @@
 						</form>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<a href="#" class="btn btn-success" data-dismiss="modal">Ya, Layak</a>
 							<a href="<?php echo base_url().'c_mengelolaSeminarSatu/update_no' ?>" class="btn btn-danger">Tidak Layak</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>

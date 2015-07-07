@@ -62,7 +62,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -399,14 +399,14 @@
 					<div class="modal-body">
 						<form class="form-horizontal">
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">NIM</label>
-								<div class="col-sm-6">
+								<label for="inputEmail3" class="col-md-4 control-label">NIM</label>
+								<div class="col-md-6">
 									<p id='ed_nim_ro' class="form-control-static"><i>NIM akan muncul jika Anda sudah memilih Nama Mahasiswa pada field Nama Mahasiswa</i></p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nama Mahasiswa</label>
-								<div class="col-sm-6">
+								<label for="inputEmail3" class="col-md-4 control-label">Nama Mahasiswa</label>
+								<div class="col-md-6">
 									<select class="form-control">
 										<option>--- Pilih Nama Mahasiswa ---</option>
 										<optgroup label="KoTA 101">
@@ -458,42 +458,42 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 2</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Seminar 2</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" min="0" max="100" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 3</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Seminar 3</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" min="0" max="100" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Sidang</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Sidang</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" min="0" max="100" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Pembimbing</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Pembimbing</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" min="0" max="100" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Akhir</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Akhir</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" readonly />
 								</div>
 							</div>				  
 						</form>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> &nbsp;Simpan Data</label>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
@@ -512,54 +512,54 @@
 					<div class="modal-body">
 						<form class="form-horizontal">
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">NIM</label>
-								<div class="col-sm-6">
+								<label for="inputEmail3" class="col-md-4 control-label">NIM</label>
+								<div class="col-md-6">
 									<p id='ed_nim_ro' class="form-control-static">121511015</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nama</label>
-								<div class="col-sm-6">
+								<label for="inputEmail3" class="col-md-4 control-label">Nama</label>
+								<div class="col-md-6">
 									<p id='ed_nama_ro' class="form-control-static">Januar Muhtadiin</p>
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 2</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Seminar 2</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" value="80" min="0" max="100" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Seminar 3</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Seminar 3</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" value="80" min="0" max="100" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Sidang</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Sidang</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" value="80" min="0" max="100" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Pembimbing</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Pembimbing</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" value="80" min="0" max="100" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="inputEmail3" class="col-sm-4 control-label">Nilai Akhir</label>
-								<div class="col-sm-2">
+								<label for="inputEmail3" class="col-md-4 control-label">Nilai Akhir</label>
+								<div class="col-md-2">
 									<input type="number" class="form-control" readonly value="80" min="0" max="100" />
 								</div>
 							</div>				  
 						</form>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<label for="submit_jadwal_seminar_satu" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> &nbsp;Simpan Data</label>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
@@ -579,10 +579,10 @@
 						<p>Apakah Anda yakin ingin menghapus data nilai untuk mahasiswa dengan nama Januar Muhtadiin (NIM: 121511015)?</p>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<button type="button" class="btn btn-danger" data-dismiss="modal">Ya, Hapus</button>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
 						</div>
 					</div>
@@ -602,10 +602,10 @@
 						<p>Apakah Anda yakin ingin mempublikasi semua data nilai yang ada ke mahasiswa yang bersangkutan?</p>
 					</div>
 					<div class="modal-footer">
-						<div class="col-sm-6" style="text-align: left;">
+						<div class="col-md-6" style="text-align: left;">
 							<a href="<?php echo base_url().'c_mengelolaNilai/postDataNilai' ?>" class="btn btn-success">Publikasikan</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-md-6">
 							<button type="button" class="btn btn-primary" data-dismiss="modal">Tidak</button>
 						</div>
 					</div>

@@ -62,7 +62,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -105,20 +105,20 @@
 					<p>Dokumen Desain dan SDD Tugas Akhir milik</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-sm-7">
+							<label class="col-md-3 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-md-7">
 								<p id='vd_id_kota' class="form-control-static">KOTA 106</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-3 control-label" style="text-align: left;">Topik Tugas Akhir</label>
-							<div class="col-sm-7">
+							<label class="col-md-3 control-label" style="text-align: left;">Topik Tugas Akhir</label>
+							<div class="col-md-7">
 								<p id='vd_id_kota' class="form-control-static">Aplikasi Animasi 3D pada Android untuk Pembelajaran Shalat Anak Usia 6-8 Tahun</p>
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="col-sm-3 control-label" style="text-align: left;">Waktu Upload Dokumen</label>
-							<div class="col-sm-7">
+							<label class="col-md-3 control-label" style="text-align: left;">Waktu Upload Dokumen</label>
+							<div class="col-md-7">
 								<p id='vd_id_kota' class="form-control-static">Rabu, 27 Mei 2015, 13.15 WIB <a href="#">(Unduh Dokumen)</a></p>
 							</div>
 						</div>

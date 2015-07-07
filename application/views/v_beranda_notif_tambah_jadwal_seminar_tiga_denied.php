@@ -62,7 +62,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<div class="col-sm-3 col-md-3">
+					<div class="col-md-3 col-md-3">
 				        <form class="navbar-form" role="search">
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Cari" name="search" id="search">
@@ -105,14 +105,14 @@
 					<p>Jadwal pelaksanaan Seminar 3 untuk</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Kode Kelompok</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Kode Kelompok</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">KOTA 108</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Topik Tugas Akhir</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Topik Tugas Akhir</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Pengelolaan Pelaksanaan Tugas Akhir POLBAN Berbasis Web</p>
 							</div>
 						</div>
@@ -120,31 +120,31 @@
 					<p style="margin: 10px 0;">yang dibuat oleh Santi Sundari pada Kamis, 30 April 2015, 11.00 WIB dengan detail sebagai berikut:</p>
 					<form class="form-horizontal">
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Tanggal Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Tanggal Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Senin, 1 Juni 2015</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Jam Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Jam Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">08.40 WIB - 10.10 WIB</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Ruangan Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Ruangan Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Ruang Rapat</p>
 							</div>
 						</div>
 						<div class="form-group" style="margin-bottom: 0;">
-							<label class="col-sm-2 control-label" style="text-align: left;">Penguji Seminar</label>
-							<div class="col-sm-8">
+							<label class="col-md-2 control-label" style="text-align: left;">Penguji Seminar</label>
+							<div class="col-md-8">
 								<p id='vd_id_kota' class="form-control-static">Joe Lian Min; Ida Suhartini</p>
 							</div>
 						</div>
 					</form>
-					<div style="margin: 10px 0;">telah dicermati oleh Pembimbing I, Joe Lian Min, dan jadwal tersebut <h4 style="display: inline; margin-bottom: 0; margin-top: 0;"><span class="label label-danger">DITOLAK</span></h4>.</div>
+					<div style="margin: 10px 0;">telah dicermati oleh Joe Lian Min, Santi Sundari, Ferry Feirizal berturut-turut sebagai Pembimbing I, Penguji I, Penguji II, dan jadwal tersebut <h4 style="display: inline; margin-bottom: 0; margin-top: 0;"><span class="label label-danger">DITOLAK</span></h4>.</div>
 					<div style="margin-top: 10px;">Harap cermati kembali jadwal ini oleh Koordinator, dan diskusikan dengan Pembimbing I kelompok ini.</div>
 				</div>
 				<div class="panel-footer">
